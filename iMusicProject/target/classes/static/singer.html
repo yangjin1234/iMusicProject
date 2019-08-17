@@ -1,0 +1,606 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 歌手页面，完成，但不知到分页怎么分 -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全部歌手_歌手_乐库频道_酷狗网</title>
+<meta name="keywords" content="酷狗2017正式版, 歌手，歌手专辑，歌手单曲、歌手下载，歌手,明星,音乐,在线音乐,在线听歌,听歌,新专辑,港台,日本,韩国,欧美,英国" />
+<meta name="description" content="酷狗官方网站是中国最新最全的在线正版音乐网站,提供最新的在线音乐服务、免费音乐下载、最新的音乐播放器下载。" />
+<script data-embed="false" type="text/javascript" src="js/pctomoblie.js" ></script>
+<link href="https://www.kugou.com/yy/static/images/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="css/singerlist.min.css" type="text/css">
+<script src="js/base-min.js"></script>
+</head>
+<body>
+<link rel="stylesheet"  data-embed href="css/header.css">
+<!--[if IE 6]>
+<script type="text/javascript" src="js/dd_belatedpng_0.0.8a-min.js"></script>
+<script type="text/javascript">
+
+try{document.execCommand("BackgroundImageCache", false, true);}catch(e){}
+
+DD_belatedPNG.fix('.icon,.logo');
+</script>
+<![endif]-->
+<div class="header">
+			<h1 class="logo">
+				<a href="index.html">
+					<img src="picture/logo_3.png" alt="" style="width=154px; height=27px;">
+				</a>
+			</h1>
+			<div class="search_wrapper top_search">
+				<div class="search_input"><input type="text">
+					<div class="searh_btn"><a href="find.html"><i class="search_icon" ></i><span>搜索</span></a></div>
+				</div>
+				<div class="search_recommend top_search_recommend">
+
+				</div>
+				<div class="search_histroy top_search_histroy">
+
+				</div>
+			</div>
+			<div class="topNav fr">
+				<ul>
+					<li>
+						<a target="_blank" href="index.html">客服中心</a>
+					</li>
+
+					<li>
+						<a target="_blank" href="index.html">会员中心 </a>
+					</li>
+				</ul>
+				<div class="login_area">
+					<div id="login_in" class="clearfix">
+						<a class="login_btn" id="login_btn" href="login.html">登录</a>
+						<a target="_blank" href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a>
+					</div>
+					<div id="login_out" class="clearfix">
+						<img class="user_img" src="">
+						<span class="user_name"></span>
+					</div>
+					<div id="user_menu" class="user_menu">
+						<div class="topArrow1"></div>
+						<div class="topArrow2"></div>
+						<ul>
+							<li>
+								<a target="_blank" href="person_Account.html"><span class="user_icon1"></span>个人帐号</a>
+							</li>
+							<li>
+								<a href="login.html"><span class="user_icon2"></span>退出登录</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navWrap">
+			<div class="nav">
+				<ul class="homeNav">
+					<li>
+						<a class="normal" href="index.html">首 页</a>
+					</li>
+					<li>
+						<a class="normal" href="EveryDay.html">榜 单</a>
+					</li>
+					<li>
+						<a class="normal" id="productCenter" href="MyAlbum.html">专 辑</a>
+					</li>
+					<li class="more" id="more">
+						<a href="" class="iconMore" id="showMore">更 多</a>
+					</li>
+				</ul>
+				<ul class="secondMenu" id="secondMenu">
+					<li>
+						<a href="broadcast.html">电台</a>
+					</li>
+					<li>
+						<a href="mv.html">MV</a>
+					</li>
+					<li>
+						<a href="SongsList.html">歌单</a>
+					</li>
+					<li>
+						<a href="singer.html">歌手</a>
+					</li>
+				</ul>
+				<ul class="subNav">
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav1">音乐直播</a>
+					</li>
+					<li>
+						<a target="_blank" href="friend.html" class="icon icon-nav2">iMusic动态</a>
+					</li>
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav3">音乐人</a>
+					</li>
+					<!--<li>
+                <a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a>
+            </li>-->
+					<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
+					</li>
+
+
+				</ul>
+			</div>
+		</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script src="js/kguser.v2.min.js"></script>
+<script type="text/javascript" src="js/common_header.min.js"> </script>
+<script src="js/repalcehttpsimg.js"></script>
+<script type="text/javascript" src="js/registerdev.v1.min.js" charset="utf-8"></script>
+
+<!--歌手-->
+<div class="wrap sng clear_fix">
+	<div class="l">
+		<ul class="sng1">
+			<li class="all"><a title="全部歌手" class='hover' href="https://www.kugou.com/yy/html/singer.html" onclick="sdnClick(12072)">全部歌手</a></li>
+			<li><a title="华语男歌手"  href="https://www.kugou.com/yy/singer/index/1-all-2.html">华语男歌手</a></li>
+			<li><a title="华语女歌手"  href="https://www.kugou.com/yy/singer/index/1-all-3.html">华语女歌手</a></li>
+			<li><a title="华语组合"  href="https://www.kugou.com/yy/singer/index/1-all-4.html">华语组合</a></li>
+		</ul>
+		<ul class="sng2">
+			<li><a title="日韩男歌手"  href="https://www.kugou.com/yy/singer/index/1-all-5.html">日韩男歌手</a></li>
+			<li><a title="日韩女歌手"  href="https://www.kugou.com/yy/singer/index/1-all-6.html">日韩女歌手</a></li>
+			<li><a title="日韩组合"  href="https://www.kugou.com/yy/singer/index/1-all-7.html">日韩组合</a></li>
+		</ul>
+		<ul class="sng3">
+			<li> <a title="欧美男歌手"  href="https://www.kugou.com/yy/singer/index/1-all-8.html">欧美男歌手</a></li>
+			<li><a title="欧美女歌手"  href="https://www.kugou.com/yy/singer/index/1-all-9.html">欧美女歌手</a></li>
+			<li><a title="欧美组合"  href="https://www.kugou.com/yy/singer/index/1-all-10.html">欧美组合</a></li>
+			<li class="oth"><a title="其他歌手"  href="https://www.kugou.com/yy/singer/index/1-all-11.html" onclick="sdnClick(12082)">其他</a></li>
+		</ul>
+	</div>
+	<div class="r">
+	<!-- 开始右边第一行数据 -->
+		<div class="top clear_fix">
+			
+			<div class="num"> <a title="热门歌手" href="https://www.kugou.com/yy/singer/index/1-all-1.html" onclick="sdnClick(12083)" class='hover' id="h">热门</a>
+			</div>
+			
+				<div id="poplist" style="display:none;"></div>
+				
+				<div class="search" style="display:none;">
+					<form action="" onsubmit="Search();return false">
+						<input maxlength="35" autocomplete="off" id="ipt" value="搜索歌手" type="text">
+						<button type="submit" title="搜索" onclick="sdnClick(12084);">搜索</button>
+					</form>
+				</div>
+				
+		</div>
+		<!-- 结束右边第一行数据 -->	
+					<!-- 开始图片的排名 -->
+					<ul id="list_head" class="clear_fix">
+					<!-- 开始第二行的第一个歌手 -->
+					<li class=''>
+						<a title="TFBOYS" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/93723.html">
+														<img alt="TFBOYS" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20190712/20190712171544113.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>1<em>st</em></i>
+
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/93723.html' title="TFBOYS">TFBOYS</a></strong>
+					</li>
+					<!--结束第二行的第一个歌手 -->
+					
+					<!-- 开始第二行的第二个歌手 -->
+					<li class=''>
+						<a title="周杰伦" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/3520.html">
+														<img alt="周杰伦" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20180515/20180515002522714.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>2<em>nd</em></i>
+
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/3520.html' title="周杰伦">周杰伦</a></strong>
+					</li>
+					<!-- 结束第二行的第二个歌手 -->
+					<!-- ....... -->
+					<li class=''>
+						<a title="G.E.M.邓紫棋" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/4490.html">
+														<img alt="G.E.M.邓紫棋" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20190720/20190720220214641.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>3<em>rd</em></i>
+
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/4490.html' title="G.E.M.邓紫棋">G.E.M.邓紫棋</a></strong>
+					</li>
+					
+					<li class=''>
+						<a title="薛之谦" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/3060.html">
+														<img alt="薛之谦" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20190103/20190103191232626.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>4<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/3060.html' title="薛之谦">薛之谦</a></strong>
+					</li>
+					
+					<li class=''>
+						<a title="林俊杰" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/1574.html">
+														<img alt="林俊杰" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20161209/20161209164303152140.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>5<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/1574.html' title="林俊杰">林俊杰</a></strong>
+					</li>
+					
+					<li class=''>
+						<a title="刘德华" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/1573.html">
+														<img alt="刘德华" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20180507/20180507120242140.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>6<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/1573.html' title="刘德华">刘德华</a></strong>
+					</li>
+					
+					<li class=''>
+						<a title="张学友" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/3521.html">
+														<img alt="张学友" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20140527/20140527095042283066.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>7<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/3521.html' title="张学友">张学友</a></strong>
+					</li>
+					
+					<li class=''>
+						<a title="隔壁老樊" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/803022.html">
+														<img alt="隔壁老樊" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20190808/20190808152656115.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>8<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/803022.html' title="隔壁老樊">隔壁老樊</a></strong>
+					</li>
+					
+					<li class='last'>
+						<a title="李荣浩" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/93475.html">
+														<img alt="李荣浩" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20180709/20180709171823942.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>9<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/93475.html' title="李荣浩">李荣浩</a></strong>
+					</li>
+					
+					<li class=''>
+						<a title="许嵩" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/3047.html">
+														<img alt="许嵩" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20180906/20180906181115284.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>10<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/3047.html' title="许嵩">许嵩</a></strong>
+					</li>
+					
+					<li class=''>
+						<a title="张杰" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/3539.html">
+														<img alt="张杰" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20181010/20181010161310788.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>11<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/3539.html' title="张杰">张杰</a></strong>
+					</li>
+					
+					<li class=''>
+						<a title="华晨宇" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/90875.html">
+														<img alt="华晨宇" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20190703/20190703165811160.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>12<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/90875.html' title="华晨宇">华晨宇</a></strong>
+					</li>
+					
+					<li class=''>
+						<a title="周传雄" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/3534.html">
+														<img alt="周传雄" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20170614/20170614182725796.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>13<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/3534.html' title="周传雄">周传雄</a></strong>
+					</li>
+					
+					<li class=''>
+						<a title="王力宏" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/2724.html">
+														<img alt="王力宏" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20170602/20170602104911895.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>14<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/2724.html' title="王力宏">王力宏</a></strong>
+					</li>
+					
+																			<li class=''>
+						<a title="陈奕迅" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/420.html">
+														<img alt="陈奕迅" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20180622/20180622193316603.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>15<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/420.html' title="陈奕迅">陈奕迅</a></strong>
+					</li>
+					
+																			<li class=''>
+						<a title="易烊千玺" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/168003.html">
+														<img alt="易烊千玺" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20190802/20190802102630527.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>16<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/168003.html' title="易烊千玺">易烊千玺</a></strong>
+					</li>
+					
+																			<li class=''>
+						<a title="任贤齐" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/2404.html">
+														<img alt="任贤齐" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20161121/20161121143819177813.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>17<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/2404.html' title="任贤齐">任贤齐</a></strong>
+					</li>
+					
+																			<li class='last'>
+						<a title="李宗盛" class='pic' onclick='sdnClick(12070)' hidefocus='true' href="https://www.kugou.com/yy/singer/home/1576.html">
+														<img alt="李宗盛" src="picture/blank.gif" _src='http://singerimg.kugou.com/uploadpic/pass/softhead/100/20150128/20150128172400104783.jpg' _def="https://www.kugou.com/yy/static/images/default3.jpg" width='68' height='68' />
+																					<i>18<em>th</em></i>
+													</a>
+						<strong><a onclick='sdnClick(12070)' href='https://www.kugou.com/yy/singer/home/1576.html' title="李宗盛">李宗盛</a></strong>
+					</li>
+					<!-- 结束是图片的排名 -->
+					<!-- 开始不是图片的排名 -->																																																																																																																																																																																																																																																																																																								</ul>
+						<div id="list1">
+				<ul class='list1'>																																																																																																																																																																																																																																																																																																																																		<li class="odd">
+						<span class='ran'>19</span>
+						<a title="毛不易" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/722869.html' class='text'>毛不易</a>
+					</li>	
+																																
+					<li >
+						<span class='ran'>20</span>
+						<a title="刀郎" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/730.html' class='text'>刀郎</a>
+					</li>	
+					
+					<li class="odd">
+						<span class='ran'>21</span>
+						
+						<a title="黄家驹" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/1383.html' class='text'>黄家驹</a>
+					</li>	
+					
+					<li >
+						<span class='ran'>22</span>
+						<a title="BEYOND" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/7249.html' class='text'>BEYOND</a>
+					</li>	
+																											</ul><ul class='list1'>					<li class="odd">
+						<span class='ran'>23</span>
+						<a title="肖战" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/281886.html' class='text'>肖战</a>
+					</li>	
+																																<li >
+						<span class='ran'>24</span>
+						<a title="王俊凯" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/155515.html' class='text'>王俊凯</a>
+					</li>	
+																																<li class="odd">
+						<span class='ran'>25</span>
+						<a title="王源" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/157295.html' class='text'>王源</a>
+					</li>	
+																																<li >
+						<span class='ran'>26</span>
+						<a title="凤凰传奇" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/7633.html' class='text'>凤凰传奇</a>
+					</li>	
+																											</ul><ul class='list1'>					<li class="odd">
+						<span class='ran'>27</span>
+						<a title="庄心妍" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/86281.html' class='text'>庄心妍</a>
+					</li>	
+																																<li >
+						<span class='ran'>28</span>
+						<a title="郑源" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/3538.html' class='text'>郑源</a>
+					</li>	
+																																<li class="odd">
+						<span class='ran'>29</span>
+						<a title="王杰" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/2725.html' class='text'>王杰</a>
+					</li>	
+																																<li >
+						<span class='ran'>30</span>
+						<a title="李现" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/864124.html' class='text'>李现</a>
+					</li>	
+																											</ul><ul class='list1'>					<li class="odd">
+						<span class='ran'>31</span>
+						<a title="孙露" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/5838.html' class='text'>孙露</a>
+					</li>	
+																																<li >
+						<span class='ran'>32</span>
+						<a title="张信哲" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/3525.html' class='text'>张信哲</a>
+					</li>	
+																																<li class="odd">
+						<span class='ran'>33</span>
+						<a title="谭咏麟" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/2627.html' class='text'>谭咏麟</a>
+					</li>	
+																																<li >
+						<span class='ran'>34</span>
+						<a title="张国荣" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/3523.html' class='text'>张国荣</a>
+					</li>	
+																											</ul><ul class='list1'>					<li class="odd">
+						<span class='ran'>35</span>
+						<a title="小洲" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/90644.html' class='text'>小洲</a>
+					</li>	
+																																<li >
+						<span class='ran'>36</span>
+						<a title="张靓颖" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/6808.html' class='text'>张靓颖</a>
+					</li>	
+																																<li class="odd">
+						<span class='ran'>37</span>
+						<a title="陈雪凝" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/582744.html' class='text'>陈雪凝</a>
+					</li>	
+																																<li >
+						<span class='ran'>38</span>
+						<a title="汪苏泷" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/1485.html' class='text'>汪苏泷</a>
+					</li>	
+																											</ul><ul class='list1'>					<li class="odd">
+						<span class='ran'>39</span>
+						<a title="邓丽君" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/4484.html' class='text'>邓丽君</a>
+					</li>	
+																																<li >
+						<span class='ran'>40</span>
+						<a title="王菲" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/6076.html' class='text'>王菲</a>
+					</li>	
+																																<li class="odd">
+						<span class='ran'>41</span>
+						<a title="张艺兴" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/91839.html' class='text'>张艺兴</a>
+					</li>	
+																																<li >
+						<span class='ran'>42</span>
+						<a title="张宇" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/3537.html' class='text'>张宇</a>
+					</li>	
+																											</ul><ul class='list1'>					<li class="odd">
+						<span class='ran'>43</span>
+						<a title="许巍" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/3043.html' class='text'>许巍</a>
+					</li>	
+																																<li >
+						<span class='ran'>44</span>
+						<a title="Alan Walker" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/178240.html' class='text'>Alan Walker</a>
+					</li>	
+																																<li class="odd">
+						<span class='ran'>45</span>
+						<a title="冷漠" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/1900.html' class='text'>冷漠</a>
+					</li>	
+																																<li >
+						<span class='ran'>46</span>
+						<a title="汪峰" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/2726.html' class='text'>汪峰</a>
+					</li>	
+																											</ul><ul class='list1'>					<li class="odd">
+						<span class='ran'>47</span>
+						<a title="伍佰&amp;China Blue" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/90912.html' class='text'>伍佰&amp;China Blue</a>
+					</li>	
+																																<li >
+						<span class='ran'>48</span>
+						<a title="张碧晨" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/169966.html' class='text'>张碧晨</a>
+					</li>	
+																																<li class="odd">
+						<span class='ran'>49</span>
+						<a title="周华健" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/3524.html' class='text'>周华健</a>
+					</li>	
+																																<li >
+						<span class='ran'>50</span>
+						<a title="鹿晗" onclick='sdnClick(12071)' href='https://www.kugou.com/yy/singer/home/173452.html' class='text'>鹿晗</a>
+					</li>	
+																				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="nvg" id="nvg"><span id="mypage"><a style='visibility:hidden' id="page_first"  href = "https://www.kugou.com/yy/singer/index/1.html" title="首页" class="direct btnPage">首页</a><span style='visibility:hidden' class="PrePageSpan"><a id="page_pr_e" href = "#" title="上一页"  class="direct btnPage back">上一页</a></span><span id="page_1" class="current">1</span><a  id="page_2" href = "https://www.kugou.com/yy/singer/index/2-all-1.html" >2</a><a  id="page_3" href = "https://www.kugou.com/yy/singer/index/3-all-1.html" >3</a><a  id="page_4" href = "https://www.kugou.com/yy/singer/index/4-all-1.html" >4</a><a  id="page_5" href = "https://www.kugou.com/yy/singer/index/5-all-1.html" >5</a><span class="NextPageSpan"><a id="page_next_2" href = "https://www.kugou.com/yy/singer/index/2-all-1.html" title="下一页"  class="direct btnPage"  >下一页</a></span><a  id="page_last_5" href = "https://www.kugou.com/yy/singer/index/5-all-1.html" title="尾页" class="direct btnPage">尾页</a></span></div>
+		</div>
+	</div>
+	<!--脚步-->
+	<link rel="stylesheet" data-embed href="css/footer.css">
+<div class="footerWrapper">
+			<div class="footer">
+				<div class="links">
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">关于iMusic</a>|
+					<a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">广告服务</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">版权指引</a>|
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">用户服务协议</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">推广合作</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐人</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐推</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">客服中心</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">用户体验提升计划</a>
+				</div>
+				<div class="copyright">
+					<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@iMusic.com</p>
+					<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">粤ICP备09017694号-2</a><span class="footerIcon"><a
+							 target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+					<p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+					<p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018
+						<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img
+							 style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
+					</p>
+					<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">不良信息举报邮箱：jubao_music@kugou.net&nbsp;&nbsp;&nbsp;&nbsp;客服邮箱：kefu@iMusoic.net</p>
+					<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2019 KuGou-Inc.All Rights Reserved
+						<a hidefocus="true" class="office-verification" href="javascript:void(0);" target="_blank"></a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="scrollTop icon-scrollTop">
+			<a href="#"></a>
+		</div>
+		</div>
+
+
+		<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+		<script src="js/kguser_min_3.js"></script>
+		<title>iMusic音乐 - 就是歌多</title>
+		<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+		<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="css/search_1.css">
+<!--百度统计-->
+<script>
+    (function () {
+        var kg_bottom = {
+            reportDialog:null,
+            getjs: function (url, callback) {
+                var s = document.createElement("script");
+                s.type = "text/javascript";
+                s.src = url;
+                document.getElementsByTagName("head")[0].appendChild(s);
+                if (typeof callback != "function") {
+                    return;
+                }
+                if (s.readyState) {
+                    if (/loaded|complete/.test(s.readyState)) {
+                        callback();
+                    } else {
+                        s.onreadystatechange = function () {
+                            if (/loaded|complete/.test(s.readyState)) {
+                                this.onreadystatechange = null;
+                                callback();
+                            }
+                        }
+                    }
+                } else {
+                    s.onload = function () {
+                        callback();
+                    }
+                }
+            },
+            jubao: function () {
+                 var _this = this;
+                if(_this.reportDialog){
+                    return;
+                }
+                _this.reportDialog = dialog({
+                    title: '提示',
+                    skin: 'report-dialog',
+                    width: 435,
+                    height: 105,
+                    fixed: true,
+                    content: [
+                        " <div class=\"report-content\" style=\"padding:10px;\">",
+                        "<div class=\"report-tips\" style=\"lin-height:22px;padding-bottom:30px;\"><p >为了倡导诚信、正直、敬业、积极的企业文化，防治舞弊，欢迎您</p><p>对我司存在的舞弊行为通过邮箱进行举报。</p></div>",
+                        " <div class=\"report-mail\">举报邮箱：<span style=\"color:#3399ff\">jubao@kugou.com</span></div>",
+                        "</div>"
+                    ].join(""),
+                    onclose:function(){
+                         _this.reportDialog = null;
+                    }
+                }).show();
+            },
+            bottom_init: function () {
+                var _this = this;
+                $("#report").click(function (e) {
+                    e.preventDefault();
+                    if (typeof dialog == "undefined" || dialog == null) {
+                        kg_bottom.getjs("https://www.kugou.com/common/js/dialog.min.js", function () {
+                            _this.jubao()
+                        })
+                    } else {
+                        _this.jubao();
+                    }
+                });
+            }
+        }
+        kg_bottom.bottom_init()
+    })(this)
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?aedee6983d4cfc62f509129360d6bb3d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    (function () {
+        setTimeout(function () {
+            var d = document.createElement("script");
+            d.src = "https://staticssl.kugou.com/common/js/min/hijacked-min.js";
+            document.body.appendChild(d);
+        }, 2000);
+    })();
+</script>
+	<script type="text/javascript">
+		var kg_domain = "https://www.kugou.com/yy/";
+		var searchPage = 1;
+		var page = 1;
+		var keywords = '';
+		var issearch = 0;
+		var head1 = '';
+		var highLightIndex = -1;  
+		var lastSearch = "";
+	</script>
+	<script type="text/javascript" src="js/singerlist.min.js"></script>
+</body>
+</html>

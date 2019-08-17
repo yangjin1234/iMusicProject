@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.CommentMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Comment">
+    <id column="comment_id" jdbcType="VARCHAR" property="commentId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="comment_id2" jdbcType="VARCHAR" property="commentId2" />
+    <result column="comment_date" jdbcType="TIMESTAMP" property="commentDate" />
+    <result column="comment_type" jdbcType="INTEGER" property="commentType" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.teach.entity.CommentWithBLOBs">
+    <result column="comment_content" jdbcType="LONGVARCHAR" property="commentContent" />
+    <result column="comment_main_id" jdbcType="LONGVARCHAR" property="commentMainId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    comment_id, user_id, comment_id2, comment_date, comment_type
+  </sql>
+  <sql id="Blob_Column_List">
+    comment_content, comment_main_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from comment
+    where comment_id = #{commentId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from comment
+    where comment_id = #{commentId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.CommentWithBLOBs">
+    insert into comment (comment_id, user_id, comment_id2, 
+      comment_date, comment_type, comment_content, 
+      comment_main_id)
+    values (#{commentId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{commentId2,jdbcType=VARCHAR}, 
+      #{commentDate,jdbcType=TIMESTAMP}, #{commentType,jdbcType=INTEGER}, #{commentContent,jdbcType=LONGVARCHAR}, 
+      #{commentMainId,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.CommentWithBLOBs">
+    insert into comment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="commentId != null">
+        comment_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="commentId2 != null">
+        comment_id2,
+      </if>
+      <if test="commentDate != null">
+        comment_date,
+      </if>
+      <if test="commentType != null">
+        comment_type,
+      </if>
+      <if test="commentContent != null">
+        comment_content,
+      </if>
+      <if test="commentMainId != null">
+        comment_main_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="commentId != null">
+        #{commentId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="commentId2 != null">
+        #{commentId2,jdbcType=VARCHAR},
+      </if>
+      <if test="commentDate != null">
+        #{commentDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="commentType != null">
+        #{commentType,jdbcType=INTEGER},
+      </if>
+      <if test="commentContent != null">
+        #{commentContent,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="commentMainId != null">
+        #{commentMainId,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.CommentWithBLOBs">
+    update comment
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="commentId2 != null">
+        comment_id2 = #{commentId2,jdbcType=VARCHAR},
+      </if>
+      <if test="commentDate != null">
+        comment_date = #{commentDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="commentType != null">
+        comment_type = #{commentType,jdbcType=INTEGER},
+      </if>
+      <if test="commentContent != null">
+        comment_content = #{commentContent,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="commentMainId != null">
+        comment_main_id = #{commentMainId,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where comment_id = #{commentId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.CommentWithBLOBs">
+    update comment
+    set user_id = #{userId,jdbcType=VARCHAR},
+      comment_id2 = #{commentId2,jdbcType=VARCHAR},
+      comment_date = #{commentDate,jdbcType=TIMESTAMP},
+      comment_type = #{commentType,jdbcType=INTEGER},
+      comment_content = #{commentContent,jdbcType=LONGVARCHAR},
+      comment_main_id = #{commentMainId,jdbcType=LONGVARCHAR}
+    where comment_id = #{commentId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Comment">
+    update comment
+    set user_id = #{userId,jdbcType=VARCHAR},
+      comment_id2 = #{commentId2,jdbcType=VARCHAR},
+      comment_date = #{commentDate,jdbcType=TIMESTAMP},
+      comment_type = #{commentType,jdbcType=INTEGER}
+    where comment_id = #{commentId,jdbcType=VARCHAR}
+  </update>
+</mapper>

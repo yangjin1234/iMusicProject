@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="head :: head(title=${'图片列表 - ' +a.albumName})">
+	</head>
+
+	<body>
+		<div class="container">
+			<h1 class="_albumName" th:text="${a.albumName}"></h1>
+			<div>
+				创建时间：<span class="_albumCreateTime" th:text="${#dates.format(a.albumCreateTime,'yyyy-MM-dd HH:mm')}"></span> 最后上传时间：
+				<span class="_albumLastModifyTime" th:text="${#dates.format(a.albumLastModifyTime,'yyyy-MM-dd HH:mm')}"></span>
+
+			</div>
+			<pre class="_albumMemo" th:text="${a.albumMemo}"></pre>
+			<pre class="_albumMemo" th:utext="${a.albumMemo}"></pre>
+
+			<div class="photo-list">
+				<div class="thumbnail" th:each="obj : ${p.list}">
+					<!-- <img style="max-height: 200px; width: 100%; display: block;" src="photo/down.do?type=1&path=2019/08/02/606935718144507904">-->
+					<img style="max-height: 200px; width: 100%; display: block;" th:src="@{photo/down.do(type=1,path=${obj.photoPath})}">
+					<div class="caption">
+						<h3 class="_photoName" th:text="${obj.photoName}"></h3>
+						<p class="_photoUploadTime" th:text="${#dates.format(obj.photoUploadTime,'yyyy-MM-dd HH:mm')}"></p>
+						<p>
+							<a th:href="@{photo/down.do(type=2,path=${obj.photoPath})}" target="_blank" class="btn btn-primary" role="button">预览</a>
+							<a th:href="@{photo/down.do(type=0,path=${obj.photoPath})}" target="_blank" class="btn btn-default" role="button">下载</a>
+						</p>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</body>
+
+</html>

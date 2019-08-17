@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta charset="UTF-8">
+		<script type="text/javascript" charset="UTF-8" src="js/jquery.min.js"></script>
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/jstorage_1.js"></script> -->
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/textchange.min_1.js"></script> -->
+
+		<script type="text/javascript" charset="UTF-8">
+			var apmCollectData = apmCollectData || [];
+		</script>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<!--<link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+		<link rel="stylesheet" href="css/myMessage.css" />
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script type="text/javascript" src="js/myMessage.js"></script>
+		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1 class="logo">
+				<a href="https://www.kugou.com/">
+					<img src="picture/logo_3.png" alt="">
+				</a>
+			</h1>
+			<div class="search_wrapper top_search">
+				<div class="search_input"><input type="text">
+					<div class="searh_btn"><i class="search_icon"></i><span>搜索</span></div>
+				</div>
+				<div class="search_recommend top_search_recommend">
+		
+				</div>
+				<div class="search_histroy top_search_histroy">
+		
+				</div>
+			</div>
+			<div class="topNav fr">
+				<ul>
+					<li>
+						<a target="_blank" href="index.html">客服中心</a>
+					</li>
+		
+					<li>
+						<a target="_blank" href="vip.html">会员中心 </a>
+					</li>
+				</ul>
+				<div class="login_area">
+					<div id="login_in" class="clearfix" style="display: none;">
+						<a class="login_btn" id="login_btn">登录</a>
+						<a target="_blank" href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a>
+					</div>
+					<div id="login_out" class="clearfix" style="display: block;">
+						<img class="user_img" src="images/photo.jpg">
+						<span class="user_name">冯小仙女啊</span>
+					</div>
+					<div id="user_menu" class="user_menu">
+						<div class="topArrow1"></div>
+						<div class="topArrow2"></div>
+						<ul>
+							<li>
+								<a target="_blank" href="person.html"><i class="fa fa-user" aria-hidden="true"></i>我的主页</a>
+							</li>
+							<li>
+								<a href=""><i class="fa fa-commenting fa-icon2" aria-hidden="true"></i>我的消息</a>
+							</li>
+							<li>
+								<a href="vip.html"><i class="fa fa-vimeo-square" aria-hidden="true"></i>VIP会员</a>
+							</li>
+							<li>
+								<a href="person_Account.html"><span class="user_icon1"></span>个人设置</a>
+							</li>
+							<li>
+								<a href="login.html"><span class="user_icon2"></span>退出</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navWrap">
+			<div class="nav">
+				<ul class="homeNav">
+					<li>
+						<a class="normal" href="index.html">首 页</a>
+					</li>
+					<li>
+						<a class="normal" href="EveryDay.html">榜 单</a>
+					</li>
+					<li>
+						<a class="normal" id="productCenter" href="MyAlbum.html">专 辑</a>
+					</li>
+					<li class="more" id="more">
+						<a href="" class="iconMore" id="showMore">更 多</a>
+					</li>
+				</ul>
+				<ul class="secondMenu" id="secondMenu">
+					<li>
+						<a href="broadcast.html">电台</a>
+					</li>
+					<li>
+						<a href="mv.html">MV</a>
+					</li>
+					<li>
+						<a href="SongsList.html">歌单</a>
+					</li>
+					<li>
+						<a href="singer.html">歌手</a>
+					</li>
+				</ul>
+				<ul class="subNav">
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav1">音乐直播</a>
+					</li>
+					<li>
+						<a target="_blank" href="friend.html" class="icon icon-nav2">iMusic动态</a>
+					</li>
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav3">音乐人</a>
+					</li>
+					<!--<li>
+		    <a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a>
+		</li>-->
+					<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
+					</li>
+		
+		
+				</ul>
+			</div>
+		</div>
+		
+
+		<!-- ######################################################以上为头部##################################################################### -->
+
+		<!--我的消息-->
+		<div class="mes-main">
+			<div class="mes-center">
+				<div class="mes-choice">
+					<div class="mes-title-div">
+						<h2 class="mes-title">我的消息</h2>
+					</div>
+					<ul id="tab-box" class="mes-title-ul">
+						<li class="j-iflag z-slt" data-umi="/at" data-type="forward" style="background-color: white;">
+							<a id="mes-at-li"><i class="u-icn u-icn-44"></i><span>我的</span><i class="u-bub" style="display: none;"></i></a>
+						</li>
+						<li class="j-iflag" data-umi="/private" data-type="msg" id="auto-id-tvS9UQEFlAoIXrab">
+							<a id="mes-private-li"><i class="u-icn u-icn-45"></i><span>私信</span><i class="u-bub" style="display: none;"></i></a>
+						</li>
+						<li class="j-iflag" data-umi="/comment" data-type="comment">
+							<a id="mes-comment-li"><i class="u-icn u-icn-46"></i><span>评论</span><i class="u-bub" style="display: none;"></i></a>
+						</li>
+						<li class="j-iflag" data-umi="/notify" data-type="notice">
+							<a id="mes-inf-li"><i class="u-icn u-icn-47"></i><span>通知</span><i class="u-bub" style="display: none;"></i></a>
+						</li>
+						<pseudo:after></pseudo:after>
+					</ul>
+				</div>
+				<!--@我的-->
+				<div class="g-mn6">
+					<div id="main-box" class="g-mn6c">
+						<div class="g-wrap" id="my-main-div" style="display: block;">
+							<h3 class="v-hd3"><span class="f-fl tit">@我的</span></h3>
+							<div class="n-msgnt n-msgnt-1 j-flag">
+								<div class="item f-cb" id="">
+									<i class="icon u-icn u-icn-43 j-flag" style="display: none;"></i>
+									<div class="ava f-pr">
+										<a href="/user/home?id=1916857724"><img src="http://p1.music.126.net/RLeBJe4D1ZzUtltxfoKDMg==/109951163250239066.jpg?param=50y50&amp;quality=100" class="j-flag"></a>
+									</div>
+									<div class="cont m-dlist m-dlist-msg j-flag">
+										<div id="auto-id-vwGeX0iTFQ8Iw940">
+											<div class="type f-pr f-fs1">
+												<a href="/user/home?id=1916857724" class="s-fc7">不错呀2</a><span class="sep s-fc3">分享单曲</span>
+												<!-- <span class="gz u-dbtn f-pa"><i class="u-dicn u-dicn-11"></i>关注</span><span class="gz u-dbtn u-dbtn-ygz f-pa" style="right:100px;"><i class="u-dicn u-dicn-24"></i>已关注</span><span class="gz u-dbtn u-dbtn-qx f-pa" style="right:200px;">取消关注</span> --></div>
+											<div class="time">
+												<a class="s-fc4" data-action="logdetail" href="/event?id=7536494697&amp;uid=1916857724">7月30日 11:13</a>
+												<!-- <span class="s-fc4">7月30日 11:13</span> --></div>
+											<div class="text f-fs1  f-brk j-text">
+												<a href="/user/home?nickname=%E5%86%AF%E5%B0%8F%E4%BB%99%E5%A5%B3%E5%91%80" class="s-fc7">@冯小仙女呀</a>
+											</div>
+											<div class="j-flag">
+												<div id="auto-id-GalCHe4i1lSpKqH4">
+													<div class="src f-cb">
+														<div class="cover cover-ply"><span class="lnk"><img src="http://p2.music.126.net/4xF8d6QNMy-TKYMy2AUwCQ==/109951163803974764.jpg?param=40y40&amp;quality=100"></span>
+															<a href="javascript:" data-log="event" data-event-id="7536494697" class="ply u-dicn u-dicn-8 f-alpha" data-res-action="play" data-res-type="18" data-res-id="1336856449"></a>
+															<pseudo:after></pseudo:after>
+														</div>
+														<div class="scnt">
+															<h3 class="tit f-thide f-fs1"><a href="/song?id=1336856449" class="s-fc1" data-log="event" data-event-id="7536494697">告白</a></h3>
+															<h4 class="from f-thide s-fc3"><a href="/artist?id=12002248" title="沈以诚" class="s-fc3" data-log="event" data-event-id="7536494697">沈以诚</a></h4></div>
+														<pseudo:after></pseudo:after>
+													</div>
+												</div>
+											</div>
+											<div class="doper j-flag">
+												<a class="s-fc7" href="/event?id=7536494697&amp;uid=1916857724">查看动态</a><span class="line">|</span>
+												<a href="javascript:" class="s-fc7" data-action="like"><i class="icn u-dicn u-dicn-3"></i><span class="j-flag f-hide" data-count="0">(0)</span></a><span class="line">|</span>
+												<a href="javascript:" class="s-fc7" data-action="forward">转发 <span class="j-flag f-hide" data-count="0">(0)</span></a><span class="line">|</span>
+												<a href="javascript:" class="s-fc7" data-action="comment">评论 <span class="j-flag " data-count="2">(2)</span></a>
+											</div>
+											<div class="arrow u-dicn u-dicn-2 j-flag" style="display:none;" data-action="unfold" title="动态管理"></div>
+											<div class="dsup j-flag f-hide" style="display: none;">赞：<span class="j-flag"></span></div>
+											<div class="j-flag f-hide"></div>
+										</div>
+									</div>
+									<pseudo:after></pseudo:after>
+								</div>
+							</div>
+							<div class="u-page j-flag auto-1565864519128-parent" style="display: none;">
+								<div class="auto-1565864519128 u-page">
+									<a href="#" class="zbtn zprv js-p-1565864519126 js-disabled" id="auto-id-8vxiSTxwuVLru03u">上一页</a>
+									<a href="#" class="zpgi zpg1 js-i-1565864519126 js-selected" id="auto-id-2NHWThvc70gx9yx1">1</a>
+									<a href="#" class="zpgi zpg2 js-i-1565864519126" id="auto-id-ZBOxAPhlsX20D8rp" style="display: none;"></a>
+									<a href="#" class="zpgi zpg3 js-i-1565864519126" id="auto-id-SoIPHwwbTTSALo56" style="display: none;"></a>
+									<a href="#" class="zpgi zpg4 js-i-1565864519126" id="auto-id-43xNW0MbucXq3z0Z" style="display: none;"></a>
+									<a href="#" class="zpgi zpg5 js-i-1565864519126" id="auto-id-GbdHo2AAIBnGH5tg" style="display: none;"></a>
+									<a href="#" class="zpgi zpg6 js-i-1565864519126" id="auto-id-Wpou2MP6zwgp44AX" style="display: none;"></a>
+									<a href="#" class="zpgi zpg7 js-i-1565864519126" id="auto-id-lUbu0K8HVwTFdGyv" style="display: none;"></a>
+									<a href="#" class="zpgi zpg8 js-i-1565864519126" id="auto-id-MCRDFV9EL3lBiqbW" style="display: none;"></a>
+									<a href="#" class="zpgi zpg9 js-i-1565864519126" id="auto-id-vSUudca5F73GuE3T" style="display: none;"></a>
+									<a href="#" class="zbtn znxt js-n-1565864519126 js-disabled" id="auto-id-HUms9HA4yyulSiWe">下一页</a>
+								</div>
+							</div>
+						</div>
+						<!--私信-->
+						<div class="g-wrap" id="mes-main-div" style="display: none;">
+							<h3 class="v-hd3"><span class="f-fl tit">私信</span><a href="#" class="mail u-btn u-btn-2 j-flag" id="auto-id-myZ0828AZwdzB7Zz">发新私信</a></h3>
+							<div class="n-msgnt n-msgnt-1 n-msgnt-hvr j-flag" id="auto-id-pMf2MskwOePPHC3B">
+								<div class="item f-cb" id="mes-mes-div1" data-id="1431801343" data-noticeaccountflag="false" data-nickname="云村大喇叭" data-count="0">
+									<div class="ava f-pr">
+										<a href="/user/home?id=1431801343" title="云村大喇叭"><img src="https://p2.music.126.net/5gxmoh5YtJC8n59QNRdMYA==/109951164023729614.jpg?param=50y50"></a>
+									</div>
+									<div class="cont">
+										<div class="sec1">
+											<div class="time s-fc4">7月5日 14:04&nbsp;<i class="u-icn u-icn-57"></i></div>
+											<div class="mn">
+												<a class="s-fc0 f-fs1 f-fw1" href="/user/home?id=1431801343" title="云村大喇叭">云村大喇叭</a>&nbsp;<sup class="u-icn u-icn-1 "></sup></div>
+										</div>
+										<div class="sec2 sec2-1 f-thide s-fc4">
+											<div class="oper" id="mes-mes-div1-del"><span class="dlt"><a href="#" class="s-fc7" data-action="del" data-id="363891756-1431801343">删除</a></span></div>
+											<p class="f-thide">还不知道云村怎么玩？新手村民七步速成Mlogger攻略来袭！</p>
+										</div>
+										<pseudo:after></pseudo:after>
+									</div>
+								</div>
+							</div>
+							<div class="u-page j-flag auto-1565870416622-parent" style="display: none;">
+								<div class="auto-1565870416622 u-page">
+									<a href="#" class="zbtn zprv js-p-1565870416620 js-disabled" id="auto-id-cbJqo5BtzVk6c5k0">上一页</a>
+									<a href="#" class="zpgi zpg1 js-i-1565870416620 js-selected" id="auto-id-3yzozTJd0tKrzarX">1</a>
+									<a href="#" class="zpgi zpg2 js-i-1565870416620" id="auto-id-89qGCuUuI2BGpci7" style="display: none;"></a>
+									<a href="#" class="zpgi zpg3 js-i-1565870416620" id="auto-id-3m7i6HkGC4oeTizA" style="display: none;"></a>
+									<a href="#" class="zpgi zpg4 js-i-1565870416620" id="auto-id-olMoHIfhu3FT3Los" style="display: none;"></a>
+									<a href="#" class="zpgi zpg5 js-i-1565870416620" id="auto-id-1BaRxcRrPwIaa5vt" style="display: none;"></a>
+									<a href="#" class="zpgi zpg6 js-i-1565870416620" id="auto-id-PWy6QPumcbFKOHMy" style="display: none;"></a>
+									<a href="#" class="zpgi zpg7 js-i-1565870416620" id="auto-id-IfalZa18Wcxat8s5" style="display: none;"></a>
+									<a href="#" class="zpgi zpg8 js-i-1565870416620" id="auto-id-ZJiPUq4v8rUf6PWO" style="display: none;"></a>
+									<a href="#" class="zpgi zpg9 js-i-1565870416620" id="auto-id-Mew4Lh9FbVUzUhDz" style="display: none;"></a>
+									<a href="#" class="zbtn znxt js-n-1565870416620 js-disabled" id="auto-id-eML3VtzqRkAur5uN">下一页</a>
+								</div>
+							</div>
+						</div>
+						<!--评论-->
+						<div class="g-wrap" id="com-main-div" style="display: none;">
+							<h3 class="v-hd3"><span class="tit">评论</span></h3>
+							<div class="n-msgnt n-msgnt-1 n-msgnt-2 j-flag" id="auto-id-LfrsJ6iKurIXBSxH">
+								<div class="item f-cb" id="mes-com-div1">
+									<a href="/user/home?id=1916857724" class="ava"><img src="https://p1.music.126.net/RLeBJe4D1ZzUtltxfoKDMg==/109951163250239066.jpg?param=50y50"></a>
+									<div class="cont cont-1">
+										<div class="sec1">
+											<div class="time s-fc3">7月30日 11:11&nbsp;<i class="u-icn u-icn-57"></i></div>
+											<div class="mn">
+												<a href="/user/home?id=1916857724" class="s-fc7 f-fw1">不错呀2</a>
+											</div>
+										</div>
+										<div class="sec3 f-brk">hhahha</div>
+										<div class="sec2">
+											<div class="oper"><span class="dlt"><a data-id="4916373622:1575288210:A_EV_2_7536453846_363891756" data-type="delete" href="javascript:void(0)" class="s-fc7">删除</a><span class="sep s-fc4">|</span></span>
+												<a data-id="4916373622:1575288210:A_EV_2_7536453846_363891756" data-type="reply" href="javascript:void(0)" class="s-fc7">回复</a>
+											</div>
+											<p class="s-fc4">我分享单曲：
+												<a class="s-fc4 f-brk" href="/event?id=7536453846&amp;uid=363891756">「Insomnia」</a>
+											</p>
+										</div>
+										<div class="corr u-arr u-arr-3"><em class="arrline">◆</em></div>
+										<div id="insert_hook_4916373622:1575288210:A_EV_2_7536453846_363891756" class="sec4 f-hide"></div>
+									</div>
+									<pseudo:after></pseudo:after>
+								</div>
+							</div>
+							<div class="u-page j-flag"></div>
+						</div>
+						<!--通知-->
+						<div class="g-wrap" id="inf-main-div" style="display: none;">
+							<h3 class="v-hd3"><span class="tit">通知</span></h3>
+							<div class="n-msgnt n-msgnt-hvr j-flag" id="auto-id-3wfJheeB2iCb16QD">
+								<div class="item f-cb" id="mes-inf-div1" data-url="/event?toast=true&amp;id=7536453846&amp;uid=363891756">
+									<a href="/user/home?id=1916857724" class="ava"><img src="https://p1.music.126.net/RLeBJe4D1ZzUtltxfoKDMg==/109951163250239066.jpg?param=40y40"></a>
+									<div class="cont">
+										<div class="sec1">
+											<div class="time s-fc4">7月30日 11:07&nbsp;<i class="u-icn u-icn-57"></i></div>
+											<div class="mn">
+												<a href="/user/home?id=1916857724" class="s-fc0 f-fw1">不错呀2</a><span class="sep s-fc4">赞了你的动态</span></div>
+										</div>
+										<div class="sec2">
+											<p class="s-fc3 f-brk">我分享了歌曲「Insomnia」by Craig David</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="u-page j-flag"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--个人展示页面-->
+		<!-- ######################################################以下为尾部 ##################################################################### -->
+	<div class="footerWrapper">
+				<div class="footer">
+					<div class="links">
+						<a hidefocus="true" href="javascript:void(0);" target="_blank">关于iMusic</a>|
+						<a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> |
+						<a hidefocus="true" href="javascript:void(0);" target="_blank">广告服务</a> |
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">版权指引</a>|
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">用户服务协议</a> |
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">推广合作</a> |
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐人</a> |
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐推</a> |
+						<a hidefocus="true" href="javascript:void(0);" target="_blank">客服中心</a> |
+						<a hidefocus="true" href="javascript:void(0);" target="_blank">用户体验提升计划</a>
+					</div>
+					<div class="copyright">
+						<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@iMusic.com</p>
+						<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;
+							<a hidefocus="true" target="_blank" href="javascript:void(0);">粤ICP备09017694号-2</a><span class="footerIcon"><a
+								 target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+						<p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+						<p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018
+							<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img
+								 style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
+						</p>
+						<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">不良信息举报邮箱：jubao_music@kugou.net&nbsp;&nbsp;&nbsp;&nbsp;客服邮箱：kefu@iMusoic.net</p>
+						<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2019 KuGou-Inc.All Rights Reserved
+							<a hidefocus="true" class="office-verification" href="javascript:void(0);" target="_blank"></a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="scrollTop icon-scrollTop">
+				<a href="#"></a>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+		<script src="js/kguser_min_3.js"></script>
+		<title>iMusic音乐 - 就是歌多</title>
+		<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+		<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="css/search_1.css">
+	</body>
+
+</html>

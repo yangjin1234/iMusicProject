@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.EmotionMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Emotion">
+    <id column="emotion_id" jdbcType="INTEGER" property="emotionId" />
+    <result column="emotion_type" jdbcType="VARCHAR" property="emotionType" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    emotion_id, emotion_type
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from emotion
+    where emotion_id = #{emotionId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from emotion
+    where emotion_id = #{emotionId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Emotion">
+    insert into emotion (emotion_id, emotion_type)
+    values (#{emotionId,jdbcType=INTEGER}, #{emotionType,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Emotion">
+    insert into emotion
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="emotionId != null">
+        emotion_id,
+      </if>
+      <if test="emotionType != null">
+        emotion_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="emotionId != null">
+        #{emotionId,jdbcType=INTEGER},
+      </if>
+      <if test="emotionType != null">
+        #{emotionType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Emotion">
+    update emotion
+    <set>
+      <if test="emotionType != null">
+        emotion_type = #{emotionType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where emotion_id = #{emotionId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Emotion">
+    update emotion
+    set emotion_type = #{emotionType,jdbcType=VARCHAR}
+    where emotion_id = #{emotionId,jdbcType=INTEGER}
+  </update>
+</mapper>

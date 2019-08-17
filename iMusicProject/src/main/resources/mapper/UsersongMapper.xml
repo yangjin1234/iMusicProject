@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.UsersongMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Usersong">
+    <id column="usersong_id" jdbcType="VARCHAR" property="usersongId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="usersong_name" jdbcType="VARCHAR" property="usersongName" />
+    <result column="usersong_message" jdbcType="VARCHAR" property="usersongMessage" />
+    <result column="usersong_picture" jdbcType="VARCHAR" property="usersongPicture" />
+    <result column="usersong_date" jdbcType="TIMESTAMP" property="usersongDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    usersong_id, user_id, usersong_name, usersong_message, usersong_picture, usersong_date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from usersong
+    where usersong_id = #{usersongId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from usersong
+    where usersong_id = #{usersongId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Usersong">
+    insert into usersong (usersong_id, user_id, usersong_name, 
+      usersong_message, usersong_picture, usersong_date
+      )
+    values (#{usersongId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{usersongName,jdbcType=VARCHAR}, 
+      #{usersongMessage,jdbcType=VARCHAR}, #{usersongPicture,jdbcType=VARCHAR}, #{usersongDate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Usersong">
+    insert into usersong
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="usersongId != null">
+        usersong_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="usersongName != null">
+        usersong_name,
+      </if>
+      <if test="usersongMessage != null">
+        usersong_message,
+      </if>
+      <if test="usersongPicture != null">
+        usersong_picture,
+      </if>
+      <if test="usersongDate != null">
+        usersong_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="usersongId != null">
+        #{usersongId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="usersongName != null">
+        #{usersongName,jdbcType=VARCHAR},
+      </if>
+      <if test="usersongMessage != null">
+        #{usersongMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="usersongPicture != null">
+        #{usersongPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="usersongDate != null">
+        #{usersongDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Usersong">
+    update usersong
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="usersongName != null">
+        usersong_name = #{usersongName,jdbcType=VARCHAR},
+      </if>
+      <if test="usersongMessage != null">
+        usersong_message = #{usersongMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="usersongPicture != null">
+        usersong_picture = #{usersongPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="usersongDate != null">
+        usersong_date = #{usersongDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where usersong_id = #{usersongId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Usersong">
+    update usersong
+    set user_id = #{userId,jdbcType=VARCHAR},
+      usersong_name = #{usersongName,jdbcType=VARCHAR},
+      usersong_message = #{usersongMessage,jdbcType=VARCHAR},
+      usersong_picture = #{usersongPicture,jdbcType=VARCHAR},
+      usersong_date = #{usersongDate,jdbcType=TIMESTAMP}
+    where usersong_id = #{usersongId,jdbcType=VARCHAR}
+  </update>
+</mapper>

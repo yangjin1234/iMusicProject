@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.SystemnoticeMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Systemnotice">
+    <id column="systemnotice_id" jdbcType="VARCHAR" property="systemnoticeId" />
+    <result column="systemnotice_name" jdbcType="VARCHAR" property="systemnoticeName" />
+    <result column="systemnotice_date" jdbcType="TIMESTAMP" property="systemnoticeDate" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.teach.entity.Systemnotice">
+    <result column="systemnotice_content" jdbcType="LONGVARCHAR" property="systemnoticeContent" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    systemnotice_id, systemnotice_name, systemnotice_date
+  </sql>
+  <sql id="Blob_Column_List">
+    systemnotice_content
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from systemnotice
+    where systemnotice_id = #{systemnoticeId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from systemnotice
+    where systemnotice_id = #{systemnoticeId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Systemnotice">
+    insert into systemnotice (systemnotice_id, systemnotice_name, 
+      systemnotice_date, systemnotice_content
+      )
+    values (#{systemnoticeId,jdbcType=VARCHAR}, #{systemnoticeName,jdbcType=VARCHAR}, 
+      #{systemnoticeDate,jdbcType=TIMESTAMP}, #{systemnoticeContent,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Systemnotice">
+    insert into systemnotice
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="systemnoticeId != null">
+        systemnotice_id,
+      </if>
+      <if test="systemnoticeName != null">
+        systemnotice_name,
+      </if>
+      <if test="systemnoticeDate != null">
+        systemnotice_date,
+      </if>
+      <if test="systemnoticeContent != null">
+        systemnotice_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="systemnoticeId != null">
+        #{systemnoticeId,jdbcType=VARCHAR},
+      </if>
+      <if test="systemnoticeName != null">
+        #{systemnoticeName,jdbcType=VARCHAR},
+      </if>
+      <if test="systemnoticeDate != null">
+        #{systemnoticeDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="systemnoticeContent != null">
+        #{systemnoticeContent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Systemnotice">
+    update systemnotice
+    <set>
+      <if test="systemnoticeName != null">
+        systemnotice_name = #{systemnoticeName,jdbcType=VARCHAR},
+      </if>
+      <if test="systemnoticeDate != null">
+        systemnotice_date = #{systemnoticeDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="systemnoticeContent != null">
+        systemnotice_content = #{systemnoticeContent,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where systemnotice_id = #{systemnoticeId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.Systemnotice">
+    update systemnotice
+    set systemnotice_name = #{systemnoticeName,jdbcType=VARCHAR},
+      systemnotice_date = #{systemnoticeDate,jdbcType=TIMESTAMP},
+      systemnotice_content = #{systemnoticeContent,jdbcType=LONGVARCHAR}
+    where systemnotice_id = #{systemnoticeId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Systemnotice">
+    update systemnotice
+    set systemnotice_name = #{systemnoticeName,jdbcType=VARCHAR},
+      systemnotice_date = #{systemnoticeDate,jdbcType=TIMESTAMP}
+    where systemnotice_id = #{systemnoticeId,jdbcType=VARCHAR}
+  </update>
+</mapper>

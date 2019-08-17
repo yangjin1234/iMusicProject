@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.AnchorMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Anchor">
+    <id column="anchor_id" jdbcType="VARCHAR" property="anchorId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="anchor_name" jdbcType="VARCHAR" property="anchorName" />
+    <result column="anchor_state" jdbcType="CHAR" property="anchorState" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    anchor_id, user_id, anchor_name, anchor_state
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from anchor
+    where anchor_id = #{anchorId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from anchor
+    where anchor_id = #{anchorId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Anchor">
+    insert into anchor (anchor_id, user_id, anchor_name, 
+      anchor_state)
+    values (#{anchorId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{anchorName,jdbcType=VARCHAR}, 
+      #{anchorState,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Anchor">
+    insert into anchor
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="anchorId != null">
+        anchor_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="anchorName != null">
+        anchor_name,
+      </if>
+      <if test="anchorState != null">
+        anchor_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="anchorId != null">
+        #{anchorId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="anchorName != null">
+        #{anchorName,jdbcType=VARCHAR},
+      </if>
+      <if test="anchorState != null">
+        #{anchorState,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Anchor">
+    update anchor
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="anchorName != null">
+        anchor_name = #{anchorName,jdbcType=VARCHAR},
+      </if>
+      <if test="anchorState != null">
+        anchor_state = #{anchorState,jdbcType=CHAR},
+      </if>
+    </set>
+    where anchor_id = #{anchorId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Anchor">
+    update anchor
+    set user_id = #{userId,jdbcType=VARCHAR},
+      anchor_name = #{anchorName,jdbcType=VARCHAR},
+      anchor_state = #{anchorState,jdbcType=CHAR}
+    where anchor_id = #{anchorId,jdbcType=VARCHAR}
+  </update>
+</mapper>

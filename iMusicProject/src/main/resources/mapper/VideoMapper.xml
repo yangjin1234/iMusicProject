@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.VideoMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Video">
+    <id column="video_id" jdbcType="VARCHAR" property="videoId" />
+    <result column="music_id" jdbcType="VARCHAR" property="musicId" />
+    <result column="video_name" jdbcType="VARCHAR" property="videoName" />
+    <result column="video_playNum" jdbcType="INTEGER" property="videoPlaynum" />
+    <result column="video_file" jdbcType="VARCHAR" property="videoFile" />
+    <result column="video_message" jdbcType="VARCHAR" property="videoMessage" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    video_id, music_id, video_name, video_playNum, video_file, video_message
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from video
+    where video_id = #{videoId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from video
+    where video_id = #{videoId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Video">
+    insert into video (video_id, music_id, video_name, 
+      video_playNum, video_file, video_message
+      )
+    values (#{videoId,jdbcType=VARCHAR}, #{musicId,jdbcType=VARCHAR}, #{videoName,jdbcType=VARCHAR}, 
+      #{videoPlaynum,jdbcType=INTEGER}, #{videoFile,jdbcType=VARCHAR}, #{videoMessage,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Video">
+    insert into video
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="videoId != null">
+        video_id,
+      </if>
+      <if test="musicId != null">
+        music_id,
+      </if>
+      <if test="videoName != null">
+        video_name,
+      </if>
+      <if test="videoPlaynum != null">
+        video_playNum,
+      </if>
+      <if test="videoFile != null">
+        video_file,
+      </if>
+      <if test="videoMessage != null">
+        video_message,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="videoId != null">
+        #{videoId,jdbcType=VARCHAR},
+      </if>
+      <if test="musicId != null">
+        #{musicId,jdbcType=VARCHAR},
+      </if>
+      <if test="videoName != null">
+        #{videoName,jdbcType=VARCHAR},
+      </if>
+      <if test="videoPlaynum != null">
+        #{videoPlaynum,jdbcType=INTEGER},
+      </if>
+      <if test="videoFile != null">
+        #{videoFile,jdbcType=VARCHAR},
+      </if>
+      <if test="videoMessage != null">
+        #{videoMessage,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Video">
+    update video
+    <set>
+      <if test="musicId != null">
+        music_id = #{musicId,jdbcType=VARCHAR},
+      </if>
+      <if test="videoName != null">
+        video_name = #{videoName,jdbcType=VARCHAR},
+      </if>
+      <if test="videoPlaynum != null">
+        video_playNum = #{videoPlaynum,jdbcType=INTEGER},
+      </if>
+      <if test="videoFile != null">
+        video_file = #{videoFile,jdbcType=VARCHAR},
+      </if>
+      <if test="videoMessage != null">
+        video_message = #{videoMessage,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where video_id = #{videoId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Video">
+    update video
+    set music_id = #{musicId,jdbcType=VARCHAR},
+      video_name = #{videoName,jdbcType=VARCHAR},
+      video_playNum = #{videoPlaynum,jdbcType=INTEGER},
+      video_file = #{videoFile,jdbcType=VARCHAR},
+      video_message = #{videoMessage,jdbcType=VARCHAR}
+    where video_id = #{videoId,jdbcType=VARCHAR}
+  </update>
+</mapper>

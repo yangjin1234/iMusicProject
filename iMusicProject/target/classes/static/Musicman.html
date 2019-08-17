@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta charset="UTF-8">
+		<script type="text/javascript" charset="UTF-8" src="js/jquery.min.js"></script>
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/jstorage_1.js"></script> -->
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/textchange.min_1.js"></script> -->
+		<script type="text/javascript" charset="UTF-8">
+			var apmCollectData = apmCollectData || [];
+		</script>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1 class="logo">
+				<a href="https://www.kugou.com/">
+					<img src="picture/logo_3.png" alt="">
+				</a>
+			</h1>
+			<div class="search_wrapper top_search">
+				<div class="search_input"><input type="text">
+					<div class="searh_btn"><i class="search_icon"></i><span>搜索</span></div>
+				</div>
+				<div class="search_recommend top_search_recommend">
+		
+				</div>
+				<div class="search_histroy top_search_histroy">
+		
+				</div>
+			</div>
+			<div class="topNav fr">
+				<ul>
+					<li>
+						<a target="_blank" href="index.html">客服中心</a>
+					</li>
+		
+					<li>
+						<a target="_blank" href="vip.html">会员中心 </a>
+					</li>
+				</ul>
+				<div class="login_area">
+					<div id="login_in" class="clearfix" style="display: none;">
+						<a class="login_btn" id="login_btn">登录</a>
+						<a target="_blank" href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a>
+					</div>
+					<div id="login_out" class="clearfix" style="display: block;">
+						<img class="user_img" src="images/photo.jpg">
+						<span class="user_name">冯小仙女啊</span>
+					</div>
+					<div id="user_menu" class="user_menu">
+						<div class="topArrow1"></div>
+						<div class="topArrow2"></div>
+						<ul>
+							<li>
+								<a target="_blank" href="person.html"><i class="fa fa-user" aria-hidden="true"></i>我的主页</a>
+							</li>
+							<li>
+								<a href=""><i class="fa fa-commenting fa-icon2" aria-hidden="true"></i>我的消息</a>
+							</li>
+							<li>
+								<a href="vip.html"><i class="fa fa-vimeo-square" aria-hidden="true"></i>VIP会员</a>
+							</li>
+							<li>
+								<a href="person_Account.html"><span class="user_icon1"></span>个人设置</a>
+							</li>
+							<li>
+								<a href="login.html"><span class="user_icon2"></span>退出</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navWrap">
+			<div class="nav">
+				<ul class="homeNav">
+					<li>
+						<a class="normal" href="index.html">首 页</a>
+					</li>
+					<li>
+						<a class="normal" href="EveryDay.html">榜 单</a>
+					</li>
+					<li>
+						<a class="normal" id="productCenter" href="MyAlbum.html">专 辑</a>
+					</li>
+					<li class="more" id="more">
+						<a href="" class="iconMore" id="showMore">更 多</a>
+					</li>
+				</ul>
+				<ul class="secondMenu" id="secondMenu">
+					<li>
+						<a href="broadcast.html">电台</a>
+					</li>
+					<li>
+						<a href="mv.html">MV</a>
+					</li>
+					<li>
+						<a href="SongsList.html">歌单</a>
+					</li>
+					<li>
+						<a href="singer.html">歌手</a>
+					</li>
+				</ul>
+				<ul class="subNav">
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav1">音乐直播</a>
+					</li>
+					<li>
+						<a target="_blank" href="friend.html" class="icon icon-nav2">iMusic动态</a>
+					</li>
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav3">音乐人</a>
+					</li>
+					<!--<li>
+		    <a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a>
+		</li>-->
+					<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
+					</li>
+		
+		
+				</ul>
+			</div>
+		</div>
+
+		<!-- ######################################################以上为头部##################################################################### -->
+
+		<div class="body_">
+			<div class="head_">
+				<div class="head-text">
+					<div class="big-l">
+						<div class="small-l">
+							<h5>1</h5>
+						</div>
+					</div>
+					<span class="txt-l">阅读协议</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="glyphicon glyphicon-menu-right"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="big-r">
+						<div class="small-r">
+							<h5>2</h5>
+						</div>
+					</div>
+					<span class="txt-r">提交资料</span>
+				</div>
+			</div>
+			<div class="content-title">
+				<h3 style="font-size: 25px; text-align: center;">音乐开放平台服务协议</h3>
+			</div>
+			<div class="content-text" style="font-size: 19px;">
+				<h4 class="texts" >欢迎你使用IMusic音乐开放平台（以下简称“平台”）及服务！</h4>
+				<p class="texts">为更好地方便你使用平台及相关服务，你应当阅读并遵守《IMusic音乐开放平台服务协议》（以下简称“本协议”）和《IMusic服务协议》、《QQ号码规则》、《IMusic微信软件许可及服务协议》、《隐私政策》等相关协议和业务规则。请你务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款，并选择接受或不接受。限制、免责条款可能以加粗等形式提示你注意。
+						除非你已阅读并接受本协议所有条款，否则你无权注册成为平台用户及享受相关服务。你的注册、登录、分享/传播相关内容等任何使用平台服务的相关行为即视为你已阅读并同意本协议的约束。
+						如果你未满18周岁，请在法定监护人的陪同下或经过法定监护人同意后，再进行阅读、接受本协议以及完成相关内容的分享/传播等操作，否则，请你不要接受本协议以及进行相关操作；若你进行了接受本协议、分享/传播相关内容等操作，将视为你的任何操作均是在法定监护人的陪同下或经过法定监护人同意后进行的，会对你及你的法定监护人产生法律约束力。
+				</p>
+						
+				<h4 class="texts" style="font-size: 19px;">一、名词定义</h4>
+				
+				<h4 style="font-size: 19px;">1.1 IMusic音乐开放平台
+						指为方便你分享、传播你有权的词或曲音乐作品、录音录像制品、MV作品、文字作品、图片作品、视频作品及其他相关内容，为你提供信息存储空间及相关技术支持等服务的平台，以下简称“平台”。
+						如你另行与IMusic音乐开放平台或其关联主体就相关分享内容另行达成其他书面协议的，应遵从其他协议的约定。
+				</h4>	
+				
+				<h4 class="texts" style="font-size: 19px;">1.2 分享内容
+						指你上传到平台的你拥有相应的全部权利的各种形式的词或曲音乐作品、录音录像制品、MV作品、文字作品、图片作品、视频作品以及其他相关的全部内容（包括词曲作者或表演者照片、个人简介、文字内容、图片、视听作品、专辑封面、专辑制作花絮、音乐文档、宣传短片等），具体分享内容形式包括代词或不带词音频形式、视频形式、MV形式（类电影作品）、文字形式、图片形式等各种形式，具体以你上传提供的为准。
+				</h4>
+				<h4 class="texts" style="font-size: 19px;"> 1.3 开放平台用户
+						指将自己有权的分享内容上传到平台上以进行分享、传播的企业、法人、其他组织或个人，具体可能包括原创或独立音乐人、经纪公司或经纪人、唱片公司或代理公司、乐评人等类型的用户，以下简称“平台用户”或“你”，同时：
+				</h4>
+				<p>		（1）你理解和同意：IMusic（包括IMusic音乐娱乐集团及其关联公司，本协议中均指本含义）是一个中立的平台服务提供者，在平台相关服务中，仅向你提供信息存储空间等中立的网络服务或技术支持服务。关联公司：指控制本协议一方，或被本协议一方所控制，或与本协议一方共同受控制于同一实体的任何企业。控制是指直接或间接拥有该企业百分之五十（50％）以上的股权、投票权或管理权，或通过协议控制该企业管理权（下同）。
+						（2）你保证：对于你上传到平台的分享内容，你是与分享内容相关的全部权利的原始权利人或经过相关原始权利人的合法授权（此情况下，你确保授权给你相关权利的权利人知悉并同意你按照本协议以及平台相关协议、规则，将分享内容按照本平台规则进行分享和传播。比如，若你是代表乐队注册上传分享内容时，你应自行取得全部乐队成员以及分享内容所涉相关全部原始权利人的授权；若你是经纪公司或唱片公司等单位主体，你应自行获得分享内容所涉相关全部原始权利人的授权），否则，你不会将分享内容上传到平台。
+						（3）你保证：你将分享内容上传到平台的行为，即视为你已经确保你拥有与分享内容相关的全部权利，IMusic按照本协议的方式使用分享内容，不会侵犯任何他人的合法权益，否则，若因为你上传的分享内容的著作权、邻接权、以及其他知识产权、肖像权、名誉权权利等任何问题侵害到他人权益的，你须自行承担全部责任。
+						（4）你保证：若你对分享内容享有的全部权利的权利状况发生变化时，你会第一时间通过书面形式通知IMusic，IMusic收到通知后，会根据你的书面通知内容，决定是否继续使用你的分享内容。
+				</p>
+				<h4 class="texts" style="font-size: 19px;">1.4 分享内容的全部权利	
+					指与分享内容相关的全部权利，具体包括如下权利之信息网络传播权等相关权利（以下简称“全部权利”）：
+				</h4>
+				<p>		（1）与分享内容相关的词著作权、曲著作权、表演者权利、录音制作者权、录音录像制作者权等相关著作权和邻接权等权利；
+						（2）与分享内容相关的词曲作者或表演者相关的署名权、肖像权、姓名权、照片/图片著作权、视听作品著作权等词曲作者、表演者的相关权利；
+						（3）与分享内容相关的专辑封面或专辑制作花絮、专辑图片等与专辑相关的权利；
+						（4）与分享内容相关的音乐文档、文字作品或介绍、宣传短片或其他相关音视频等相关内容的著作权等权利；
+						（5）为确保你在平台上按本协议向其他用户传播分享内容的其他一切必要的权利。
+						你阅读并接受本协议，即代表着你将上述所有权利在全世界范围内的，可撤销地，非独占地授权IMusic及其关联公司按照本协议约定的方式予以行使。除非你与IMusic及其关联公司另行达成其他书面合作协议的，否则IMusic及其关联公司不会对你在平台上分享的内容向除IMusic及其关联公司外的任何第三方进行任何形式的转授权使用。你作为分享内容的权利方，仍完整地保留分享内容的相关一切权利，你依然有权将相关分享内容与其他第三方进行相应的合作等。IMusic及其关联公司会予以充分尊重你的合作自主权和选择权。
+				</p>
+				<h4 class="texts" style="font-size: 19px;">1.5 IMusic平台
+						指由IMusic及其关联公司所有/运营/管理的现有或将来可能出现的各种形式的产品，包括但不限于网站以及相应网站下属子页面（具体包括但不限于（i）网站以及相应网站下属子页面（具体包括但不限于www.qq.com、www.kugou.com、www.kuwo.cn、彩虹音乐频道等）；（ii）网页、PC端、移动端等各种形式的客户端软件（具体包括但不限于QQ音乐、企鹅FM、轻听、微视、全民K歌、QQ、微信、QQ空间、音兔、MOO、IMusic视频、酷狗音乐、酷我音乐、彩虹音乐、酷我聚星、酷我K歌、酷我听书、2469、酷我BOOM、酷我电台、酷我视频、5sing、酷FM、酷狗直播、酷狗唱唱、酷狗KTV、酷狗铃声、酷狗直播伴侣、短酷、巴卟巴卟、1822、海兔故事、Viper HIFI等）；以及（iii）网页、客户端、移动APP等各种形式的游戏产品等。
+				</h4>
+			</div>
+			<div class="content-end">
+				<div class="cotent-surebox">
+					<input type="checkbox" name="isAdmin" value="1" id="isAdmin" style="size: 20px;" >
+					<span>同意以上协议</span>
+				</div>
+					<span id="my-button">
+						<div class="btn-group" role="group" aria-label="...">
+						  <a href="Musicman2.html"><button type="button" class="btn btn-default" style="color: white; " >下一步</button></a>
+						</div>
+					</span>
+			</div>
+
+		<!-- ######################################################以下为尾部 ##################################################################### -->
+	<div class="footerWrapper">
+		<div class="footer">
+			<div class="links">
+				<a hidefocus="true" href="javascript:void(0);" target="_blank">关于iMusic</a>|
+				<a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> |
+				<a hidefocus="true" href="javascript:void(0);" target="_blank">广告服务</a> |
+				<a hidefocus="true" target="_blank" href="javascript:void(0);">版权指引</a>|
+				<a hidefocus="true" target="_blank" href="javascript:void(0);">用户服务协议</a> |
+				<a hidefocus="true" target="_blank" href="javascript:void(0);">推广合作</a> |
+				<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐人</a> |
+				<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐推</a> |
+				<a hidefocus="true" href="javascript:void(0);" target="_blank">客服中心</a> |
+				<a hidefocus="true" href="javascript:void(0);" target="_blank">用户体验提升计划</a>
+			</div>
+			<div class="copyright">
+				<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@iMusic.com</p>
+				<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">粤ICP备09017694号-2</a><span class="footerIcon"><a
+						 target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+				<p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+				<p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018
+					<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img
+						 style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
+				</p>
+				<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">不良信息举报邮箱：jubao_music@kugou.net&nbsp;&nbsp;&nbsp;&nbsp;客服邮箱：kefu@iMusoic.net</p>
+				<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2019 KuGou-Inc.All Rights Reserved
+					<a hidefocus="true" class="office-verification" href="javascript:void(0);" target="_blank"></a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="scrollTop icon-scrollTop">
+		<a href="#"></a>
+	</div>
+	</div>
+	
+	
+	<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+	<script src="js/kguser_min_3.js"></script>
+	<title>iMusic音乐 - 就是歌多</title>
+	<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+	<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+	<link rel="stylesheet" href="css/search_1.css">
+	</body>
+	
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script>
+	   $('input:radio[name="isAdmin"]').change(function () {
+        if ($("#isAdmin").click()) {
+            $("#my-button").show();
+        }
+       
+    })
+
+</script>
+
+</html>

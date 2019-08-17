@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta charset="UTF-8">
+		<script type="text/javascript" charset="UTF-8" src="js/jquery.min.js"></script>
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/jstorage_1.js"></script> -->
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/textchange.min_1.js"></script> -->
+
+		<script type="text/javascript" charset="UTF-8">
+			var apmCollectData = apmCollectData || [];
+		</script>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<!--<link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+		<link rel="stylesheet" href="css/vip.css" />
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script type="text/javascript" src="js/vip.js"></script>
+		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1 class="logo">
+        <a href="https://www.kugou.com/">
+            <img src="picture/logo_3.png" alt="">
+        </a>
+    </h1>
+			<div class="search_wrapper top_search">
+				<div class="search_input"><input type="text">
+					<div class="searh_btn"><i class="search_icon"></i><span>搜索</span></div>
+				</div>
+				<div class="search_recommend top_search_recommend">
+
+				</div>
+				<div class="search_histroy top_search_histroy">
+
+				</div>
+			</div>
+			<div class="topNav fr">
+				<ul>
+					<li>
+						<a target="_blank" href="https://www.kugou.com/shop/help/serviceCenter">客服中心</a>
+					</li>
+
+					<li>
+						<a target="_blank" href="http://vip.kugou.com/">会员中心 </a>
+					</li>
+				</ul>
+				<div class="login_area">
+					<div id="login_in" class="clearfix" style="display: none;">
+						<a class="login_btn" id="login_btn">登录</a>
+						<a target="_blank" href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a>
+					</div>
+					<div id="login_out" class="clearfix" style="display: block;">
+						<img class="user_img" src="images/photo.jpg">
+						<span class="user_name">冯小仙女啊</span>
+					</div>
+					<div id="user_menu" class="user_menu">
+						<div class="topArrow1"></div>
+						<div class="topArrow2"></div>
+						<ul>
+							<li>
+								<a target="_blank" href=""><i class="fa fa-user" aria-hidden="true"></i>我的主页</a>
+							</li>
+							<li>
+								<a href=""><i class="fa fa-commenting fa-icon2" aria-hidden="true"></i>我的消息</a>
+							</li>
+							<li>
+								<a href=""><i class="fa fa-vimeo-square" aria-hidden="true"></i>VIP会员</a>
+							</li>
+							<li>
+								<a href=""><span class="user_icon1"></span>个人设置</a>
+							</li>
+							<li>
+								<a href=""><span class="user_icon2"></span>退出</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navWrap">
+			<div class="nav">
+				<ul class="homeNav">
+					<li>
+						<a class="normal" href="index.html">首 页</a>
+					</li>
+					<li>
+						<a class="normal" href="EveryDay.html">榜 单</a>
+					</li>
+					<li>
+						<a class="normal" id="productCenter" href="MyAlbum.html">专 辑</a>
+					</li>
+					<li class="more" id="more">
+						<a href="" class="iconMore" id="showMore">更 多</a>
+					</li>
+				</ul>
+				<ul class="secondMenu" id="secondMenu">
+					<li>
+						<a href="broadcast.html">电台</a>
+					</li>
+					<li>
+						<a href="mv.html">MV</a>
+					</li>
+					<li>
+						<a href="SongsList.html">歌单</a>
+					</li>
+					<li>
+						<a href="singer.html">歌手</a>
+					</li>
+				</ul>
+				<ul class="subNav">
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav1">音乐直播</a>
+					</li>
+					<li>
+						<a target="_blank" href="friend.html" class="icon icon-nav2">iMusic动态</a>
+					</li>
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav3">音乐人</a>
+					</li>
+					<!--<li>
+		        <a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a>
+		    </li>-->
+					<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
+					</li>
+		
+		
+				</ul>
+			</div>
+		</div>
+
+		<!-- ######################################################以上为头部##################################################################### -->
+
+		<!--vip页面-->
+		<div class="vip_main">
+			<div class="vip_center">
+				<div class="user_info">
+					<div class="is-login">
+						<div class="user_head">
+							<div class="photo_img_div">
+								<img class="photo_img" src="images/photo.jpg"></div>
+							<div class="user_content">
+								<h2 class="content-s-fc000 s-fc000">冯小仙女呀</h2>
+								<img src="images/no-vip.png" class="content-vip-tag">
+								<div class="content-f-fs12 s-fc333 not-dredge">当前未开通</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="vip_bottom">
+					<div class="m-vip-card scene-card ">
+						<section class="m-vip-header"></section>
+						<section class="m-vip-tab">
+							<ul class="m-vip-tab-list">
+								<li class="active">
+									<pseudo:after></<pseudo:after>iMusicVIP<img src="images/m-vip.png" class="list-icon"></li>
+							</ul>
+						</section>
+						<section class="m-vip-product">
+							<ul class="m-vip-product-list">
+								<li class="product-item active">
+									<div class="product-item-corner" style="display: block;"><i class="fa fa-check" aria-hidden="true"></i></div>
+									<div class="product-item-origin"><span class="product-item-origin-finalprice">10</span>元</div>
+									<div class="product-item-desc"></div>
+									<div class="product-item-month">
+										<pseudo:before></<pseudo:before>15天</div>
+								</li>
+								<li class="product-item ">
+									<div class="product-item-corner" style="display: none;"><i class="fa fa-check" aria-hidden="true"></i></div>
+									<div class="product-item-origin"><span class="product-item-origin-finalprice">15</span>元</div>
+									<div class="product-item-desc"></div>
+									<div class="product-item-month">
+										<pseudo:before></<pseudo:before>1个月</div>
+								</li>
+								<li class="product-item ">
+									<div class="product-item-corner" style="display: none;"><i class="fa fa-check" aria-hidden="true"></i></div>
+									<div class="product-item-origin"><span class="product-item-origin-finalprice">40</span>元</div>
+									<div class="product-item-desc">13.33元/月</div>
+									<div class="product-item-month">
+										<pseudo:before></<pseudo:before>3个月</div>
+								</li>
+								<li class="product-item ">
+									<div class="product-item-corner" style="display: none;"><i class="fa fa-check" aria-hidden="true"></i></div>
+									<div class="product-item-origin"><span class="product-item-origin-finalprice">138</span>元</div>
+									<div class="product-item-desc">11.5元/月</div>
+									<div class="product-item-month">
+										<pseudo:before></<pseudo:before>12个月</div>
+								</li>
+							</ul>
+						</section>
+						<section class="m-vip-settle">
+							<div class="m-vip-settle-line"></div>
+							<div class="m-vip-settle-body">
+								<div class="u-settle-detail">
+									<p class="detail-title">点击图片进入支付页面</p>
+									<div class="detail-icons">
+										<img src="images/alipay.png" />
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<section class="m-privilege">
+						<h2 class="title"><em><pseudo:before></<pseudo:before>iMusicVIP特权<pseudo:after></<pseudo:after></em></h2>
+						<ul class="m-rights f-cb" id="privilege-icon-list">
+							<li><img class="icon" src="images/musicLib.png">
+								<p class="f-fs14 icon-name ">会员曲库</p>
+							</li>
+							<li><img class="icon" src="images/quality.png">
+								<p class="f-fs14 icon-name ">无损音质</p>
+							</li>
+							<li><img class="icon" src="images/freeDowload.png">
+								<p class="f-fs14 icon-name ">免费下载</p>
+							</li>
+							<li><img class="icon" src="images/noAvertising.png">
+								<p class="f-fs14 icon-name ">免广告</p>
+							</li>
+							<li><img class="icon" src="images/musicTheme.png">
+								<p class="f-fs14 icon-name ">音画主题</p>
+							</li>
+							<li><img class="icon" src="images/headPortrait.png">
+								<p class="f-fs14 icon-name ">头像挂件</p>
+							</li>
+							<li><img class="icon" src="images/skin.png">
+								<p class="f-fs14 icon-name ">个性皮肤</p>
+							</li>
+							<li><img class="icon" src="images/mallDis.png">
+								<p class="f-fs14 icon-name ">商城折扣</p>
+							</li>
+							<li><img class="icon" src="images/ticketVip.png">
+								<p class="f-fs14 icon-name ">票务特权</p>
+							</li>
+							<li><img class="icon" src="images/welfare.png">
+								<p class="f-fs14 icon-name ">福利券</p>
+							</li>
+						</ul>
+						<div style="clear:both;"></div>
+					</section>
+					<div class="n-special">
+						<h2 class="title"><em><pseudo:before></pseudo:before>VIP专享下载曲库<pseudo:after></pseudo:after></em></h2>
+						<div class="slogan">畅享
+							<!-- -->2367
+							<!-- -->万首VIP下载歌曲</div>
+						<div class="song">
+							<div class="more"><span><a href="" class="s-fc7">查看全部</a><i class="u-gt f-ff1 s-fc7">&gt;</i></span></div>
+							<ul class="songlist f-cb">
+								<li>
+									<a href="/album?id=74306483" class="cover f-pr"><img class="f-img album-img " src="http://p1.music.126.net/tG2WPESxhyIX3fBaSt3hbQ==/109951163658916193.jpg?imageView=1&amp;type=webp&amp;thumbnail=1309x0&amp;quality=85&amp;interlace=1"><span class="mask f-pa f-alpha"></span></a>
+								</li>
+								<li>
+									<a href="/album?id=74265751" class="cover f-pr"><img class="f-img album-img " src="http://p1.music.126.net/X7f92tSJ-b0_sC1u9tgAyQ==/109951163654227442.jpg?imageView=1&amp;type=webp&amp;thumbnail=1309x0&amp;quality=85&amp;interlace=1"><span class="mask f-pa f-alpha"></span></a>
+								</li>
+								<li>
+									<a href="/album?id=73966611" class="cover f-pr"><img class="f-img album-img " src="http://p1.music.126.net/fB6M_CgSRkeUzIEni6ENzw==/109951163615459621.jpg?imageView=1&amp;type=webp&amp;thumbnail=1309x0&amp;quality=85&amp;interlace=1"><span class="mask f-pa f-alpha"></span></a>
+								</li>
+								<li>
+									<a href="/album?id=73587275" class="cover f-pr"><img class="f-img album-img " src="http://p1.music.126.net/xUAfdMHdXhu3BmO4g8nOYA==/109951163573311341.jpg?imageView=1&amp;type=webp&amp;thumbnail=1309x0&amp;quality=85&amp;interlace=1"><span class="mask f-pa f-alpha"></span></a>
+								</li>
+								<pseudo:after></pseudo:after>
+							</ul>
+							<div style="clear:both;"></div>
+						</div>
+					</div>
+					<div class="n-faq">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--个人展示页面-->
+		<!-- ######################################################以下为尾部 ##################################################################### -->
+		<div class="footerWrapper">
+			<div class="footer">
+				<div class="links">
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">关于iMusic</a>|
+					<a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">广告服务</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">版权指引</a>|
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">用户服务协议</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">推广合作</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐人</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐推</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">客服中心</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">用户体验提升计划</a>
+				</div>
+				<div class="copyright">
+					<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@iMusic.com</p>
+					<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">粤ICP备09017694号-2</a><span class="footerIcon"><a
+							 target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+					<p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+					<p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018
+						<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img
+							 style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
+					</p>
+					<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">不良信息举报邮箱：jubao_music@kugou.net&nbsp;&nbsp;&nbsp;&nbsp;客服邮箱：kefu@iMusoic.net</p>
+					<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2019 KuGou-Inc.All Rights Reserved
+						<a hidefocus="true" class="office-verification" href="javascript:void(0);" target="_blank"></a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="scrollTop icon-scrollTop">
+			<a href="#"></a>
+		</div>
+		</div>
+		
+		
+		<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+		<script src="js/kguser_min_3.js"></script>
+		<title>iMusic音乐 - 就是歌多</title>
+		<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+		<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="css/search_1.css">
+	</body>
+
+</html>

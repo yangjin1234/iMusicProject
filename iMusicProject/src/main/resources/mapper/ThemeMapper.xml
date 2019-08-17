@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.ThemeMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Theme">
+    <id column="theme_id" jdbcType="INTEGER" property="themeId" />
+    <result column="theme_type" jdbcType="VARCHAR" property="themeType" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    theme_id, theme_type
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from theme
+    where theme_id = #{themeId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from theme
+    where theme_id = #{themeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Theme">
+    insert into theme (theme_id, theme_type)
+    values (#{themeId,jdbcType=INTEGER}, #{themeType,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Theme">
+    insert into theme
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="themeId != null">
+        theme_id,
+      </if>
+      <if test="themeType != null">
+        theme_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="themeId != null">
+        #{themeId,jdbcType=INTEGER},
+      </if>
+      <if test="themeType != null">
+        #{themeType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Theme">
+    update theme
+    <set>
+      <if test="themeType != null">
+        theme_type = #{themeType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where theme_id = #{themeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Theme">
+    update theme
+    set theme_type = #{themeType,jdbcType=VARCHAR}
+    where theme_id = #{themeId,jdbcType=INTEGER}
+  </update>
+</mapper>

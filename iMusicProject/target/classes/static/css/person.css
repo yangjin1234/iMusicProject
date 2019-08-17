@@ -1,0 +1,194 @@
+@charset "utf-8";
+@import url("bootstrap.min.css");
+@import url("font-awesome.min.css");
+@import url("animate.css");
+
+//个人中心下拉框
+
+.login-div {
+	width: auto;
+	height: auto; 
+	background-color: lightgray;
+}
+
+//个人简介部分
+.login-div-main {
+	width: 70%;
+	height: auto; 
+	margin: auto;
+	background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-width: 0 1px;
+}
+
+.login-div-main-top {
+	width: 90%;
+	height: auto; 
+	margin: auto;
+	padding-top: 50px;
+}
+
+.main-top-dl .user-name .edit {
+    float: right;
+    margin-top: 0px;
+}
+
+//关注,动态
+.main-top-dl .data {
+    height: 41px;
+    margin-bottom: 15px;
+}
+
+.main-top-dl .data a {
+    display: inline-block;
+    position: relative;
+    zoom: 1;
+    color: #666;
+}
+
+//我创建的歌单
+.person-my-music {
+	width: 90%;
+	height: 220px; 
+	margin: auto;
+	padding-top: 50px;
+}
+
+.u-cover {
+	width: 140px;
+    height: 140px;
+    position: relative;
+	display: block;
+}
+
+.u-cover .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 27px;
+    background-position: 0 -537px;
+    background-image: url(../images/coverall.png);
+}
+
+.u-cover .icon-play {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    width: 16px;
+    height: 17px;
+    background-position: 0 0;
+}
+
+.u-cover .icon-headset {
+    float: left;
+    width: 14px;
+    height: 11px;
+    background-position: 0 -24px;
+    margin: 9px 5px 9px 10px;
+}
+
+.u-cover .icon-headset, .u-cover .icon-play {
+    display: inline-block;
+}
+
+.u-cover .nb {
+    float: left;
+    margin: 7px 0 0 0;
+    color: white;
+}
+
+.u-cover .msk {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+//收藏的歌单
+.login-div-main .m-cvrlst-1 {
+    margin: 20px 0 0 0px;
+    display: block;
+    height: auto;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+.login-div-main .m-cvrlst-1 li {
+    overflow: hidden;
+    float: left;
+    display: inline-block;
+    width: 190px;
+    height: 195px;
+    overflow: hidden;
+    padding: 0 0 30px 10px;
+    line-height: 1.4;
+}
+
+.m-cvrlst-1 p.dec {
+	margin-top: 10px;
+}
+
+.m-cvrlst-1 p.dec a{
+	color: #666666;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    display: inline-block;
+    max-width: 140px;
+    vertical-align: middle;
+}
+
+//我收藏的歌单
+.u-title-person {
+	margin-left: 50px;
+	width: 90%;
+	margin-top: 80px;
+	font-size: 20px;
+}
+
+.login-div-main .m-cvrlst-2 {
+    margin: 20px 0 0 0px;
+    display: block;
+    height: auto;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+.login-div-main .m-cvrlst-2 li {
+    overflow: hidden;
+     float: left;
+    display: inline-block;
+    width: 190px;
+    height: 195px;
+    overflow: hidden;
+    padding: 0 0 30px 10px;
+    line-height: 1.4;
+}
+
+.m-cvrlst-2 p.dec {
+	margin-top: 10px;
+}
+
+.m-cvrlst-2 p.dec a{
+	color: #666666;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    display: inline-block;
+    max-width: 140px;
+    vertical-align: middle;
+}
+

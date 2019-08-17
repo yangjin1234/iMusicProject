@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.ChatMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Chat">
+    <id column="chat_id" jdbcType="VARCHAR" property="chatId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="use_user_id" jdbcType="VARCHAR" property="useUserId" />
+    <result column="chat_date" jdbcType="DATE" property="chatDate" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.teach.entity.Chat">
+    <result column="chat_message" jdbcType="LONGVARCHAR" property="chatMessage" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    chat_id, user_id, use_user_id, chat_date
+  </sql>
+  <sql id="Blob_Column_List">
+    chat_message
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from chat
+    where chat_id = #{chatId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from chat
+    where chat_id = #{chatId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Chat">
+    insert into chat (chat_id, user_id, use_user_id, 
+      chat_date, chat_message)
+    values (#{chatId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{useUserId,jdbcType=VARCHAR}, 
+      #{chatDate,jdbcType=DATE}, #{chatMessage,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Chat">
+    insert into chat
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="chatId != null">
+        chat_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="useUserId != null">
+        use_user_id,
+      </if>
+      <if test="chatDate != null">
+        chat_date,
+      </if>
+      <if test="chatMessage != null">
+        chat_message,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="chatId != null">
+        #{chatId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="useUserId != null">
+        #{useUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="chatDate != null">
+        #{chatDate,jdbcType=DATE},
+      </if>
+      <if test="chatMessage != null">
+        #{chatMessage,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Chat">
+    update chat
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="useUserId != null">
+        use_user_id = #{useUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="chatDate != null">
+        chat_date = #{chatDate,jdbcType=DATE},
+      </if>
+      <if test="chatMessage != null">
+        chat_message = #{chatMessage,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where chat_id = #{chatId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.Chat">
+    update chat
+    set user_id = #{userId,jdbcType=VARCHAR},
+      use_user_id = #{useUserId,jdbcType=VARCHAR},
+      chat_date = #{chatDate,jdbcType=DATE},
+      chat_message = #{chatMessage,jdbcType=LONGVARCHAR}
+    where chat_id = #{chatId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Chat">
+    update chat
+    set user_id = #{userId,jdbcType=VARCHAR},
+      use_user_id = #{useUserId,jdbcType=VARCHAR},
+      chat_date = #{chatDate,jdbcType=DATE}
+    where chat_id = #{chatId,jdbcType=VARCHAR}
+  </update>
+</mapper>

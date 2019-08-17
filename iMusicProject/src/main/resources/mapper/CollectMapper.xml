@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.CollectMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Collect">
+    <id column="collect_id" jdbcType="VARCHAR" property="collectId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.teach.entity.Collect">
+    <result column="collect_music_ids" jdbcType="LONGVARCHAR" property="collectMusicIds" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    collect_id, user_id
+  </sql>
+  <sql id="Blob_Column_List">
+    collect_music_ids
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from collect
+    where collect_id = #{collectId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from collect
+    where collect_id = #{collectId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Collect">
+    insert into collect (collect_id, user_id, collect_music_ids
+      )
+    values (#{collectId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{collectMusicIds,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Collect">
+    insert into collect
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="collectId != null">
+        collect_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="collectMusicIds != null">
+        collect_music_ids,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="collectId != null">
+        #{collectId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="collectMusicIds != null">
+        #{collectMusicIds,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Collect">
+    update collect
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="collectMusicIds != null">
+        collect_music_ids = #{collectMusicIds,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where collect_id = #{collectId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.Collect">
+    update collect
+    set user_id = #{userId,jdbcType=VARCHAR},
+      collect_music_ids = #{collectMusicIds,jdbcType=LONGVARCHAR}
+    where collect_id = #{collectId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Collect">
+    update collect
+    set user_id = #{userId,jdbcType=VARCHAR}
+    where collect_id = #{collectId,jdbcType=VARCHAR}
+  </update>
+</mapper>

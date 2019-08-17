@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.OrdertableMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Ordertable">
+    <id column="ordertable_id" jdbcType="INTEGER" property="ordertableId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="ordertable_number" jdbcType="VARCHAR" property="ordertableNumber" />
+    <result column="ordertable_info" jdbcType="VARCHAR" property="ordertableInfo" />
+    <result column="ordertable_state" jdbcType="REAL" property="ordertableState" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ordertable_id, user_id, ordertable_number, ordertable_info, ordertable_state
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ordertable
+    where ordertable_id = #{ordertableId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from ordertable
+    where ordertable_id = #{ordertableId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Ordertable">
+    insert into ordertable (ordertable_id, user_id, ordertable_number, 
+      ordertable_info, ordertable_state)
+    values (#{ordertableId,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{ordertableNumber,jdbcType=VARCHAR}, 
+      #{ordertableInfo,jdbcType=VARCHAR}, #{ordertableState,jdbcType=REAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Ordertable">
+    insert into ordertable
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="ordertableId != null">
+        ordertable_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="ordertableNumber != null">
+        ordertable_number,
+      </if>
+      <if test="ordertableInfo != null">
+        ordertable_info,
+      </if>
+      <if test="ordertableState != null">
+        ordertable_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="ordertableId != null">
+        #{ordertableId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="ordertableNumber != null">
+        #{ordertableNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="ordertableInfo != null">
+        #{ordertableInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="ordertableState != null">
+        #{ordertableState,jdbcType=REAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Ordertable">
+    update ordertable
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="ordertableNumber != null">
+        ordertable_number = #{ordertableNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="ordertableInfo != null">
+        ordertable_info = #{ordertableInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="ordertableState != null">
+        ordertable_state = #{ordertableState,jdbcType=REAL},
+      </if>
+    </set>
+    where ordertable_id = #{ordertableId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Ordertable">
+    update ordertable
+    set user_id = #{userId,jdbcType=VARCHAR},
+      ordertable_number = #{ordertableNumber,jdbcType=VARCHAR},
+      ordertable_info = #{ordertableInfo,jdbcType=VARCHAR},
+      ordertable_state = #{ordertableState,jdbcType=REAL}
+    where ordertable_id = #{ordertableId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.LanguageMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Language">
+    <id column="language_id" jdbcType="INTEGER" property="languageId" />
+    <result column="language_type" jdbcType="VARCHAR" property="languageType" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    language_id, language_type
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from language
+    where language_id = #{languageId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from language
+    where language_id = #{languageId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Language">
+    insert into language (language_id, language_type)
+    values (#{languageId,jdbcType=INTEGER}, #{languageType,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Language">
+    insert into language
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="languageId != null">
+        language_id,
+      </if>
+      <if test="languageType != null">
+        language_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="languageId != null">
+        #{languageId,jdbcType=INTEGER},
+      </if>
+      <if test="languageType != null">
+        #{languageType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Language">
+    update language
+    <set>
+      <if test="languageType != null">
+        language_type = #{languageType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where language_id = #{languageId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Language">
+    update language
+    set language_type = #{languageType,jdbcType=VARCHAR}
+    where language_id = #{languageId,jdbcType=INTEGER}
+  </update>
+</mapper>

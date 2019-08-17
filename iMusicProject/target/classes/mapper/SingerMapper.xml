@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.SingerMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Singer">
+    <id column="singer_id" jdbcType="VARCHAR" property="singerId" />
+    <result column="singer_name" jdbcType="VARCHAR" property="singerName" />
+    <result column="singer_age" jdbcType="INTEGER" property="singerAge" />
+    <result column="singer_sex" jdbcType="VARCHAR" property="singerSex" />
+    <result column="singer_description" jdbcType="VARCHAR" property="singerDescription" />
+    <result column="singer_picture" jdbcType="VARCHAR" property="singerPicture" />
+    <result column="singer_nationality" jdbcType="VARCHAR" property="singerNationality" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    singer_id, singer_name, singer_age, singer_sex, singer_description, singer_picture, 
+    singer_nationality
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from singer
+    where singer_id = #{singerId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from singer
+    where singer_id = #{singerId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Singer">
+    insert into singer (singer_id, singer_name, singer_age, 
+      singer_sex, singer_description, singer_picture, 
+      singer_nationality)
+    values (#{singerId,jdbcType=VARCHAR}, #{singerName,jdbcType=VARCHAR}, #{singerAge,jdbcType=INTEGER}, 
+      #{singerSex,jdbcType=VARCHAR}, #{singerDescription,jdbcType=VARCHAR}, #{singerPicture,jdbcType=VARCHAR}, 
+      #{singerNationality,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Singer">
+    insert into singer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="singerId != null">
+        singer_id,
+      </if>
+      <if test="singerName != null">
+        singer_name,
+      </if>
+      <if test="singerAge != null">
+        singer_age,
+      </if>
+      <if test="singerSex != null">
+        singer_sex,
+      </if>
+      <if test="singerDescription != null">
+        singer_description,
+      </if>
+      <if test="singerPicture != null">
+        singer_picture,
+      </if>
+      <if test="singerNationality != null">
+        singer_nationality,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="singerId != null">
+        #{singerId,jdbcType=VARCHAR},
+      </if>
+      <if test="singerName != null">
+        #{singerName,jdbcType=VARCHAR},
+      </if>
+      <if test="singerAge != null">
+        #{singerAge,jdbcType=INTEGER},
+      </if>
+      <if test="singerSex != null">
+        #{singerSex,jdbcType=VARCHAR},
+      </if>
+      <if test="singerDescription != null">
+        #{singerDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="singerPicture != null">
+        #{singerPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="singerNationality != null">
+        #{singerNationality,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Singer">
+    update singer
+    <set>
+      <if test="singerName != null">
+        singer_name = #{singerName,jdbcType=VARCHAR},
+      </if>
+      <if test="singerAge != null">
+        singer_age = #{singerAge,jdbcType=INTEGER},
+      </if>
+      <if test="singerSex != null">
+        singer_sex = #{singerSex,jdbcType=VARCHAR},
+      </if>
+      <if test="singerDescription != null">
+        singer_description = #{singerDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="singerPicture != null">
+        singer_picture = #{singerPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="singerNationality != null">
+        singer_nationality = #{singerNationality,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where singer_id = #{singerId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Singer">
+    update singer
+    set singer_name = #{singerName,jdbcType=VARCHAR},
+      singer_age = #{singerAge,jdbcType=INTEGER},
+      singer_sex = #{singerSex,jdbcType=VARCHAR},
+      singer_description = #{singerDescription,jdbcType=VARCHAR},
+      singer_picture = #{singerPicture,jdbcType=VARCHAR},
+      singer_nationality = #{singerNationality,jdbcType=VARCHAR}
+    where singer_id = #{singerId,jdbcType=VARCHAR}
+  </update>
+</mapper>

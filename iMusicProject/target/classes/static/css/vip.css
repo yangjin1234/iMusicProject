@@ -1,0 +1,532 @@
+@charset "utf-8";
+@import url("bootstrap.min.css");
+@import url("font-awesome.min.css");
+@import url("animate.css");
+
+.vip_main {
+	width: 100%;
+	height: auto;
+	background-color: #f3f4f5;
+}
+
+.vip_center {
+	width: 70%;
+	margin: auto;
+	height: auto;
+	border: 1px solid #D3D3D3;
+}
+
+.vip_bottom{
+	width: 100%;
+	height: auto;
+	background-color: #FFFFFF;
+}
+
+.user_info, .user_info .is-login {
+    width: 70%;
+    height: 200px;
+    position: relative;
+    background-color: #F3F4F5;
+}
+
+.user_info .user_head {
+    padding: 36px 70px;
+}
+
+.user_info .user_head .photo_img_div {
+    position: relative;
+    float: left;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #d5d5d5;
+    padding: 3px;
+}
+
+.user_info .user_head .photo_img {
+    width: 100%;
+    height: 100%;
+}
+
+.user_info .user_head .user_content {
+    height: 128px;
+    margin-left: 148px;
+    position: relative;
+}
+
+.user_info .user_head .user_content h2 {
+    font-size: 22px;
+    height: 30px;
+    max-width: 570px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.content-s-fc000 {
+    font-family: Microsoft Yahei,Arial,Helvetica,sans-serif;
+}
+
+.s-fc000 {
+    color: #000;
+}
+
+.user_info .user_head .user_content .not-dredge {
+    margin-top: 2px;
+}
+
+.s-fc333 {
+    color: #333;
+}
+
+.content-f-fs12 {
+    font-size: 12px;
+}
+
+.user_info .user_head .user_content .content-vip-tag {
+    height: 20px;
+    position: relative;
+    margin-left: 10px;
+    vertical-align: super;
+}
+
+.m-vip-header {
+    border-bottom: 1px solid #eee;
+}
+
+.m-vip-tab {
+    margin: 20px auto;
+}
+
+.scene-card .m-vip-tab .m-vip-tab-list {
+    border-bottom: 1px solid #eee;
+    height: 36px;
+    text-align: center;
+}
+
+.m-vip-tab-list li {
+    margin: 0 0px;
+    display: inline-block;
+    font-size: 16px;
+    color: black;
+    line-height: 20px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1;
+    flex: 1 1;
+    text-align: center;
+}
+
+i, li {
+    list-style: none;
+}
+
+.m-vip-tab-list li .list-icon {
+    height: 24px;
+    margin-left: 4px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.scene-card .m-vip-product {
+    margin-top: 30px;
+}
+
+.m-vip-product {
+    margin: 20px auto;
+}
+
+.scene-card .m-vip-product-list {
+    padding: 0 70px;
+}
+
+.m-vip-product-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0 15px;
+}
+
+.scene-card .m-vip-product-list .product-item:first-child {
+    margin-left: 0;
+}
+
+.m-vip-product-list .product-item.active {
+    border-color: #fa4f4d;
+}
+
+.scene-card .m-vip-product-list .product-item {
+    margin: 0 15px;
+}
+
+.m-vip-product-list .product-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1;
+    flex: 1 1;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    height: 142px;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.m-vip-product-list .product-item-corner {
+    background: #fa4f4d;
+    border-radius: 0 2px 0 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    color: #fff;
+    line-height: 21px;
+    padding: 0 5px 0 6px;
+    border-top-right-radius: 0;
+}
+
+.m-vip-product-list .product-item-origin {
+    padding-top: 20px;
+    font-size: 14px;
+    color: #151515;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: text-bottom;
+}
+
+.m-vip-product-list .product-item-origin-finalprice {
+    font-size: 30px;
+}
+
+.m-vip-product-list .product-item-origin-price {
+    color: #999;
+    text-decoration: line-through;
+    padding-left: 8px;
+}
+
+.m-vip-product-list .product-item-desc {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    padding-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.m-vip-product-list .product-item-month {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.m-vip-product-list .product-item-month:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    border-top: 1px dashed #eee;
+}
+
+.scene-card .m-vip-tab .m-vip-tab-list .active:after {
+    bottom: 0;
+    width: 48px;
+}
+
+.scene-card .m-vip-product-list .product-item {
+    margin: 0 15px;
+}
+
+.m-vip-product-list .product-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1;
+    flex: 1 1;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    height: 142px;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scene-card .m-vip-settle {
+    margin-top: 50px;
+}
+
+.m-vip-settle {
+    margin: 20px 0;
+}
+
+.scene-card .m-vip-settle .m-vip-settle-line {
+    display: none;
+}
+
+.m-vip-settle-line {
+    margin: 20px auto;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+
+.scene-card .m-vip-settle .m-vip-settle-body {
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.m-vip-settle .m-vip-settle-body {
+    font-size: 0;
+    padding: 0 20px;
+    position: relative;
+}
+
+.scene-card .m-vip-settle .m-vip-settle-body:before {
+    content: "\652F\4ED8\65B9\5F0F";
+    display: block;
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    top: -30px;
+    line-height: 20px;
+    left: 0;
+}
+
+.scene-card .m-vip-settle .m-vip-settle-body .u-settle-qrcode {
+    top: 20px;
+}
+
+.u-settle-qrcode {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 20px;
+    top: 0;
+}
+
+.u-settle-qrcode img {
+    width: 100%;
+}
+
+.u-settle-detail {
+    display: inline-block;
+    padding-left: 0px;
+    width: 100%;
+    font-size: 14px;
+    vertical-align: top;
+    height: 100px;
+}
+
+.u-settle-detail .detail-title {
+    font-size: 14px;
+    line-height: 14px;
+    color: #333;
+}
+
+.u-settle-detail .detail-icons {
+    margin-top: 10px;
+    height: 58px;
+}
+
+.u-settle-detail .detail-icons img {
+    display: inline-block;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.m-privilege {
+    width: 840px;
+    margin: 60px auto 0;
+}
+
+.m-privilege .title {
+    height: 30px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.m-privilege .title em {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    background: #fff;
+    line-height: 22px;
+}
+
+em, i {
+    font-style: normal;
+    text-align: left;
+}
+
+.m-privilege .title em:before {
+    left: -50px;
+}
+
+.m-privilege .title em:after {
+    right: -50px;
+}
+
+.m-privilege .m-rights {
+    width: 811px;
+    margin: 0 auto;
+    line-height: 20px;
+}
+
+.m-privilege .m-rights li {
+    float: left;
+    width: 140px;
+    margin: 40px 10px 0;
+    text-align: center;
+}
+
+.m-privilege .m-rights .icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+}
+
+.n-special {
+    margin: 60px auto 0;
+}
+
+.n-special .title {
+    height: 30px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.n-special .title em {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    background: #fff;
+    line-height: 22px;
+    font-style: normal;
+    text-align: left;
+}
+
+.n-special .title em:before {
+    left: -50px;
+}
+
+.n-special .title em:after, .n-special .title em:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    height: 12px;
+    width: 36px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.n-special .title em:after {
+    right: -50px;
+}
+
+.n-special .title em:after, .n-special .title em:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    height: 12px;
+    width: 36px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.n-special .slogan {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 45px;
+}
+
+.n-special .song {
+    margin-top: 10px;
+}
+
+.n-special .more {
+    height: 24px;
+    padding-right: 26px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.member-wrap .f-hand, .member-wrap .f-hand *, .member-wrap a, .member-wrap a * {
+    cursor: pointer;
+}
+
+.s-fc7, a.s-fc7:hover {
+    color: #328ad4;
+}
+
+.s-fcLink, a {
+    color: #507daf;
+}
+
+.n-special .more .u-gt {
+    padding-left: 4px;
+}
+
+.s-fc7, a.s-fc7:hover {
+    color: #328ad4;
+}
+
+.f-ff1 {
+    font-family: simsun,\5b8b\4f53;
+}
+
+.n-special .songlist {
+    margin: 8px 0 0 26px;
+}
+
+.n-special .songlist li {
+    float: left;
+    width: 190px;
+    height: 160px;
+    margin-left: 26px;
+}
+
+.n-special .songlist .cover {
+    display: block;
+    width: 160px;
+    height: 160px;
+}
+
+.f-pr {
+    position: relative;
+}
+
+.n-special .songlist .album-img {
+    width: 100%;
+    height: 100%;
+}
+
+.n-special .songlist .mask {
+    top: 0;
+    left: 0;
+    width: 191px;
+    height: 160px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL8AAACgCAMAAABqtE16AAACzVBMV…c/t/223/bbfttv+22//f9r9v/f2f+faPv/c9h+6P+f+wf+b5Fo3X1n2wAAAABJRU5ErkJggg==) no-repeat;
+}
+
+.f-cb:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    content: ".";
+}
+
+.n-faq {
+    padding: 30px 0 40px;
+    text-align: center;
+}

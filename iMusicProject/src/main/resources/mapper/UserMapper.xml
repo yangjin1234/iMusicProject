@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.User">
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="collectlist_id" jdbcType="VARCHAR" property="collectlistId" />
+    <result column="collect_id" jdbcType="VARCHAR" property="collectId" />
+    <result column="anchor_id" jdbcType="VARCHAR" property="anchorId" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
+    <result column="user_sex" jdbcType="VARCHAR" property="userSex" />
+    <result column="user_birthday" jdbcType="TIMESTAMP" property="userBirthday" />
+    <result column="user_photo" jdbcType="VARCHAR" property="userPhoto" />
+    <result column="user_address" jdbcType="VARCHAR" property="userAddress" />
+    <result column="user_recommend" jdbcType="VARCHAR" property="userRecommend" />
+    <result column="user_question" jdbcType="VARCHAR" property="userQuestion" />
+    <result column="user_answer" jdbcType="VARCHAR" property="userAnswer" />
+    <result column="user_grade" jdbcType="VARCHAR" property="userGrade" />
+    <result column="user_viptime" jdbcType="DATE" property="userViptime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_id, collectlist_id, collect_id, anchor_id, user_phone, user_name, user_email, 
+    user_sex, user_birthday, user_photo, user_address, user_recommend, user_question, 
+    user_answer, user_grade, user_viptime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.User">
+    insert into user (user_id, collectlist_id, collect_id, 
+      anchor_id, user_phone, user_name, 
+      user_email, user_sex, user_birthday, 
+      user_photo, user_address, user_recommend, 
+      user_question, user_answer, user_grade, 
+      user_viptime)
+    values (#{userId,jdbcType=VARCHAR}, #{collectlistId,jdbcType=VARCHAR}, #{collectId,jdbcType=VARCHAR}, 
+      #{anchorId,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
+      #{userEmail,jdbcType=VARCHAR}, #{userSex,jdbcType=VARCHAR}, #{userBirthday,jdbcType=TIMESTAMP}, 
+      #{userPhoto,jdbcType=VARCHAR}, #{userAddress,jdbcType=VARCHAR}, #{userRecommend,jdbcType=VARCHAR}, 
+      #{userQuestion,jdbcType=VARCHAR}, #{userAnswer,jdbcType=VARCHAR}, #{userGrade,jdbcType=VARCHAR}, 
+      #{userViptime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="collectlistId != null">
+        collectlist_id,
+      </if>
+      <if test="collectId != null">
+        collect_id,
+      </if>
+      <if test="anchorId != null">
+        anchor_id,
+      </if>
+      <if test="userPhone != null">
+        user_phone,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="userEmail != null">
+        user_email,
+      </if>
+      <if test="userSex != null">
+        user_sex,
+      </if>
+      <if test="userBirthday != null">
+        user_birthday,
+      </if>
+      <if test="userPhoto != null">
+        user_photo,
+      </if>
+      <if test="userAddress != null">
+        user_address,
+      </if>
+      <if test="userRecommend != null">
+        user_recommend,
+      </if>
+      <if test="userQuestion != null">
+        user_question,
+      </if>
+      <if test="userAnswer != null">
+        user_answer,
+      </if>
+      <if test="userGrade != null">
+        user_grade,
+      </if>
+      <if test="userViptime != null">
+        user_viptime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="collectlistId != null">
+        #{collectlistId,jdbcType=VARCHAR},
+      </if>
+      <if test="collectId != null">
+        #{collectId,jdbcType=VARCHAR},
+      </if>
+      <if test="anchorId != null">
+        #{anchorId,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhone != null">
+        #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="userSex != null">
+        #{userSex,jdbcType=VARCHAR},
+      </if>
+      <if test="userBirthday != null">
+        #{userBirthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userPhoto != null">
+        #{userPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="userAddress != null">
+        #{userAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="userRecommend != null">
+        #{userRecommend,jdbcType=VARCHAR},
+      </if>
+      <if test="userQuestion != null">
+        #{userQuestion,jdbcType=VARCHAR},
+      </if>
+      <if test="userAnswer != null">
+        #{userAnswer,jdbcType=VARCHAR},
+      </if>
+      <if test="userGrade != null">
+        #{userGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="userViptime != null">
+        #{userViptime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.User">
+    update user
+    <set>
+      <if test="collectlistId != null">
+        collectlist_id = #{collectlistId,jdbcType=VARCHAR},
+      </if>
+      <if test="collectId != null">
+        collect_id = #{collectId,jdbcType=VARCHAR},
+      </if>
+      <if test="anchorId != null">
+        anchor_id = #{anchorId,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhone != null">
+        user_phone = #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        user_email = #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="userSex != null">
+        user_sex = #{userSex,jdbcType=VARCHAR},
+      </if>
+      <if test="userBirthday != null">
+        user_birthday = #{userBirthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userPhoto != null">
+        user_photo = #{userPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="userAddress != null">
+        user_address = #{userAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="userRecommend != null">
+        user_recommend = #{userRecommend,jdbcType=VARCHAR},
+      </if>
+      <if test="userQuestion != null">
+        user_question = #{userQuestion,jdbcType=VARCHAR},
+      </if>
+      <if test="userAnswer != null">
+        user_answer = #{userAnswer,jdbcType=VARCHAR},
+      </if>
+      <if test="userGrade != null">
+        user_grade = #{userGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="userViptime != null">
+        user_viptime = #{userViptime,jdbcType=DATE},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.User">
+    update user
+    set collectlist_id = #{collectlistId,jdbcType=VARCHAR},
+      collect_id = #{collectId,jdbcType=VARCHAR},
+      anchor_id = #{anchorId,jdbcType=VARCHAR},
+      user_phone = #{userPhone,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      user_email = #{userEmail,jdbcType=VARCHAR},
+      user_sex = #{userSex,jdbcType=VARCHAR},
+      user_birthday = #{userBirthday,jdbcType=TIMESTAMP},
+      user_photo = #{userPhoto,jdbcType=VARCHAR},
+      user_address = #{userAddress,jdbcType=VARCHAR},
+      user_recommend = #{userRecommend,jdbcType=VARCHAR},
+      user_question = #{userQuestion,jdbcType=VARCHAR},
+      user_answer = #{userAnswer,jdbcType=VARCHAR},
+      user_grade = #{userGrade,jdbcType=VARCHAR},
+      user_viptime = #{userViptime,jdbcType=DATE}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+</mapper>

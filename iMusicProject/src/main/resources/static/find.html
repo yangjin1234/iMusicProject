@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta charset="UTF-8">
+		<title>酷狗音乐 - 就是歌多</title>
+		<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="js/jquery.min.js"></script>
+		<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="css/search_1.css">
+		<script type="text/javascript" charset="UTF-8">
+			var apmCollectData = apmCollectData || [];
+		</script>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		 crossorigin="anonymous">
+
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+		 crossorigin="anonymous">
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		 crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+			<div class="header">
+			<h1 class="logo">
+				<a href="index.html">
+					<img src="picture/logo_3.png" alt="" style="width=154px; height=27px;">
+				</a>
+			</h1>
+			<div class="search_wrapper top_search">
+				<div class="search_input"><input type="text">
+					<div class="searh_btn"><a href="find.html"><i class="search_icon" ></i><span>搜索</span></a></div>
+				</div>
+				<div class="search_recommend top_search_recommend">
+		
+				</div>
+				<div class="search_histroy top_search_histroy">
+		
+				</div>
+			</div>
+			<div class="topNav fr">
+				<ul>
+					<li>
+						<a target="_blank" href="index.html">客服中心</a>
+					</li>
+		
+					<li>
+						<a target="_blank" href="index.html">会员中心 </a>
+					</li>
+				</ul>
+				<div class="login_area">
+					<div id="login_in" class="clearfix">
+						<a class="login_btn" id="login_btn" href="login.html">登录</a>
+						<a target="_blank" href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a>
+					</div>
+					<div id="login_out" class="clearfix">
+						<img class="user_img" src="">
+						<span class="user_name"></span>
+					</div>
+					<div id="user_menu" class="user_menu">
+						<div class="topArrow1"></div>
+						<div class="topArrow2"></div>
+						<ul>
+							<li>
+								<a target="_blank" href="person_Account.html"><span class="user_icon1"></span>个人帐号</a>
+							</li>
+							<li>
+								<a href="login.html"><span class="user_icon2"></span>退出登录</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navWrap">
+			<div class="nav">
+				<ul class="homeNav">
+					<li>
+						<a class="normal" href="index.html">首 页</a>
+					</li>
+					<li>
+						<a class="normal" href="EveryDay.html">榜 单</a>
+					</li>
+					<li>
+						<a class="normal" id="productCenter" href="MyAlbum.html">专 辑</a>
+					</li>
+					<li class="more" id="more">
+						<a href="" class="iconMore" id="showMore">更 多</a>
+					</li>
+				</ul>
+				<ul class="secondMenu" id="secondMenu">
+					<li>
+						<a href="broadcast.html">电台</a>
+					</li>
+					<li>
+						<a href="mv.html">MV</a>
+					</li>
+					<li>
+						<a href="SongsList.html">歌单</a>
+					</li>
+					<li>
+						<a href="singer.html">歌手</a>
+					</li>
+				</ul>
+				<ul class="subNav">
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav1">音乐直播</a>
+					</li>
+					<li>
+						<a target="_blank" href="friend.html" class="icon icon-nav2">iMusic动态</a>
+					</li>
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav3">音乐人</a>
+					</li>
+					<!--<li>
+		        <a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a>
+		    </li>-->
+					<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
+					</li>
+		
+		
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		<div class="search_header">
+			<div class="search_wrapper content_search">
+				<div class="search_input"><input type="text">
+					<div class="searh_btn"><i class="search_icon"></i><span>搜索</span></div>
+				</div>
+				<div class="search_recommend content_search_recommend">
+
+				</div>
+				<div class="search_histroy content_search_histroy">
+
+				</div>
+			</div>
+		</div>
+		<div class="search_content">
+			<ul class="search_tab clearfix">
+				<li class="active" data-type="song">
+					<a id="song" href="javascript:;">单曲</a>
+				</li>
+				<li data-type="special">
+					<a id="special" href="javascript:;">歌单</a>
+				</li>
+				<li data-type="mv">
+					<a id="mv" href="javascript:;">MV</a>
+				</li>
+				<li data-type="admin">
+					<a id="admin" href="javascript:;">专辑</a>
+				</li>
+				<li data-type="user">
+					<a id="user" href="javascript:;">用户</a>
+				</li>
+				<li data-type="singer">
+					<a id="singer" href="javascript:;">歌手</a>
+				</li>
+			</ul>
+
+			<div class="search_song" id="search_song">
+				<div class="song_list_header">
+					<div class="similar_singer">
+						<a href="" class="singer_img" target="_blank"><img src="picture/singer_1.jpg" alt=""></a>
+						<p class="singer_name">
+							<a href="">周杰伦</a>
+						</p>
+						<p class="singer_info"><span class="search_song_num"><i>204</i>单曲</span><span class="search_mv_num"><i>301</i>MV</span>
+						</p>
+					</div>
+					<div class="action_area">
+						<p class="search_key_word">搜索到<i>周杰伦</i></p>
+						<p class="search_tips">相关的歌曲</p>
+						<a class="play_all" href="javascript:;"><span><i class="search_icon"></i>播放</span></a>
+					</div>
+				</div>
+				<div class="song_list">
+					<ul class="list_header clearfix">
+						<li class="width_f_li song_name_li">
+							<span class="search_icon checkall"></span>歌曲名
+						</li>
+						<li class="width_s_li">
+							专辑
+						</li>
+						<li class="width_t_li">
+							时长
+						</li>
+					</ul>
+					<ul class="list_content clearfix">
+
+					</ul>
+				</div>
+			</div>
+			
+			<div class="search_special" id="search_special">
+				<div class="special_header">
+					<div class="action_area">
+						<p class="search_key_word">搜索到<i>周杰伦</i></p>
+						<p class="search_tips">相关的歌单</p>
+					</div>
+				</div>
+				<div class="special_list">
+					<ul class="list_header clearfix">
+						<li class="width_f_li">
+							<span class="special_header_name">歌单名</span>
+						</li>
+						<li class="width_s_li">
+							创建人
+						</li>
+						<li class="width_t_li">
+							收藏
+						</li>
+					</ul>
+					<ul class="list_content clearfix">
+
+					</ul>
+				</div>
+			</div>
+			<div class="search_mv" id="search_mv">
+				<div class="mv_header">
+					<div class="action_area">
+						<p class="search_key_word">搜索到<i>周杰伦</i></p>
+						<p class="search_tips">相关的MV</p>
+					</div>
+				</div>
+				<div class="mv_list">
+					<ul>
+					</ul>
+				</div>
+			</div>
+			<nav aria-label="Page navigation" style="text-align-last: center;">
+				<ul class="pagination">
+					<li>
+						<a href="#" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li>
+						<a href="#" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+
+
+		</div>
+		</div>
+		
+		
+		
+		
+		<div class="footerWrapper">
+			<div class="footer">
+				<div class="links">
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">关于iMusic</a>|
+					<a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">广告服务</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">版权指引</a>|
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">用户服务协议</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">推广合作</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐人</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐推</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">客服中心</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">用户体验提升计划</a>
+				</div>
+				<div class="copyright">
+					<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@iMusic.com</p>
+					<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">粤ICP备09017694号-2</a><span class="footerIcon"><a
+							 target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+					<p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+					<p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018
+						<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img
+							 style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
+					</p>
+					<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">不良信息举报邮箱：jubao_music@kugou.net&nbsp;&nbsp;&nbsp;&nbsp;客服邮箱：kefu@iMusoic.net</p>
+					<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2019 KuGou-Inc.All Rights Reserved
+						<a hidefocus="true" class="office-verification" href="javascript:void(0);" target="_blank"></a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="scrollTop icon-scrollTop">
+			<a href="#"></a>
+		</div>
+		</div>
+		
+		
+		<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+		<script src="js/kguser_min_3.js"></script>
+		<title>iMusic音乐 - 就是歌多</title>
+		<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+		<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+		<script src="js/repalcehttpsimg_3.js"></script>
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/jstorage_1.js"></script> -->
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/textchange.min_1.js"></script> -->
+		<script src="js/kguser_min_3.js"></script>
+	
+	</body>
+
+</html>

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 主页面,已完成 -->
+<head>
+     <script type="text/javascript">window.startTime = new Date().getTime();var sendFristFlag = false;</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" /> 
+    <title>IMusic- 畅听无阻</title>
+    <meta itemprop="images" content="picture/logo.jpg" />
+    <meta name="keywords" content="酷狗音乐旗下最新最全的在线正版音乐网站，本站为您免费提供最全的在线音乐试听下载，以及全球海量电台和MV播放服务、最新音乐播放器下载。酷狗音乐 和音乐在一起。" />
+    <meta name="description" content="酷狗音乐旗下最新最全的在线正版音乐网站，本站为您免费提供最全的在线音乐试听下载，以及全球海量电台和MV播放服务、最新音乐播放器下载。酷狗音乐 和音乐在一起。" />
+    <link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="css/index_04cfa9d3c4.css">
+   <!-- <link rel="alternate" media="only screen and (max-width: 640px)"  href="http://m.kugou.com"> -->
+   
+    
+</head>
+
+<body>
+  <!-- ======================================================body内的所有东西=============================== -->
+  <div class="header">
+  	<h1 class="logo">
+  		<a href="index.html">
+  			<img src="picture/logo_3.png" alt="" style="width=154px; height=27px;">
+  		</a>
+  	</h1>
+  	<div class="search_wrapper top_search">
+  		<div class="search_input"><input type="text">
+  			<div class="searh_btn"><a href="find.html"><i class="search_icon" ></i><span>搜索</span></a></div>
+  		</div>
+  		<div class="search_recommend top_search_recommend">
+  
+  		</div>
+  		<div class="search_histroy top_search_histroy">
+  
+  		</div>
+  	</div>
+  	<div class="topNav fr">
+  		<ul>
+  			<li>
+  				<a target="_blank" href="index.html">客服中心</a>
+  			</li>
+  
+  			<li>
+  				<a target="_blank" href="index.html">会员中心 </a>
+  			</li>
+  		</ul>
+  		<div class="login_area">
+  			<div id="login_in" class="clearfix">
+  				<a class="login_btn" id="login_btn" href="login.html">登录</a>
+  				<!-- <a target="_blank" href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a> -->
+  			</div>
+  			<div id="login_out" class="clearfix">
+  				<img class="user_img" src="">
+  				<span class="user_name"></span>
+  			</div>
+  			<div id="user_menu" class="user_menu">
+  				<div class="topArrow1"></div>
+  				<div class="topArrow2"></div>
+  				<ul>
+  					<li>
+  						<a target="_blank" href="person_Account.html"><span class="user_icon1"></span>个人帐号</a>
+  					</li>
+  					<li>
+  						<a href="login.html"><span class="user_icon2"></span>退出登录</a>
+  					</li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <div class="navWrap">
+  	<div class="nav">
+  		<ul class="homeNav">
+  			<li>
+  				<a class="normal" href="index.html">首 页</a>
+  			</li>
+  			<li>
+  				<a class="normal" href="EveryDay.html">榜 单</a>
+  			</li>
+  			<li>
+  				<a class="normal" id="productCenter" href="MyAlbum.html">专 辑</a>
+  			</li>
+  			<li class="more" id="more">
+  				<a href="" class="iconMore" id="showMore">更 多</a>
+  			</li>
+  		</ul>
+  		<ul class="secondMenu" id="secondMenu">
+  			<li>
+  				<a href="broadcast.html">电台</a>
+  			</li>
+  			<li>
+  				<a href="mv.html">MV</a>
+  			</li>
+  			<li>
+  				<a href="SongsList.html">歌单</a>
+  			</li>
+  			<li>
+  				<a href="singer.html">歌手</a>
+  			</li>
+  		</ul>
+  		<ul class="subNav">
+  			<li>
+  				<a target="_blank" href="index.html" class="icon icon-nav1">音乐直播</a>
+  			</li>
+  			<li>
+  				<a target="_blank" href="friend.html" class="icon icon-nav2">iMusic动态</a>
+  			</li>
+  			<li>
+  				<a target="_blank" href="index.html" class="icon icon-nav3">音乐人</a>
+  			</li>
+  			<!--<li>
+          <a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a>
+      </li>-->
+  			<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
+  			</li>
+  
+  
+  		</ul>
+  	</div>
+  </div>
+        <!-- ===========================2、标题头的实现=============================== -->
+        <!-- ============================3、点击图片，进入歌单========================= -->
+        <div class="banner">
+            <ul>
+                   <li class="sliderItem" data-bg="images/20190109104215314555.jpg" data-show="1">
+                       
+                            <a target="_blank" href="SongsList.html" title="换肤新体验 酷狗英雄主题" style="width:100%; height:500px;background:url(images/20190109104215314555.jpg) no-repeat center top ">
+                         
+                       </a>
+                       </li> 
+                    
+                       <li class="sliderItem" data-bg="https://imgessl.kugou.com/commendpic/20190109/20190109104155147376.jpg" data-show="0">
+                       
+                            <a target="_blank" href="SongsList.html" title="繁星网 缔造星途神话">
+                         
+                       </a>
+                       </li> 
+                    
+                       <li class="sliderItem" data-bg="https://imgessl.kugou.com/commendpic/20190611/20190611101938392990.jpg" data-show="0">
+                       
+                            <a target="_blank" href="SongsList.html" title="酷狗蓝牙耳机，听歌 通话 煲剧10小时">
+                         
+                       </a>
+                       </li> 
+                    
+                       <li class="sliderItem" data-bg="https://imgessl.kugou.com/commendpic/20190802/20190802205856108614.jpg" data-show="0">
+                       
+                            <a target="_blank" href="SongsList.html" title="声入人心">
+                         
+                       </a>
+                       </li> 
+                    
+                       <li class="sliderItem" data-bg="https://imgessl.kugou.com/commendpic/20190802/20190802204435402325.jpg" data-show="0">
+                       
+                            <a target="_blank" href="SongsList.html" title="中国好声音">
+                         
+                       </a>
+                       </li> 
+                    
+                       <li class="sliderItem" data-bg="https://imgessl.kugou.com/commendpic/20190802/20190802203542761142.jpg" data-show="0">
+                       
+                            <a target="_blank" href="SongsList.html" title="中国新说唱">
+                         
+                       </a>
+                       </li> 
+                    
+                       <li class="sliderItem" data-bg="https://imgessl.kugou.com/commendpic/20190802/20190802221648308584.jpg" data-show="0">
+                       
+                            <a target="_blank" href="SongsList.html" title="叶炫清">
+                         
+                       </a>
+                       </li> 
+                    
+                       <li class="sliderItem" data-bg="https://imgessl.kugou.com/commendpic/20190802/20190802221800123912.jpg" data-show="0">
+                       
+                            <a target="_blank" href="SongsList.html" title="半吨兄弟">
+                         
+                       </a>
+                       </li> 
+                    
+                       <li class="sliderItem" data-bg="https://imgessl.kugou.com/commendpic/20190802/20190802225629691293.jpg" data-show="0">
+                       
+                            <a target="_blank" href="SongsList.html" title="洛天依">
+                         
+                       </a>
+                       </li> 
+            </ul>
+        </div>
+         <!-- ============================3、点击图片，进入歌单========================= -->
+         
+         <!-- ===============4、一条背景图片============================= -->
+        <div class="downloadBlur">
+            <div class="downloadWrapper" id="downloadWrapper"></div>
+            <div class="overlayer"></div>
+        </div>
+         <!-- ==============4、一条背景图片============================= -->
+      
+      
+        <!-- 5、所有分类 -->
+        <!-- ===================================================开始大标题的所有东西================================================ -->
+        <div class="content" id="content">
+        
+          <!-- ======开始热门推荐、热门榜单========= -->
+            <div class="subContentM" id="secoundContent">
+                <!--==== 热门推荐===-->
+                <div class="itemM selectSongList">   
+						 <div class="itemTitle hasBorder">
+	                        <h3>热门推荐</h3>
+		                        <div class="tabT" id="SongtabMenu">
+		                            <span class="MenuItem active" data="0">华语</span>
+		                            <span class="MenuItem " data="1">流行</span>
+		                            <span class="MenuItem " data="2">摇滚</span>
+		                            <span class="MenuItem " data="3">民谣</span>
+		                            <span class="MenuItem " data="3">电子</span>
+		                        </div>
+	                        <a href="list.html" class="playAll"><em>更多</em></a>
+	                    </div>
+	               <!-- 热门推荐的内容 -->
+                    <div class="itemContent"> 
+                  				 <!-- 第一条内容 -->
+                                <div class="cpt cptBig">
+                                        <p class="cptT"><span class="icon icon-select_icon"></span><span class="num">180.1万</span></p>
+                                          
+                                            <img  _src="picture/20190510013730949124.jpg" width="325" height="325" src="picture/blank.gif" _def="https://staticssl.kugou.com/public/root/images/rankdefalut.jpg">
+                                        
+                                        <div class="Cover" >
+                                            <a target="_blank" href="SongsList.html">
+                                            </a>
+                                            <div class="playBtn icon icon-play_s" data-index="0" data-id="680905">播放</div>
+                                        </div>
+                                        <p class="cptBg"></p>
+                                        <div class="cptB">
+                                            <p class="songListName">感情终止：在喜欢你这件事上，我尽力了</p>
+                                            <p class="songListSinger">晚饭吃了吗</p>
+                                        </div>
+                                </div>
+                                 <!-- 第一条内容 -->
+                                 <!-- 第二条内容 -->
+                                <div class="cpt cptMid">
+                            
+                                        <p class="cptT"><span class="icon icon-select_icon"></span><span class="num">36150.5万</span></p>
+                                          
+                                            <img  _src="picture/20190803005015411263.jpg" width="160" height="160" src="picture/blank.gif" _def="https://staticssl.kugou.com/public/root/images/rankdefalut.jpg">
+                                        
+                                        <div class="Cover" >
+                                            <a target="_blank" href="SongsList.html">
+                                            </a>
+                                            <div class="playBtn icon icon-play_s" data-index="1" data-id="547134">播放</div>
+                                        </div>
+                                        <p class="cptBg"></p>
+                                        <div class="cptB">
+                                            <p class="songListName">每周推荐歌曲</p>
+                                            <p class="songListSinger">酷狗号歌单君</p>
+                                        </div>
+                                </div> 
+                                 <!-- 第二条内容 -->  
+                                 <!-- ===........==== -->
+                                <div class="cpt cptMid">
+                            
+                                        <p class="cptT"><span class="icon icon-select_icon"></span><span class="num">45.2万</span></p>
+                                          
+                                            <img  _src="picture/20190718124035981904.jpg" width="160" height="160" src="picture/blank.gif" _def="https://staticssl.kugou.com/public/root/images/rankdefalut.jpg">
+                                        
+                                        <div class="Cover" >
+                                            <a target="_blank" href="SongsList.html">
+                                            </a>
+                                            <div class="playBtn icon icon-play_s" data-index="2" data-id="784029">播放</div>
+                                        </div>
+                                        <p class="cptBg"></p>
+                                        <div class="cptB">
+                                            <p class="songListName">思念成疾，爱你如斯</p>
+                                            <p class="songListSinger">神算</p>
+                                        </div>
+                                </div>
+                       
+                                <div class="cpt cptMid">
+                            
+                                        <p class="cptT"><span class="icon icon-select_icon"></span><span class="num">365.9万</span></p>
+                                          
+                                            <img  _src="picture/20190725122805689646.jpg" width="160" height="160" src="picture/blank.gif" _def="https://staticssl.kugou.com/public/root/images/rankdefalut.jpg">
+                                        
+                                        <div class="Cover" >
+                                            <a target="_blank" href="SongsList.html">
+                                            </a>
+                                            <div class="playBtn icon icon-play_s" data-index="3" data-id="797984">播放</div>
+                                        </div>
+                                        <p class="cptBg"></p>
+                                        <div class="cptB">
+                                            <p class="songListName">磁带记忆：经典粤语歌泛起旧时光</p>
+                                            <p class="songListSinger">小月</p>
+                                        </div>
+                                </div>
+                                <div class="cpt cptMid">
+                            
+                                        <p class="cptT"><span class="icon icon-select_icon"></span><span class="num">21.0万</span></p>
+                                          
+                                            <img  _src="picture/20190721201554332319.jpg" width="160" height="160" src="picture/blank.gif" _def="https://staticssl.kugou.com/public/root/images/rankdefalut.jpg">
+                                        
+                                        <div class="Cover" >
+                                            <a target="_blank" href="SongsList.html">
+                                            </a>
+                                            <div class="playBtn icon icon-play_s" data-index="4" data-id="790948">播放</div>
+                                        </div>
+                                        <p class="cptBg"></p>
+                                        <div class="cptB">
+                                            <p class="songListName">浪漫情话：余生有你暖又甜</p>
+                                            <p class="songListSinger">谢景行的宗介</p>
+                                        </div>
+                                </div>
+                               <!-- ===........==== -->
+                    </div>
+                 <!-- ==结束热门推荐的内容=== -->   
+                </div>
+               <!--=== 结束热门推荐===-->
+                
+                
+                <!-- 开始精选歌单 -->  
+                <!-- ======开始热门榜单 ======-->
+                <div class="itemM HotSongList">
+                    <div class="itemTitle">
+                        <h3><b>热门</b>榜单</h3><a target="_blank" href="songlist.html" class="more fr">更多</a></div>
+                    <div class="itemContent">
+                    
+                        
+                            <div class="listItem">
+                                 <a href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-play_s" data-id="6666">播放</div>
+                                    </div>
+                                    <span class="arrow icon-big_arrow_right"></span>
+                                    <img  _src="picture/04b10ec0bb3d8dfdc2b6cf0d30e0ebd3.jpg_240x240.jpg" src="picture/blank.gif" width="98" height="98" _def="https://staticssl.kugou.com/public/root/images/rankdefalut.jpg">
+                                    <div class="list">
+                                        <dl>
+                                            <dt>酷狗飙升榜</dt>
+                                                    <dd>1 . 南宫嘉骏 - 比烟花还寂寞</dd>
+                                         		     <dd>2 . 安小木 - 无名之辈 (励志男声版)</dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                            <div class="listItem">
+                                 <a href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-play_s" data-id="8888">播放</div>
+                                    </div>
+                                    <span class="arrow icon-big_arrow_right"></span>
+                                    <img  _src="picture/bc23a80bf7a2e9179460ed2b6e384849.jpg_240x240.jpg" src="picture/blank.gif" width="98" height="98" _def="https://staticssl.kugou.com/public/root/images/rankdefalut.jpg">
+                                    <div class="list">
+                                        <dl>
+                                            <dt>酷狗TOP500</dt>
+                                            
+                                                
+                                                    <dd>1 . 画词戏子 - 把孤独当作晚餐</dd>
+                                                
+                                            
+                                                
+                                                    <dd>2 . 王力宏、谭维维 - 缘分一道桥</dd>
+                                                
+                                            
+                                        </dl>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                            <div class="listItem">
+                                 <a href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-play_s" data-id="23784">播放</div>
+                                    </div>
+                                    <span class="arrow icon-big_arrow_right"></span>
+                                    <img  _src="picture/47e76f9757c6bbb670630b4671961759.jpg_240x240.jpg" src="picture/blank.gif" width="98" height="98" _def="https://staticssl.kugou.com/public/root/images/rankdefalut.jpg">
+                                    <div class="list">
+                                        <dl>
+                                            <dt>网络红歌榜</dt>
+                                            
+                                                
+                                                    <dd>1 . 虎二 - 你一定要幸福</dd>
+                                                
+                                            
+                                                
+                                                    <dd>2 . 杭娇 - 听心</dd>
+                                                
+                                            
+                                        </dl>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                    
+                    </div>
+                </div>
+                <!--===结束 热门榜单===-->
+            </div> 
+           <!-- ======================结束热门推荐、热门榜单========================== -->
+            
+        <!-- =======================开始新碟上架、热门歌手============================= -->    
+        <!-- 开始一张分割背景图，为了与上面的标题分割 -->     
+            <div class="forSaleM">
+                <!-- <img src="picture/ad_default.jpg"> -->
+                <iframe scrolling="no" frameborder="0" width="1000" height="100" src="about:blank" _isrc="https://adservice.kugou.com/v1/random/?id=20" width="100%" height="100%"></iframe>
+            </div>
+         <!-- 结束一张分割背景图，为了与上面的标题分割 -->  
+         <!--=== 开始新碟上架与热门歌手===== -->   
+            <div class="subContentM limitHeight">
+                <!-- ===开始新碟上架及内容=== -->
+                <div class="itemM HotRadio">
+                    <div class="itemTitle">
+                        <h3><b>新碟</b>上架</h3> <a href="broadcast.html" class="playAll"><em>更多</em></a></div>
+                    <div class="itemContent">
+                        <ul>
+                            <li>
+                                <a target="_blank" href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" _src="picture/radio_1.jpg" src="picture/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">KTV必点曲</div>
+                                    <div class="radioName">陈奕迅 - 婚礼的祝福</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" _src="picture/radio_2.jpg" src="picture/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">中文DJ</div>
+                                    <div class="radioName">李佩玲 - 心有独钟(Live)</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" _src="picture/radio_3.jpg" src="picture/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">酷狗热歌</div>
+                                    <div class="radioName">那英 - 放爱一条生路</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" _src="picture/radio_4.jpg" src="picture/blank.gif" class=" ">
+                                    </div>
+                                    <div class="radioKind">网络红歌</div>
+                                    <div class="radioName">斯琴高丽 - 情如花</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" _src="picture/radio_5.jpg" src="picture/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">经典</div>
+                                    <div class="radioName">G.E.M.邓紫棋 - 泡沫 - DJ版</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" _src="picture/radio_6.jpg" src="picture/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">老情歌</div>
+                                    <div class="radioName">索朗扎西 - 郎啊郎</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" _src="picture/radio_7.jpg" src="picture/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">新歌</div>
+                                    <div class="radioName">Owl City - Wolf Bite</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" _src="picture/radio_8.jpg" src="picture/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">动漫</div>
+                                    <div class="radioName">刘若英、黄立行 - 分开旅行</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" _src="picture/radio_9.jpg" src="picture/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">轻音乐</div>
+                                    <div class="radioName">GALA - 点豆豆</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="playmusic.html">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" _src="picture/radio_10.jpg" src="picture/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">最爱成名曲</div>
+                                    <div class="radioName">Alicia Keys - 28 Thousand Days</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+               <!-- ===结束新碟上架及内容=== -->
+                <!-- ===开始热门歌手及内容 ===-->
+                <div class="itemM HotSinger">
+                    <div class="itemTitle">
+                        <h3><b>热门</b>歌手</h3>
+                        <div class="tabT" id="tabMenu"><span class="active" data="0">华语</span><span data="1">欧美</span><span data="2">日韩</span><span data="3"><a class="more" href="singer.html">更多</a></span></div>
+                    </div>
+                    <div class="itemContent">
+                        <div>
+                            <ul class="firstUl clearFix" id="SingertabContent">
+                                <li class="item">
+                                    <ul class="chinaSinger secondUl clearFix" id="chinaSingerContent">
+                                        <li>
+                                                    <div class="cpt cptMid">
+                                                
+                                                        <a target="_blank" class="singerLink" href="playmusic.html">
+                                                            <img class="singerImg" src="picture/singdefalut.jpg" _src="https://imgessl.kugou.com/uploadpic/softhead/240/20190720/20190720220214641.jpg" _def="picture/singdefalut.jpg">
+                                                            <div class="Cover">
+                                                                <div class="playBtn icon">播放</div> 
+                                                            </div>
+                                                            <p class="cptBg"></p>
+                                                            <div class="cptB">
+                                                                <p class="songListSinger">G.E.M.邓紫棋</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                            
+                                                
+                                                    <div class="cpt cptMid">
+                                                
+                                                        <a target="_blank" class="singerLink" href="playmusic.html">
+                                                            <img class="singerImg" src="picture/singdefalut.jpg" _src="https://imgessl.kugou.com/uploadpic/softhead/240/20180515/20180515002522714.jpg" _def="picture/singdefalut.jpg">
+                                                            <div class="Cover">
+                                                                <div class="playBtn icon">播放</div> 
+                                                            </div>
+                                                            <p class="cptBg"></p>
+                                                            <div class="cptB">
+                                                                <p class="songListSinger">周杰伦</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                            
+                                                
+                                                     <div class="cpt cptSmall">
+                                                
+                                                        <a target="_blank" class="singerLink" href="playmusic.html">
+                                                            <img class="singerImg" src="picture/singdefalut.jpg" _src="https://imgessl.kugou.com/uploadpic/softhead/240/20190103/20190103191232626.jpg" _def="picture/singdefalut.jpg">
+                                                            <div class="Cover">
+                                                                <div class="playBtn icon">播放</div> 
+                                                            </div>
+                                                            <p class="cptBg"></p>
+                                                            <div class="cptB">
+                                                                <p class="songListSinger">薛之谦</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                            
+                                                
+                                                     <div class="cpt cptSmall">
+                                                
+                                                        <a target="_blank" class="singerLink" href="playmusic.html">
+                                                            <img class="singerImg" src="picture/singdefalut.jpg" _src="https://imgessl.kugou.com/uploadpic/softhead/240/20161209/20161209164303152140.jpg" _def="picture/singdefalut.jpg">
+                                                            <div class="Cover">
+                                                                <div class="playBtn icon">播放</div> 
+                                                            </div>
+                                                            <p class="cptBg"></p>
+                                                            <div class="cptB">
+                                                                <p class="songListSinger">林俊杰</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                            
+                                                
+                                                     <div class="cpt cptSmall">
+                                                
+                                                        <a target="_blank" class="singerLink" href="playmusic.html">
+                                                            <img class="singerImg" src="picture/singdefalut.jpg" _src="https://imgessl.kugou.com/uploadpic/softhead/240/20180507/20180507120242140.jpg" _def="picture/singdefalut.jpg">
+                                                            <div class="Cover">
+                                                                <div class="playBtn icon">播放</div> 
+                                                            </div>
+                                                            <p class="cptBg"></p>
+                                                            <div class="cptB">
+                                                                <p class="songListSinger">刘德华</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                            
+                                        
+                                        </li>
+                                    </ul>
+                                    <div class="tabC" id="subMenu">
+                                        <a class="icon icon-s-dot icon-s_dot_hover" data="0"></a>
+                                        <a class="icon icon-s-dot" data="1"></a>
+                                        <a class="icon icon-s-dot" data="2"></a>
+                                    </div>    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+             <!-- ===开始热门歌手及内容 ===-->
+            </div>
+           
+        </div>
+        
+        <!-- ============================================大标题的所有东西======================================= -->
+        <!-- 5、所有分类 -->
+      </div>    
+	  <div class="footerWrapper">
+	  	<div class="footer">
+	  		<div class="links">
+	  			<a hidefocus="true" href="javascript:void(0);" target="_blank">关于iMusic</a>|
+	  			<a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> |
+	  			<a hidefocus="true" href="javascript:void(0);" target="_blank">广告服务</a> |
+	  			<a hidefocus="true" target="_blank" href="javascript:void(0);">版权指引</a>|
+	  			<a hidefocus="true" target="_blank" href="javascript:void(0);">用户服务协议</a> |
+	  			<a hidefocus="true" target="_blank" href="javascript:void(0);">推广合作</a> |
+	  			<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐人</a> |
+	  			<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐推</a> |
+	  			<a hidefocus="true" href="javascript:void(0);" target="_blank">客服中心</a> |
+	  			<a hidefocus="true" href="javascript:void(0);" target="_blank">用户体验提升计划</a>
+	  		</div>
+	  		<div class="copyright">
+	  			<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@iMusic.com</p>
+	  			<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;
+	  				<a hidefocus="true" target="_blank" href="javascript:void(0);">粤ICP备09017694号-2</a><span class="footerIcon"><a
+	  					 target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+	  			<p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+	  			<p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018
+	  				<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img
+	  					 style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
+	  			</p>
+	  			<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">不良信息举报邮箱：jubao_music@kugou.net&nbsp;&nbsp;&nbsp;&nbsp;客服邮箱：kefu@iMusoic.net</p>
+	  			<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2019 KuGou-Inc.All Rights Reserved
+	  				<a hidefocus="true" class="office-verification" href="javascript:void(0);" target="_blank"></a>
+	  			</p>
+	  		</div>
+	  	</div>
+	  </div>
+	  <div class="scrollTop icon-scrollTop">
+	  	<a href="#"></a>
+	  </div>
+	  </div>
+	  
+	  
+	  <script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+	  <script src="js/kguser_min_3.js"></script>
+	  <title>iMusic音乐 - 就是歌多</title>
+	  <script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+	  <link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+	  <link rel="stylesheet" href="css/search_1.css">
+    <script type="text/javascript"  src="js/jquery.js"></script>
+    <script type="text/javascript"  src="js/common_9da4617bd7.js"></script>
+    <script src="js/kguser_min.js"></script>
+    <script type="text/javascript"  src="js/background-blur.js"></script>
+    <script src="js/repalcehttpsimg.js"></script>
+    <script type="text/javascript" src="js/registerdev.v1.min.js" charset="utf-8"></script>
+   <!-- <script type="text/javascript">
+    var apmCollectData = apmCollectData || [];
+        kugouC = utility.read("KuGoo"),
+        kugou_id = kugouC.KugooID;
+    var pageLoadedData = {
+              "typeId": 10003, //记录id
+              "errorMessageId": "",
+              "errorMessage": "",
+              "requestUrl": location.href,
+              "os": 0,
+              "timeType": 2,
+              "timeLength": new Date().getTime() - window.startTime, //时长
+              "userid": kugou_id ||-1
+        };
+        var domLoaded = [12,pageLoadedData,null,1];
+            apmCollectData.push(domLoaded);
+            new Image().src = "https://statwww2.kugou.com/front/stat.html?report_id=7752&stat_type=total";
+        try{
+            newLogCount();
+        }catch(ex){}  
+    </script>
+    <script type="text/javascript">
+    var fristLoad={
+        fSImgs : [],
+        fSImgsCopy :[],
+        init:function(){
+            var _this = this,
+                fs;
+            var imgs = document.getElementsByTagName("img"),
+                secoundContent = document.getElementById("secoundContent"),
+                markImgs = secoundContent.getElementsByTagName("img");
+                for(var i = 0, len = markImgs.length; i < len; i++){
+                    _this.fSImgs.push(markImgs[i]);
+                    _this.fSImgsCopy.push(markImgs[i]);
+                }
+
+                for(var i = 0, len = _this.fSImgs.length; i < len; i++){
+                    fs = _this.fSImgsCopy[i];
+                    if(fs){
+                        if(fs.complete){
+                            _this.remove(fs);
+                        } else {
+                            fs.onload = function(){
+                                _this.remove(this);
+                            }
+                            fs.onerror = function(){
+                                _this.remove(this);
+                            }
+                        }
+                    }
+                } 
+                
+        },
+        remove: function (elm){
+            var _this = this,
+                i, fs;
+            for(i = 0; i < _this.fSImgs.length; ){
+                fs = _this.fSImgs[i];
+                if(fs == elm||fs == null){
+                    _this.fSImgs.splice(i,1);//可能存在不明的null
+                } else {
+                    i++;
+                }
+            }
+            // 确保加载的图片数据全部加载完发送统计
+            if(_this.fSImgs.length == 0){
+                _this.activeLog();
+            }
+        },
+        activeLog:function(){
+            var firstScreenLoadedEndTime = new Date().getTime();
+            window.firstScreenLoaded = firstScreenLoadedEndTime - startTime;
+            var firstScreenData = {
+                "typeId": 10001,
+                "errorMessageId": "",
+                "errorMessage": "",
+                "requestUrl": location.href,
+                "os": 0,
+                "timeType": 1,
+                "timeLength": window.firstScreenLoaded,
+                "userid": kugou_id || -1
+            };
+            var firstScreenLoadedArr = [12, firstScreenData, "", 1];
+            apmCollectData.push(firstScreenLoadedArr);
+            
+            try {
+                newLogCount()
+            } catch(ex) {}
+
+            /*负数，及超过10分钟数据上报*/
+            if(firstScreenLoaded < 0 || firstScreenLoaded > (1000*60*10)){
+                var subId = "home_firstScreenLoaded_beyond_10min";
+                if(firstScreenLoaded < 0){
+                    subId = "home_firstScreenLoaded_negative_num";
+                }
+                $.post('http://stat.www2.kugou.com/node/weblog/jsloger',{
+                    "key" : subId,
+                    "startTime" : startTime,
+                    "endTime" : firstScreenLoadedEndTime,
+                    "sendTime" : new Date().getTime(),
+                    "ua" : navigator.userAgent,
+                    "kugouid" : kugou_id || -1,
+                    "url" : location.href,
+                    "referrerUrl" : document.referrer || "null"
+                });
+            }
+        }
+    }
+    fristLoad.init();
+    </script> -->
+    <script type="text/javascript">
+            // 精选歌单
+        var jsonSelect1 = '[{"Hash":"EEE548AFDBAB0DE43FA515CEB7F2FA06","timeLen":117185,"FileName":"叶洛洛 - 爱过你这件事","albumId":20210512},{"Hash":"BD61D51E4387A31CAF50C8BF6851AFD1","timeLen":203005,"FileName":"韦琪 - 是时候说再见了","albumId":8564206},{"Hash":"5590C8B8D393ABC52D127D791B8477D4","timeLen":234027,"FileName":"马诗蕊 - 幸好","albumId":11196353},{"Hash":"187432E8641D499B0563528EDC700D61","timeLen":276032,"FileName":"贺一航 - 爱犹未尽","albumId":9019746},{"Hash":"8FC1B90B2E72D9EC4BC1206C765217F1","timeLen":284032,"FileName":"朱兴东 - 一百首疗伤歌 (治愈版)","albumId":8597661},{"Hash":"D72D82E33A829B1A2EB4457003C67A7E","timeLen":240480,"FileName":"万能和弦 - 我却不明白","albumId":19691295},{"Hash":"604D4AD9630257913D4F44BCA399DF2E","timeLen":224040,"FileName":"黄静美 - 一声不吭","albumId":20136119},{"Hash":"56FD25BA78BFE8551D2EFE54E81EB7A1","timeLen":293276,"FileName":"陈雪凝 - 灰姑娘","albumId":20117520},{"Hash":"44B166DF78E2A54A0F31BC4163D57A38","timeLen":214067,"FileName":"卢一 - 你在想他","albumId":9111175},{"Hash":"3DA180E59A2D4A0DA46AF97F5CD40667","timeLen":256018,"FileName":"朱兴东 - 熬夜成瘾","albumId":12434265},{"Hash":"F9A1629A222F483825A02847AE246FEE","timeLen":233021,"FileName":"馨瑶 - 害怕什么","albumId":9389356},{"Hash":"A451F0BE9DDAF383BA4B19828B31FBE0","timeLen":253000,"FileName":"胜屿 - 笑着结束","albumId":554794},{"Hash":"AB92B1F3AB91C0906EA432987D1D4584","timeLen":195027,"FileName":"弦外之音 - 别说舍不得","albumId":12801140},{"Hash":"3B56670CFCEBA39C3D01F92A91F8BEBC","timeLen":212006,"FileName":"曲肖冰 - 空心","albumId":9438220},{"Hash":"6D76421D0DC7EEC52CCC6AA425F1157A","timeLen":238032,"FileName":"美美 - 束手无策","albumId":19689576},{"Hash":"4974D8B667F0BA8DE1762D4DC2FD02BE","timeLen":240054,"FileName":"亦勋 - 爱你这件小事","albumId":10829561},{"Hash":"8A9D0F3EE16E01FF2D2B2678E3BC9E73","timeLen":224417,"FileName":"杨非同 - 今天又没说话","albumId":19695345},{"Hash":"A154D29F02351EAECE9390A2767AE6B3","timeLen":333082,"FileName":"陈佩茹 - 偶发空缺","albumId":8674320},{"Hash":"94B9D177CD1F906C92BAB720BB792035","timeLen":270003,"FileName":"赵小臭 - 一个人","albumId":8659163},{"Hash":"B83B837C1DEE6656CB03AFF2BE381540","timeLen":245034,"FileName":"陶心瑶 - 戒你","albumId":8705033},{"Hash":"ACCB29136E8255EC5FD26DB639EBB03C","timeLen":238039,"FileName":"季彦霖 - 失温","albumId":9018465},{"Hash":"F03946CDEE8DEECC921839CC03863FEC","timeLen":212027,"FileName":"黄姗姗 - 过期","albumId":8624211},{"Hash":"E81DE91D831C760FD8C8CF2CFC1B4DD4","timeLen":260070,"FileName":"杨森Anson - 明明","albumId":8754813},{"Hash":"1A04D8C4360E62A478E4D43E355259B8","timeLen":251030,"FileName":"王北车 - 无憾","albumId":12829941},{"Hash":"9D4969C725E1FC77990953E35684308F","timeLen":239086,"FileName":"庄心妍 - 太早","albumId":11848936},{"Hash":"E0B1B752978AD4EB90AD21F8906850F8","timeLen":219077,"FileName":"齐晨 - 各不相干","albumId":11612733},{"Hash":"CD3315D33CDD218475C9F5C4682A5DB7","timeLen":239229,"FileName":"江潮 - 摊牌","albumId":1078517},{"Hash":"79D71765B2A603C85DA9411DF1C6F0DE","timeLen":221031,"FileName":"郑俊豪 - 说破","albumId":10259422},{"Hash":"D5F512D6143770FB1643BDC2C023BBC0","timeLen":204000,"FileName":"任然 - 失恋俱乐部","albumId":8002890},{"Hash":"7540A1E8E37BBDCE1F8703F4AC68FEF6","timeLen":220073,"FileName":"曾奕灿 - 终于我们错过","albumId":8502657},{"Hash":"815C0765437B258FD01AF9CC4D2A5AE2","timeLen":287000,"FileName":"张磊 - 暖人","albumId":1942302},{"Hash":"829F1705BF72A411D45E4DBDFA26F5F9","timeLen":247000,"FileName":"刘玥 - 余温","albumId":1952639}]',
+            DataSelect1 = JSON.parse(jsonSelect1),
+
+            jsonSelect2 = '[{"Hash":"6E1D8B57CD4A26BCD244D4884503F241","timeLen":205400,"FileName":"罗志祥 - 星舞者","albumId":26190364},{"Hash":"DCC35ACA1A55C2BF1ECC67F56C970EFB","timeLen":222798,"FileName":"孙语赛、宋孟君 - 可不可以让我对你好","albumId":26190807},{"Hash":"77A294BB390DB637F8C83055F0ACFC76","timeLen":246047,"FileName":"封茗囧菌 - 忍不住心动","albumId":26246731},{"Hash":"D6C543E7A1BAB01067425708CC51F1B4","timeLen":263105,"FileName":"排骨教主 - 入梦局","albumId":26229475},{"Hash":"0E70892419741DE9BEBDB76958299994","timeLen":216528,"FileName":"洛天依 - 爱恨两难","albumId":26134566},{"Hash":"2EF52C02C219718930843773C8D40981","timeLen":228963,"FileName":"球球 - 没有人爱","albumId":26190675},{"Hash":"F27626F9BDF6F0BDCB77D120A6E9B71C","timeLen":247170,"FileName":"曲肖冰 - 多余感性","albumId":26045432},{"Hash":"7ECE7E5BF4E5CCBC5B5EEF6748559A4F","timeLen":243304,"FileName":"周思涵 - 星落","albumId":26182467},{"Hash":"903D8D00AB6CDF0073BADA88C1CC5BF9","timeLen":294071,"FileName":"金久哲 - 堂堂光辉","albumId":26133847},{"Hash":"A651C38997B02221FDFD7A1F8619610A","timeLen":229537,"FileName":"邵雨涵 - 你长得好像我男票","albumId":26249069},{"Hash":"AD9CE814A16D8BBA526A1BDCBF8B3BD0","timeLen":280267,"FileName":"向熙 - 卑恋","albumId":26085072},{"Hash":"3A9D241418EEA23861A45EBDC5CE6BB6","timeLen":192966,"FileName":"朱玉 - 缘分主义","albumId":26129993},{"Hash":"04DA03709B6B2EFA88A1B9DF1D42F60C","timeLen":192182,"FileName":"汪苏泷 - 闪耀","albumId":26096590},{"Hash":"26DEC81A49C6951208731BAFF8EA81D4","timeLen":220368,"FileName":"刘至佳、lambert - 下过雨后","albumId":26187409},{"Hash":"D44BF0D7A8F8E66299D90B043EB39695","timeLen":217547,"FileName":"云菲菲 - 徒劳的伤","albumId":26100485},{"Hash":"3F51EC3EB9F756EC3A007F15D629E5FE","timeLen":311405,"FileName":"易烊千玺 - 陷落美好","albumId":26197134},{"Hash":"EE4A6947AC366EEABC40F47F25D85AAF","timeLen":186139,"FileName":"Ariana Grande、Social House - boyfriend","albumId":26222680},{"Hash":"5EAC05D21968ADD81622BE36ECEDBB7A","timeLen":261851,"FileName":"鱼大仙儿 - 指令","albumId":26083961},{"Hash":"D80D76F0837A74147F816AE3D318B480","timeLen":277551,"FileName":"张津涤 - 禅月","albumId":26188590},{"Hash":"8020785FE910D639454E421640082A3D","timeLen":282357,"FileName":"王馨 - 今生疼你的人是我","albumId":26185344},{"Hash":"84ED3731D62F3445AEC6C33986718878","timeLen":215013,"FileName":"大欢 - 伤心的酒别喝的太醉","albumId":26177019},{"Hash":"8A0590B78BE36DBB2EC10E262CEC50C4","timeLen":190406,"FileName":"黄晓明 - 别哭,我最爱的人","albumId":26141657},{"Hash":"1F7051E0651FDCBE19B9A3294D0E3130","timeLen":260284,"FileName":"叶炫清 - 城外","albumId":26093372},{"Hash":"C8EE88BDD56F326B9F5ADB73BF2BC57A","timeLen":173035,"FileName":"刘羽晟 - 命里缺你","albumId":26134705},{"Hash":"87F85CEC1B3CD346DCBFB378F390082A","timeLen":214334,"FileName":"兰雨 - 最初一次的温柔","albumId":26184774},{"Hash":"446D2CB41B6100AC994ACA08707469A8","timeLen":206706,"FileName":"潘倩倩 - 零下冰冻的痛","albumId":26189863},{"Hash":"C13462C157C2D6D924D494FEB6EB732D","timeLen":236016,"FileName":"彭筝 - 上一首流行歌","albumId":26185899},{"Hash":"8ED2E18B3ECE0F2157A1BC4C88F33E8A","timeLen":290560,"FileName":"鸾音社 - 王昭君","albumId":26185100},{"Hash":"265B9EC6CD4F98D7B6F826CE591CB157","timeLen":170919,"FileName":"逍遥散人 - 多面散","albumId":26194329},{"Hash":"1CAE142D813AA86E817EBE9191C788DF","timeLen":222302,"FileName":"Pitbull - 3 to Tango","albumId":26181965},{"Hash":"D91FBB6CC0F4A035BEB16685B2B08782","timeLen":161724,"FileName":"乔洋 - 我不是韩商言","albumId":26084771},{"Hash":"FFCC8D51D8920D8C02C56DB66FA42F78","timeLen":210050,"FileName":"双笙 - 大雨作法歌","albumId":26140117},{"Hash":"6F7A992AF40666A201DA822C0DC6B04F","timeLen":236800,"FileName":"宋黛霆 - 罗密欧","albumId":26133971},{"Hash":"77855C6096E11780C04D47562A87D7CD","timeLen":254040,"FileName":"一棵小葱、李宗南 - 风陵渡","albumId":26085043},{"Hash":"B2BA3CCE8753CA7B391BE871FE3E8ED8","timeLen":229120,"FileName":"蒋雪儿、张北北 - 是耶非耶","albumId":26127728},{"Hash":"B2671E434DA4E0CBC31F85A05F1D6B0E","timeLen":232680,"FileName":"挺齐全- ALL IN-杨昊铭、吴卓凡 - 差不多先生","albumId":26172542},{"Hash":"0398DCDE71DBC5860E735B57A679A38E","timeLen":178050,"FileName":"蓝心羽、KEYI - 来我身边","albumId":26134084},{"Hash":"180F4E5FB22691968550B6FFDC1FAB5E","timeLen":243017,"FileName":"音频怪物 - 盗墓笔记·张起灵·不朽","albumId":26147332},{"Hash":"0EC26C0FD6CE4B7159E4151DEC0088B8","timeLen":257436,"FileName":"萧忆情Alex、汐音社 - 息辞","albumId":25815874},{"Hash":"BE4FBB14AC70EC6CCE1B375146164541","timeLen":307278,"FileName":"阿云嘎 - 八步半的房间","albumId":26134343},{"Hash":"F6CC417F002F69907783549390B60C93","timeLen":259108,"FileName":"雪十郎 - 谁在你心里","albumId":26142330},{"Hash":"9AEDF6F2B45476FFB3D41ED0AAE7480A","timeLen":243748,"FileName":"陈娟儿 - 樱花","albumId":26143067},{"Hash":"5CB355ECE37BBCBB8635A0111E49ADE3","timeLen":309054,"FileName":"蒙面哥、优素素 - 君已陌","albumId":26142107},{"Hash":"1620E663D65DC490F1B589F1CE87391E","timeLen":254850,"FileName":"南宫嘉骏 - 比烟花还寂寞","albumId":26142013},{"Hash":"6859E0C731FDA9AA5A4B1130D8ADF229","timeLen":227526,"FileName":"梅朵 - 做个最爱你的人","albumId":26141159},{"Hash":"771C69B18114B1C6871570B83C760F9C","timeLen":222197,"FileName":"菲儿 - 嗒嘀嗒","albumId":26140551},{"Hash":"438E14B32426F80E95FDF2DF89AD6987","timeLen":246334,"FileName":"贺敬轩 - 如殇","albumId":26100798},{"Hash":"20C2DADFFD5251ED145F466977E2C898","timeLen":251167,"FileName":"河图、汐音社 - 沅水谣","albumId":26052087},{"Hash":"69FB6C1D817951DED466C649F7FC2FEE","timeLen":263601,"FileName":"王源 - 源","albumId":26079631},{"Hash":"4BF10B9BDBCEE919CF53DE8567FF10C3","timeLen":181002,"FileName":"阿悄 - 很迷","albumId":26046872},{"Hash":"92B0F6AC4C0C796A86901E873C533915","timeLen":254354,"FileName":"格子兮 - 江南小酒馆","albumId":25871174},{"Hash":"AB56C923BE72A78EA672842AEC26E5FC","timeLen":268460,"FileName":"高安、郭玲 - 爱的同心圆","albumId":26047943},{"Hash":"6DD25C11CDF1F1B9ABF4DD6E9C3ACFD4","timeLen":225985,"FileName":"王旭(旭日阳刚) - 想家的爷们","albumId":26016302},{"Hash":"E5AC078FC0C7AFCA07E946F466ED61A5","timeLen":227970,"FileName":"玄觞 - 古城遗梦","albumId":25919465},{"Hash":"D100EA9C2EDAB30C7EE260E5D9A42C92","timeLen":221753,"FileName":"张禾禾 - 甩","albumId":25805457},{"Hash":"7147FF35BB47D206BF71839E670C00ED","timeLen":291657,"FileName":"艾辰 - 荒野","albumId":26047727},{"Hash":"2BFFBE560E6B058D2C60861B183C1364","timeLen":182928,"FileName":"Dirbig大民民、侯浩然 - 情侣装","albumId":26036798},{"Hash":"65DE8C7F0E6AE6D8AD061F050A35F1C1","timeLen":160548,"FileName":"海鸥乐队 - ATM","albumId":25924149}]',
+            DataSelect2 = JSON.parse(jsonSelect2);
+
+            jsonSelect3 = '[{"Hash":"EF29114291D3AC999581DF0AA378E9C8","timeLen":222171,"FileName":"弦外之音 - 花开若相惜,花落莫相离","albumId":25164076},{"Hash":"D5E394C859D20B095070ADBBFC80C2E6","timeLen":232010,"FileName":"黄诗扶 - 九万字 (念白版)","albumId":14636608},{"Hash":"4BB94C8F0A175C4AF2074B38780C8E1C","timeLen":236040,"FileName":"依侬 - 我只想说","albumId":23586571},{"Hash":"F4097773132E2E78CEA873DCD8479C85","timeLen":240014,"FileName":"许家珲 - 失衡","albumId":8570986},{"Hash":"DCE32188C40C9278E2574CEDFDFA89B2","timeLen":212904,"FileName":"丸子呦 - 广寒宫","albumId":19615336},{"Hash":"D5AE1F84E48FD5D112A6F36991AB4BB7","timeLen":252008,"FileName":"蓝心羽 - 寂寞烟火","albumId":12277275},{"Hash":"E2D91C08258003AFA5AC33A794E5AAB6","timeLen":242782,"FileName":"夏婉安 - 印记","albumId":22988967},{"Hash":"A1E2804EAF844987D23D2A544BD2A5C3","timeLen":234070,"FileName":"韦琪 - 366天","albumId":14176901},{"Hash":"86E10A9F6029817C1D786D0F0B3D9A96","timeLen":231031,"FileName":"Post Malone - Better Now (Explicit)","albumId":8505896},{"Hash":"7995A2173ED0914868BB860F93C3D642","timeLen":216189,"FileName":"魏新雨 - 余情未了","albumId":20709823},{"Hash":"E0408EFB1F54830E52D8DC154B45E95B","timeLen":251544,"FileName":"焦迈奇 - 我的名字","albumId":19615293},{"Hash":"B19C8AE45E286D2B906F6045B752211F","timeLen":266000,"FileName":"CRITTY - 不谓侠","albumId":10684687},{"Hash":"F37F1A385C3754E94E9C24972CBDA7E7","timeLen":201377,"FileName":"蒋雪儿 - 从前的我快乐过","albumId":23563450},{"Hash":"7A6A470A2F95E6BE6DF509020931E142","timeLen":216633,"FileName":"马晓晨 - 该不会忘了吧","albumId":22190060},{"Hash":"EB8BD1137423F0131DBFEB61944370CB","timeLen":294817,"FileName":"李志强 - 到底这是谁的错","albumId":24070957},{"Hash":"31188A4A0944124B167B4C90EE2A4CBD","timeLen":252682,"FileName":"卢麒宇 - 星尘","albumId":23717547},{"Hash":"88063E63C03325B6B5B511222ECD7996","timeLen":197093,"FileName":"苏小纯 - 走散","albumId":24511019},{"Hash":"FC51631B6EE911993ED5181C1269F8E7","timeLen":221648,"FileName":"苏一音 - 假如分开你会快乐","albumId":24507928},{"Hash":"2D02CFC52A7D1166EC9BDB521A66723B","timeLen":146991,"FileName":"老猫 - 与狼共舞","albumId":24743566},{"Hash":"8A736EC0ABEBAA47A059CB1AC82BBBC6","timeLen":336822,"FileName":"张鄢上 - 百忧解","albumId":24652722},{"Hash":"C33F7905401AD21DA253DFFFC049D674","timeLen":234736,"FileName":"半阳 - 烟花巷子","albumId":24777560},{"Hash":"F18773103A781E492F165AC97DFDB930","timeLen":256000,"FileName":"花僮 - 不堪回眸","albumId":24591820}]',
+            DataSelect3 = JSON.parse(jsonSelect3),
+
+            jsonSelect4 = '[{"Hash":"97122CD2CEFD69F58FFB99348F304D69","timeLen":254056,"FileName":"张国荣 - 当年情 (粤语)","albumId":959539},{"Hash":"409FF285406DA569FCB2415B678B851A","timeLen":277472,"FileName":"BEYOND - 真的爱你","albumId":526327},{"Hash":"2922307E436F1337C0341E8B73F2B5B0","timeLen":236668,"FileName":"刘德华 - 一起走过的日子","albumId":516836},{"Hash":"9F837E849410137F4AD8C6C13DD772EA","timeLen":184000,"FileName":"许冠杰 - 浪子心声","albumId":885928},{"Hash":"1BD9BDBA827DE87B82AC9795263FA9E2","timeLen":181000,"FileName":"汪明荃 - 万水千山总是情","albumId":885925},{"Hash":"23AFFF6CDC54DBBE3242D2EBAEB1CE0B","timeLen":239490,"FileName":"蔡国权 - 不装饰你的梦","albumId":969959},{"Hash":"728AA6F1F525C5A2F87669F729B16269","timeLen":284000,"FileName":"陈百强 - 一生何求","albumId":555598},{"Hash":"46E1395733165A0CD1100C4D73D96564","timeLen":294000,"FileName":"谭咏麟 - 千千阙歌","albumId":968159},{"Hash":"B4F2402C852CDD82E4DD2ECF5256271F","timeLen":256654,"FileName":"周慧敏 - 痴心换情深","albumId":568321},{"Hash":"C8527895321D9C0268B00F8514BADCF3","timeLen":256000,"FileName":"张学友、汤宝如 - 相思风雨中","albumId":531792},{"Hash":"3EEC3D54D20541E4829B007BC2325373","timeLen":240692,"FileName":"钟镇涛 - 让一切随风","albumId":570951},{"Hash":"5FCF5135F29FF1F129DB0E92273194A2","timeLen":223022,"FileName":"邓丽君 - 漫步人生路 (粤语)","albumId":946042},{"Hash":"F72FF3A8F7E44C13634BC0C6BB5EFF6C","timeLen":191660,"FileName":"叶丽仪 - 上海滩","albumId":572432},{"Hash":"01F492A3EBF933B7E00F08DFAE405D26","timeLen":304017,"FileName":"王杰 - 谁明浪子心","albumId":517177},{"Hash":"8048840617EA47F967E57089E66E7896","timeLen":250548,"FileName":"张国荣 - 沉默是金","albumId":962826},{"Hash":"EDA7F7692BF86649CA95DAFD8A9C4CA8","timeLen":261851,"FileName":"谭咏麟 - 一生中最爱","albumId":517045},{"Hash":"B94DA47B3A4F3679272719C4AC3E6EE3","timeLen":211010,"FileName":"陈百强 - 偏偏喜欢你","albumId":555598},{"Hash":"498FFD010763B5B7F6B5DC637FD760E8","timeLen":320003,"FileName":"BEYOND - 海阔天空","albumId":516535},{"Hash":"605EFB21B5D6E9B218371E0C4E21A15F","timeLen":229000,"FileName":"刘德华 - 暗里着迷","albumId":518577},{"Hash":"BFCD8C6585E355733A6A0D6BC0546B16","timeLen":287076,"FileName":"谭咏麟 - 朋友","albumId":555851},{"Hash":"547CD222557D456B9DC29B618D585B39","timeLen":264000,"FileName":"郑少秋 - 笑看风云","albumId":567097},{"Hash":"3FE15606C809AD13E86AB65558926DF9","timeLen":287000,"FileName":"王杰 - 不浪漫罪名","albumId":1738000}]',
+            DataSelect4 = JSON.parse(jsonSelect4),
+
+            jsonSelect5 = '[{"Hash":"2ED6BF0092913D165C2B04A94C423FB2","timeLen":252000,"FileName":"李宏毅、李明霖 - 恶魔的爱","albumId":1975526},{"Hash":"FA50B7D40C89293976F95ADC6FB812EB","timeLen":241867,"FileName":"许嵩 - 有何不可","albumId":973251},{"Hash":"BBE8DA87111C2A4DCB713ED1F1A44C61","timeLen":252891,"FileName":"亦勋 - 八九不离十","albumId":25305478},{"Hash":"E9BFCA182D21CD8169478F9439ADB7FB","timeLen":271091,"FileName":"王宇良、张千一 - 喜欢你时","albumId":13858307},{"Hash":"EBA84F16274912420DC4A17FB2B7D6EE","timeLen":253047,"FileName":"慕寒 - 致你的情歌","albumId":15075544},{"Hash":"95FC7B36DC1F3F6BE56FA9D846739983","timeLen":240020,"FileName":"钟易轩 - 想给你","albumId":10533859},{"Hash":"A93AC4CF6487F7CC80AB917609290F35","timeLen":275000,"FileName":"陈柯宇 - 直到遇见了你，我只喜欢你","albumId":1688604},{"Hash":"E0B36CA0BB58C068B825682E6910DCA1","timeLen":178259,"FileName":"一口甜 - 圈住你","albumId":22482782},{"Hash":"8B706095AB2572689F573FB43EC9667B","timeLen":206016,"FileName":"又又 - 浪漫情节","albumId":10794835},{"Hash":"982200F5AA33173C9F8A0FA6D00E4723","timeLen":205019,"FileName":"李哈哈、可泽 - 余生请多指教","albumId":9658171},{"Hash":"31E1BA381722FB88D67EF8FC04DCF6FC","timeLen":188019,"FileName":"虎芽 - 甜蜜时间轴","albumId":14643937},{"Hash":"8B3DA1D94D863FC75EB9DF34BF192A4E","timeLen":193038,"FileName":"音阙诗听、赵方婧 - 心里想的都是你","albumId":15181006},{"Hash":"A4F015F1C24566AA80315329FAAE7329","timeLen":217094,"FileName":"电流妹 - 粉色少女","albumId":15329008},{"Hash":"8D9C0C1A8E821E21C9D0969A34D1F799","timeLen":230035,"FileName":"杨梓文祺 - 为你写一首歌谣","albumId":15326548},{"Hash":"BF86471C0180C641DE2F5D9B6F8302E7","timeLen":189026,"FileName":"阮豆 - 快说你爱我","albumId":15322462},{"Hash":"5D12BB539D2CC8602AF5C50DF578DDCA","timeLen":247010,"FileName":"木及少年 - 专属爱称","albumId":15184679},{"Hash":"532A34F15BE4829C2CC39833A33DB427","timeLen":159045,"FileName":"徐木子 - 丘比特你看看我","albumId":14756616},{"Hash":"A2D759004DDF90B1FFBDBB2A3894A22D","timeLen":240718,"FileName":"刘小静 - 喜欢你的喜欢","albumId":16738313},{"Hash":"C0C602DF871D5134DBDF51F9FAFB3309","timeLen":211800,"FileName":"贺世哲 - 谈个小恋爱","albumId":16506296},{"Hash":"780CE490A3DC488E3CD2727CEA4B59CA","timeLen":220003,"FileName":"匿名情书、唐嘟嘟 - 一点点想你","albumId":15615857},{"Hash":"54581E5F01E5158F4DC561C145E85381","timeLen":218984,"FileName":"陈小硕 - 说你爱我","albumId":19484436},{"Hash":"7724B7F54422F48315F7EE0E97E4EB60","timeLen":209502,"FileName":"冉小冉 - 我超甜","albumId":20635468},{"Hash":"9F071193CAFEAF0B230AD2014CA8B719","timeLen":225201,"FileName":"肖淑洁 - 只对你动心","albumId":19680063},{"Hash":"85C3CEDB565929FB976CAD83AF2704EC","timeLen":190902,"FileName":"王逗逗 - 我正在喜欢你","albumId":20653682},{"Hash":"5805CE152ECD610B71DFCFF084160E77","timeLen":209496,"FileName":"喻言家 - 我想做你的女朋友","albumId":20349868},{"Hash":"26DDDC8CDDF4780AE62138E7C0366F21","timeLen":169586,"FileName":"陈奕夫 - 余生都是你","albumId":20580428},{"Hash":"94E85F57DAC6E9084B331A45A1471E0E","timeLen":208000,"FileName":"李朝、王圣锋 - 情话微甜","albumId":4076306},{"Hash":"A73E0E2EC01905B5496E385AB6C561C8","timeLen":252000,"FileName":"常春木、夏雨沐 - 幸福奇妙","albumId":2916275},{"Hash":"A3805F6FF0139BF51F3E22960ED6CC7F","timeLen":233071,"FileName":"金南玲、李俊佑 - 超级喜欢你","albumId":8506385},{"Hash":"457C6692AB09BCF37890795A8C1940A6","timeLen":238632,"FileName":"徐良、孙羽幽 - 情话","albumId":526576},{"Hash":"6328E44DBCAAF19CA9E2D2B0F004C138","timeLen":185073,"FileName":"陈泫孝(大泫) - 静悄悄","albumId":8439149}]',
+            DataSelect5 = JSON.parse(jsonSelect5),
+            // 热门榜单
+            jsonhot1 = '[{"Hash":"1620E663D65DC490F1B589F1CE87391E","timeLen":254850,"FileName":"南宫嘉骏 - 比烟花还寂寞","albumId":26142013},{"Hash":"7DE00409DE3FACE8E35B0CE0BB64CBB2","timeLen":261120,"FileName":"安小木 - 无名之辈 (励志男声版)","albumId":0},{"Hash":"26B854CDDE97AF4890FB1E1554C26C31","timeLen":219088,"FileName":"红格格 - 余情未了","albumId":0},{"Hash":"BD87C2C43DCC5DE4FB65E53A06F2E34D","timeLen":201009,"FileName":"不靠谱组合 - 遥远的你","albumId":13733320},{"Hash":"195663668E8769E415CCC4F980096C42","timeLen":109000,"FileName":"郑律成 - 中国人民解放军军歌","albumId":0},{"Hash":"0398DCDE71DBC5860E735B57A679A38E","timeLen":178050,"FileName":"蓝心羽、KEYI - 来我身边","albumId":26134084},{"Hash":"FFCC8D51D8920D8C02C56DB66FA42F78","timeLen":210050,"FileName":"双笙 - 大雨作法歌","albumId":26140117},{"Hash":"3F4AC351E255A56D45B0B690B9B703CF","timeLen":113027,"FileName":"崔来宾 - 八一建军节快乐","albumId":10062163},{"Hash":"319A0E7EEF4B93C03D2A41149ABD3DC3","timeLen":242520,"FileName":"黎林添娇 - 爱情错觉 (完整版)","albumId":0},{"Hash":"10200B40574468F0701CBE6E498B8E6B","timeLen":211461,"FileName":"红格格 - 牛奶面包","albumId":0},{"Hash":"7A3E6F989E7636A8621211A2DF52764E","timeLen":164780,"FileName":"木喆 - 你笑起来真好看 (独唱版)","albumId":0},{"Hash":"AFA13CBC36F36AAEF8F74719AA856E78","timeLen":196989,"FileName":"Ersen0306、Yelaman - 攀登 (男生原版)","albumId":26133875},{"Hash":"E8A82FC1E4414BBF331FD172B9AEA614","timeLen":325433,"FileName":"六哲、帅霖 - 伤心末班车","albumId":26044958},{"Hash":"B2E0A3F4732E2AFBB7B7A83C7A6C95FF","timeLen":212088,"FileName":"童雪棋 - 遥远的你（女版）","albumId":0},{"Hash":"C18751A86A8F2C86AEBCAECEE3AF1C60","timeLen":123000,"FileName":"总政合唱团 - 当那一天来临","albumId":0},{"Hash":"0FE037ACD02F04D57004FDCA661DFE1A","timeLen":228336,"FileName":"王莉、汤非 - 军人本色","albumId":16769480},{"Hash":"554F20BC041F96E4FCB6C77B6F10A329","timeLen":192078,"FileName":"龚玥 - 军港之夜","albumId":973490},{"Hash":"9AA9D5411F693C332B4024F6EEB647BD","timeLen":234135,"FileName":"阎维文 - 咱当兵的人","albumId":0},{"Hash":"B4D9B63BE844C4205093C0C757670FB6","timeLen":268000,"FileName":"陌秋离 - 不谓侠","albumId":10684687},{"Hash":"ABE50EC49B1B93627EDF80177B60E783","timeLen":262765,"FileName":"屾棠 - 无名之辈","albumId":0},{"Hash":"82C6B5A10FC62B0FF097645FC97E0DF6","timeLen":156160,"FileName":"范茹 - 情深深雨濛濛 (柔情版)","albumId":0},{"Hash":"C45DCDAC274E0FFCF9F5FA8416EC1B42","timeLen":244584,"FileName":"安小木 - 来自天堂的魔鬼 (男声版)","albumId":0},{"Hash":"FA4E9C8880CCE04E5792D7A007F7B22F","timeLen":221387,"FileName":"黄子韬 - 你也会像我一样","albumId":21614079},{"Hash":"01C078634A2905DDA6628A9424A7242C","timeLen":237888,"FileName":"太一 - 生而为一","albumId":26132206},{"Hash":"27670CD04513C5DCA5CB59B305E77A9C","timeLen":195003,"FileName":"1908公社 - 七月的风,八月的雨 (原版)","albumId":13360175},{"Hash":"C8263BED0E72E4267E5408FBE4BBADB3","timeLen":224688,"FileName":"刘十里 - 来自天堂的魔鬼 (爵士改编版)","albumId":0},{"Hash":"1A77C1454281D023AB96CB6D764978BE","timeLen":165085,"FileName":"李瑨瑶 - 七月的风八月的雨","albumId":20634991},{"Hash":"4ACCBE7642B831D9DFF5D45E6AA28553","timeLen":271270,"FileName":"刘紫玲 - 今天","albumId":2997487},{"Hash":"771C69B18114B1C6871570B83C760F9C","timeLen":222197,"FileName":"菲儿 - 嗒嘀嗒","albumId":26140551},{"Hash":"B955D4A4D6D00AF104D8D231D8E7FCB6","timeLen":243057,"FileName":"岳靖川 - 彻骨伤","albumId":8255061}]';
+            Datahot1 = JSON.parse(jsonhot1),
+
+            jsonhot2 = '[{"Hash":"61F3DD676689BB767C45CF3DD6067FBC","timeLen":146494,"FileName":"画词戏子 - 把孤独当作晚餐","albumId":24268925},{"Hash":"1F40C2E244B7490387CF44C9E00D107E","timeLen":246019,"FileName":"王力宏、谭维维 - 缘分一道桥","albumId":7988791},{"Hash":"A8136351BE3DA7D077E95B976EB723CB","timeLen":245000,"FileName":"G.E.M.邓紫棋 - 来自天堂的魔鬼","albumId":555825},{"Hash":"7995A2173ED0914868BB860F93C3D642","timeLen":216189,"FileName":"魏新雨 - 余情未了","albumId":20709823},{"Hash":"5424803FD6E4D91F6A6EC2E9227AB135","timeLen":243024,"FileName":"大欢 - 多年以后","albumId":21079236},{"Hash":"03CAF1DF4729FEF40432A6AB9E1EC7AB","timeLen":404009,"FileName":"梁博 - 出现又离开 (Live)","albumId":19284949},{"Hash":"658DB93D330E3B4E42700978CE667DD2","timeLen":272143,"FileName":"王恰恰 - 撕夜","albumId":24592283},{"Hash":"FEA52FCCFE2823E1C40FB0E03C9CFC01","timeLen":178755,"FileName":"永彬Ryan.B - 放个大招给你看","albumId":23515008},{"Hash":"7EE0ED044CBF75E6A8C2D8EA2DB21251","timeLen":155951,"FileName":"杨胖雨 - 情深深雨濛濛","albumId":21347340},{"Hash":"E924E3202D1D11160FFFCCFD4FE32C8C","timeLen":210052,"FileName":"孙艺琪 - 情火","albumId":15195228},{"Hash":"C6DD7CCA40138940F800E23C624FAD19","timeLen":149263,"FileName":"王七七 - 我愿意平凡的陪在你身旁","albumId":16833305},{"Hash":"07A55D0F8FF088BDCA36B836F7FE115F","timeLen":172068,"FileName":"李昕融、樊桐舟、李凯稠 - 你笑起来真好看","albumId":19428374},{"Hash":"E7E4933C73CCA86F7E1F4E78E4B978D9","timeLen":158000,"FileName":"Jain - Lil Mama","albumId":1079758},{"Hash":"BE1E1D3C2A46B4CBD259ACA7FF050CD3","timeLen":251048,"FileName":"陈雪凝 - 你的酒馆对我打了烊","albumId":14913769},{"Hash":"E0408EFB1F54830E52D8DC154B45E95B","timeLen":251544,"FileName":"焦迈奇 - 我的名字","albumId":19615293},{"Hash":"5FA78EA30EC824F2D2F0A67B4AA053B9","timeLen":280000,"FileName":"Uu - 那女孩对我说 (完整版)","albumId":23069950},{"Hash":"6AB95F4B94EFAE2809ADABE835B7EF48","timeLen":243931,"FileName":"半吨兄弟 - 爱情错觉","albumId":21784244},{"Hash":"33CDF2D5B124C3D4E70CE54BDF2A1B49","timeLen":296019,"FileName":"执素兮 - 赤伶 (正式版)","albumId":24115894},{"Hash":"FD906F5B6B468D1C561EBFD7EC313C5C","timeLen":185417,"FileName":"Ice Paper - 心如止水","albumId":19226398},{"Hash":"51B755AE9F8F9E973BDC4CE57F361CB4","timeLen":208059,"FileName":"崔伟立 - 情火","albumId":8538104},{"Hash":"FB2CD9F9D38364D1D7FFC5252374ABB3","timeLen":193000,"FileName":"Alan Walker、Sabrina Carpenter、Farruko - On My Way","albumId":17503395},{"Hash":"56B210373C4A23D81A874BDC128D0497","timeLen":194690,"FileName":"LEE HI、B.I - 누구 없소 (NO ONE)","albumId":21751753},{"Hash":"604179481729E46D35FCE48746BE3BEC","timeLen":251045,"FileName":"潘玮柏、G.E.M.邓紫棋、艾热 - 攀登 (Live)","albumId":11030272},{"Hash":"EC9256A7F23259799E555E88635CBBB4","timeLen":181368,"FileName":"花姐 - 狂浪","albumId":13476703},{"Hash":"E1FF6FD76B09D6DE4DD83DF12CA0D53E","timeLen":217103,"FileName":"王小帅 - 最近 (正式版)","albumId":17601568},{"Hash":"446AD7938157F86DD819CAABA8D66B99","timeLen":169000,"FileName":"G.E.M.邓紫棋 - 画 (Live Piano Session II)","albumId":1627734},{"Hash":"DE791B5A3FFF759C04925B0CAA411B6B","timeLen":216058,"FileName":"221小伙伴 - 遥远的你 (正式版)","albumId":13315465},{"Hash":"F37F1A385C3754E94E9C24972CBDA7E7","timeLen":201377,"FileName":"蒋雪儿 - 从前的我快乐过","albumId":23563450},{"Hash":"E62BCE3CF8F797A31B09E526C88E02BA","timeLen":269871,"FileName":"隔壁老樊 - 多想在平庸的生活拥抱你 (Live)","albumId":22281048},{"Hash":"16BE6D72C02AD494BBC22A2A5A259211","timeLen":312408,"FileName":"是你大哥阿 - 孤独","albumId":24279157}]',
+            Datahot2 = JSON.parse(jsonhot2);
+
+            jsonhot3 = '[{"Hash":"9681F4CCD830B8436DB5F8218C7DF0C7","timeLen":259066,"FileName":"虎二 - 你一定要幸福","albumId":12249679},{"Hash":"BB01737DD38BEABE31496E1088010AD2","timeLen":236000,"FileName":"杭娇 - 听心","albumId":4133589},{"Hash":"D8E40DA7F51C0486224E008A3B6ABD45","timeLen":163087,"FileName":"兔子牙 - 小白兔遇上卡布奇诺","albumId":12492325},{"Hash":"F36AB94DA7FAF948248BE675E43C3EF5","timeLen":256000,"FileName":"冷漠、杨小曼 - 心锁","albumId":551533},{"Hash":"FD906F5B6B468D1C561EBFD7EC313C5C","timeLen":185417,"FileName":"Ice Paper - 心如止水","albumId":19226398},{"Hash":"B8FEF96095524DF7C556E0A916AA62B3","timeLen":168002,"FileName":"半阳 - 一曲相思","albumId":10499591},{"Hash":"5424803FD6E4D91F6A6EC2E9227AB135","timeLen":243024,"FileName":"大欢 - 多年以后","albumId":21079236},{"Hash":"69CE89784C4B69D2D57888F4D1F4F2F2","timeLen":260000,"FileName":"冷漠、杨小曼 - 爱如星火","albumId":553212},{"Hash":"F831122AA78D17AF1C67050CD6235917","timeLen":266000,"FileName":"任妙音 - 天在下雨我在想你","albumId":1399580},{"Hash":"7995A2173ED0914868BB860F93C3D642","timeLen":216189,"FileName":"魏新雨 - 余情未了","albumId":20709823},{"Hash":"C6DD7CCA40138940F800E23C624FAD19","timeLen":149263,"FileName":"王七七 - 我愿意平凡的陪在你身旁","albumId":16833305},{"Hash":"72F246BF33C49BE306D1BF841A380594","timeLen":257000,"FileName":"孙艺琪 - 最远的你是我最近的爱","albumId":1782623},{"Hash":"458E9B9F362277AC37E9EEF1CB80B535","timeLen":322011,"FileName":"王琪 - 万爱千恩","albumId":18712576},{"Hash":"EC9256A7F23259799E555E88635CBBB4","timeLen":181368,"FileName":"花姐 - 狂浪","albumId":13476703},{"Hash":"7e91fde7e8d33e8ed11c6db4620917e2","timeLen":182230,"FileName":"孤独诗人 - 渡我不渡她","albumId":14624971},{"Hash":"224A5D87144B3FC5E31BA95B528E984B","timeLen":322000,"FileName":"庄心妍 - 再遇不到你这样的人","albumId":3743816},{"Hash":"6AB95F4B94EFAE2809ADABE835B7EF48","timeLen":243931,"FileName":"半吨兄弟 - 爱情错觉","albumId":21784244},{"Hash":"44ABEAA9CCE29AFB5C947D4FBD2C567F","timeLen":301004,"FileName":"大壮 - 伪装","albumId":15999493},{"Hash":"E1FF6FD76B09D6DE4DD83DF12CA0D53E","timeLen":217103,"FileName":"王小帅 - 最近 (正式版)","albumId":17601568},{"Hash":"E62BCE3CF8F797A31B09E526C88E02BA","timeLen":269871,"FileName":"隔壁老樊 - 多想在平庸的生活拥抱你 (Live)","albumId":22281048},{"Hash":"927E961174DECAA30641213D11D2C55B","timeLen":217133,"FileName":"崔子格 - 卜卦","albumId":961899},{"Hash":"9C00A468D2658487DB2DE4ED16A12B5A","timeLen":285031,"FileName":"王贰浪 - 像鱼","albumId":13621986},{"Hash":"0D0CD85787B2988DC372A315EFD632FC","timeLen":338000,"FileName":"展展与罗罗 - 沙漠骆驼","albumId":2713184},{"Hash":"7EE0ED044CBF75E6A8C2D8EA2DB21251","timeLen":155951,"FileName":"杨胖雨 - 情深深雨濛濛","albumId":21347340},{"Hash":"0697D37D764489B728531D29DF910591","timeLen":226320,"FileName":"蕾蕾的小麦霸们、张振轩 - 赢在江湖 (童声版)","albumId":18692636},{"Hash":"AD0F0F474047A7A3D0577125EDD2B145","timeLen":267000,"FileName":"海鸣威 - 老人与海","albumId":1778632},{"Hash":"76D04F195C1F081CC0CD027A310A7D9A","timeLen":381083,"FileName":"王琪 - 站着等你三千年","albumId":13886090},{"Hash":"96E064A41AB84EBE4C03C6AAE3CB9334","timeLen":240093,"FileName":"张紫豪 - 可不可以","albumId":9618875},{"Hash":"AC9ABCA4E27D1BB21BADDF5565031868","timeLen":212375,"FileName":"叶贝文 - 情人鹤顶红","albumId":647731},{"Hash":"978CDD51DB752F007978B2E5346703DA","timeLen":230087,"FileName":"海鸣威 - 我的回忆不是我的","albumId":490417}]',
+            Datahot3 = JSON.parse(jsonhot3),
+
+            // 中国新歌 
+            jsonChina = '[{"first":1,"Hash":"0398DCDE71DBC5860E735B57A679A38E","time":"02:58","timeLen":178050,"FileName":"蓝心羽、KEYI - 来我身边","Filename":"蓝心羽、KEYI - 来我身边","albumId":26134084,"privilege":8,"size":2849395,"songLink":"y6yqs49","mixsongid":179994557},{"first":1,"Hash":"B2BA3CCE8753CA7B391BE871FE3E8ED8","time":"03:49","timeLen":229120,"FileName":"蒋雪儿、张北北 - 是耶非耶","Filename":"蒋雪儿、张北北 - 是耶非耶","albumId":26127728,"privilege":8,"size":3666502,"songLink":"y6vvu55","mixsongid":179908783},{"first":1,"Hash":"FFCC8D51D8920D8C02C56DB66FA42F78","time":"03:30","timeLen":210050,"FileName":"双笙 - 大雨作法歌","Filename":"双笙 - 大雨作法歌","albumId":26140117,"privilege":0,"size":3361396,"songLink":"y72lh86","mixsongid":180054399},{"first":1,"Hash":"77A294BB390DB637F8C83055F0ACFC76","time":"04:06","timeLen":246047,"FileName":"封茗囧菌 - 忍不住心动","Filename":"封茗囧菌 - 忍不住心动","albumId":26246731,"privilege":8,"size":3937219,"songLink":"y9jiraf","mixsongid":180916361},{"first":1,"Hash":"3F51EC3EB9F756EC3A007F15D629E5FE","time":"05:11","timeLen":311405,"FileName":"易烊千玺 - 陷落美好","Filename":"易烊千玺 - 陷落美好","albumId":26197134,"privilege":8,"size":4983074,"songLink":"y7wexdf","mixsongid":180594517},{"first":1,"Hash":"04DA03709B6B2EFA88A1B9DF1D42F60C","time":"03:12","timeLen":192182,"FileName":"汪苏泷 - 闪耀【小欢喜电视剧插曲】","Filename":"汪苏泷 - 闪耀【小欢喜电视剧插曲】","albumId":26096590,"privilege":8,"size":3075508,"songLink":"y6deh3c","mixsongid":179638306},{"first":1,"Hash":"D44BF0D7A8F8E66299D90B043EB39695","time":"03:37","timeLen":217547,"FileName":"云菲菲 - 徒劳的伤","Filename":"云菲菲 - 徒劳的伤","albumId":26100485,"privilege":8,"size":3481342,"songLink":"y6fk86f","mixsongid":179674521},{"first":1,"Hash":"78C57AC1B84436BFEFF01433BE921613","time":"04:23","timeLen":263880,"FileName":"虎二 - 你说可以吗","Filename":"虎二 - 你说可以吗","albumId":26014982,"privilege":8,"size":4222771,"songLink":"y5mc745","mixsongid":178698855},{"first":1,"Hash":"E972FEEB053B762975459B040F899E42","time":"04:24","timeLen":264986,"FileName":"小洲 - 有谁知我爱着你","Filename":"小洲 - 有谁知我爱着你","albumId":26177120,"privilege":8,"size":4240367,"songLink":"y7okwaf","mixsongid":180346650},{"first":1,"Hash":"BE4FBB14AC70EC6CCE1B375146164541","time":"05:07","timeLen":307278,"FileName":"阿云嘎 - 八步半的房间","Filename":"阿云嘎 - 八步半的房间","albumId":26134343,"privilege":8,"size":4917043,"songLink":"y6ys2d6","mixsongid":179998330},{"first":1,"Hash":"4077972FC1912E738D3A58138C5563A1","time":"03:25","timeLen":205583,"FileName":"大哲 - 越来越看不懂","Filename":"大哲 - 越来越看不懂","albumId":26052940,"privilege":8,"size":3289800,"songLink":"y5tqn1e","mixsongid":179188900},{"first":1,"Hash":"F27626F9BDF6F0BDCB77D120A6E9B71C","time":"04:07","timeLen":247170,"FileName":"曲肖冰 - 多余感性","Filename":"曲肖冰 - 多余感性","albumId":26045432,"privilege":8,"size":3955312,"songLink":"y5sd06a","mixsongid":179066269},{"first":1,"Hash":"DCC35ACA1A55C2BF1ECC67F56C970EFB","time":"03:42","timeLen":222798,"FileName":"孙语赛、宋孟君 - 可不可以让我对你好","Filename":"孙语赛、宋孟君 - 可不可以让我对你好","albumId":26190807,"privilege":8,"size":3565354,"songLink":"y7ul054","mixsongid":180552102},{"first":1,"Hash":"21EE9815934616409E55DC97F720633B","time":"02:50","timeLen":170031,"FileName":"等什么君 - 慕夏","Filename":"等什么君 - 慕夏","albumId":26125598,"privilege":8,"size":2720958,"songLink":"y6ugp81","mixsongid":179882705},{"first":1,"Hash":"26DEC81A49C6951208731BAFF8EA81D4","time":"03:40","timeLen":220368,"FileName":"刘至佳、lambert - 下过雨后","Filename":"刘至佳、lambert - 下过雨后","albumId":26187409,"privilege":8,"size":3526481,"songLink":"y7svveb","mixsongid":180509693},{"first":1,"Hash":"84ED3731D62F3445AEC6C33986718878","time":"03:35","timeLen":215013,"FileName":"大欢 - 伤心的酒别喝的太醉","Filename":"大欢 - 伤心的酒别喝的太醉","albumId":26177019,"privilege":8,"size":3440731,"songLink":"y7oqref","mixsongid":180345475},{"first":1,"Hash":"8A0590B78BE36DBB2EC10E262CEC50C4","time":"03:10","timeLen":190406,"FileName":"黄晓明 - 别哭,我最爱的人【烈火英雄电影致敬宣传曲】","Filename":"黄晓明 - 别哭,我最爱的人【烈火英雄电影致敬宣传曲】","albumId":26141657,"privilege":8,"size":3047087,"songLink":"y73cq70","mixsongid":180070310},{"first":1,"Hash":"5EAC05D21968ADD81622BE36ECEDBB7A","time":"04:21","timeLen":261851,"FileName":"鱼大仙儿 - 指令","Filename":"鱼大仙儿 - 指令","albumId":26083961,"privilege":8,"size":4190339,"songLink":"y67448e","mixsongid":179453728},{"first":1,"Hash":"5CB355ECE37BBCBB8635A0111E49ADE3","time":"05:09","timeLen":309054,"FileName":"蒙面哥、优素素 - 君已陌","Filename":"蒙面哥、优素素 - 君已陌","albumId":26142107,"privilege":8,"size":4945465,"songLink":"y73spac","mixsongid":180074413},{"first":1,"Hash":"3D8B6125981A8FB6518CE9BD4319A0B3","time":"03:59","timeLen":239072,"FileName":"杨小曼 - 千丝网","Filename":"杨小曼 - 千丝网","albumId":26141201,"privilege":8,"size":3825671,"songLink":"y72z160","mixsongid":180065236},{"first":1,"Hash":"DE983AEF5564B5D247C678109F3CC123","time":"03:30","timeLen":210938,"FileName":"于洋 - 你应该过的很好","Filename":"于洋 - 你应该过的很好","albumId":26135433,"privilege":8,"size":3375738,"songLink":"y6znu33","mixsongid":180009591},{"first":1,"Hash":"438E14B32426F80E95FDF2DF89AD6987","time":"04:06","timeLen":246334,"FileName":"贺敬轩 - 如殇","Filename":"贺敬轩 - 如殇","albumId":26100798,"privilege":8,"size":3941864,"songLink":"y6g2g3d","mixsongid":179676737},{"first":1,"Hash":"64968D84AAF2FA298E0B9EB7AF43AAC8","time":"04:25","timeLen":265822,"FileName":"蓝七七 - 我们的回忆","Filename":"蓝七七 - 我们的回忆","albumId":25880490,"privilege":8,"size":4253614,"songLink":"y4hkm89","mixsongid":177556190},{"first":1,"Hash":"243CFEA5CF360BB29518212EF65C7FC6","time":"05:19","timeLen":319738,"FileName":"黄勇 - 墙【王牌剑客电影插曲】","Filename":"黄勇 - 墙【王牌剑客电影插曲】","albumId":25975815,"privilege":8,"size":5116537,"songLink":"y5gjoc6","mixsongid":178373150}]';
+            DataChina = JSON.parse(jsonChina),
+            // 欧美新歌 
+            jsonEurope = '[{"first":1,"Hash":"EE4A6947AC366EEABC40F47F25D85AAF","time":"03:06","timeLen":186139,"FileName":"Ariana Grande、Social House - boyfriend","Filename":"Ariana Grande、Social House - boyfriend","albumId":26222680,"privilege":8,"size":2978224,"songLink":"y8awnb8","mixsongid":180771300},{"first":1,"Hash":"D6351C27D39888E57A5CD6DE077108C1","time":"03:35","timeLen":215771,"FileName":"Gryffin、Carly Rae Jepsen - OMG","Filename":"Gryffin、Carly Rae Jepsen - OMG","albumId":26127650,"privilege":8,"size":3452804,"songLink":"y6vwd49","mixsongid":179907461},{"first":1,"Hash":"CE63EEC780F7BBA2841E79A12423C15F","time":"03:06","timeLen":186592,"FileName":"Tove Lo、ALMA - Bad As The Boys","Filename":"Tove Lo、ALMA - Bad As The Boys","albumId":26215885,"privilege":8,"size":2985975,"songLink":"y82y87d","mixsongid":180721148},{"first":1,"Hash":"6B2FEBDCA9DECFFB6E9EA20402F4ABBA","time":"03:13","timeLen":193985,"FileName":"Ava Max - Blood, Sweat & Tears","Filename":"Ava Max - Blood, Sweat & Tears","albumId":26007783,"privilege":8,"size":3104226,"songLink":"y5l8gdc","mixsongid":178640324},{"first":1,"Hash":"15F5A33FFE3A0C48374FE77DF3A21BED","time":"03:12","timeLen":192496,"FileName":"Ava Max - Freaking Me Out","Filename":"Ava Max - Freaking Me Out","albumId":26005796,"privilege":8,"size":3080403,"songLink":"y5kxn71","mixsongid":178624058},{"first":1,"Hash":"190F978ECD7DAFA448382474273C4545","time":"04:15","timeLen":255033,"FileName":"Khalid、A Boogie wit da Hoodie - Right Back","Filename":"Khalid、A Boogie wit da Hoodie - Right Back","albumId":26175422,"privilege":8,"size":4081214,"songLink":"y7nr30c","mixsongid":180321991},{"first":1,"Hash":"E0E10AECE50ED011CA3248E86B452ED8","time":"02:36","timeLen":156133,"FileName":"Noah Cyrus - July","Filename":"Noah Cyrus - July","albumId":26095910,"privilege":8,"size":2498754,"songLink":"y6dbhbc","mixsongid":179628788},{"first":1,"Hash":"A2C00FFB111C5DBD39F0BC57D864B2A7","time":"03:45","timeLen":225000,"FileName":"Drake、James Fauntleroy - Girls Love Beyoncé","Filename":"Drake、James Fauntleroy - Girls Love Beyoncé","albumId":26224590,"privilege":8,"size":3613361,"songLink":"203jcd0","mixsongid":180782814},{"first":1,"Hash":"8ABAAB1523A7AE903E9FAECD6AF0204D","time":"03:05","timeLen":185338,"FileName":"Clairo - Softly","Filename":"Clairo - Softly","albumId":26216029,"privilege":8,"size":2965913,"songLink":"y82zje4","mixsongid":180721792},{"first":1,"Hash":"1CAE142D813AA86E817EBE9191C788DF","time":"03:42","timeLen":222302,"FileName":"Pitbull - 3 to Tango","Filename":"Pitbull - 3 to Tango","albumId":26181965,"privilege":8,"size":3557426,"songLink":"y7qam5a","mixsongid":180427645},{"first":1,"Hash":"98C69E8F91618BB97BDF591CF7964E4B","time":"04:08","timeLen":248032,"FileName":"Illenium、Foy Vance - Blood","Filename":"Illenium、Foy Vance - Blood","albumId":26219410,"privilege":8,"size":3969015,"songLink":"y84ms86","mixsongid":180742400},{"first":1,"Hash":"330536B3136D5A6CA9C1882909F1EF7C","time":"03:14","timeLen":194272,"FileName":"Tiffany - Magnetic Moon","Filename":"Tiffany - Magnetic Moon","albumId":26225178,"privilege":8,"size":3108824,"songLink":"y8cg16e","mixsongid":180787140},{"first":1,"Hash":"1C0B26F9BA20A8A0167C9085B30A51A9","time":"04:43","timeLen":283742,"FileName":"Lil Durk、Nicki Minaj - Extravagant (Explicit)","Filename":"Lil Durk、Nicki Minaj - Extravagant (Explicit)","albumId":26224638,"privilege":8,"size":4540365,"songLink":"y8e7p88","mixsongid":180783128},{"first":1,"Hash":"44C4E8D87E567F2B07909E33013BB8F0","time":"03:02","timeLen":182386,"FileName":"Topic、Vigiland、Christopher - Let Us Love","Filename":"Topic、Vigiland、Christopher - Let Us Love","albumId":26217491,"privilege":8,"size":2918684,"songLink":"y83oka9","mixsongid":180730189},{"first":1,"Hash":"B8F881E1B78E2B1ED6D04E7D8C1D0EC4","time":"02:48","timeLen":168385,"FileName":"Conor Maynard - Not Over You","Filename":"Conor Maynard - Not Over You","albumId":26123833,"privilege":8,"size":2694626,"songLink":"y6thn00","mixsongid":179867493},{"first":1,"Hash":"BF2C8E152BDE784E3359769D5E0CD0E8","time":"02:36","timeLen":156421,"FileName":"Franklin、Digital Farm Animals、Sorana - Drowning","Filename":"Franklin、Digital Farm Animals、Sorana - Drowning","albumId":26143574,"privilege":8,"size":2503485,"songLink":"y74aa4c","mixsongid":180086320},{"first":1,"Hash":"2AEF73B02F9737F424AE7A2A4A0D4FFD","time":"03:08","timeLen":188525,"FileName":"Sabrina Claudio - Holding The Gun","Filename":"Sabrina Claudio - Holding The Gun","albumId":25032893,"privilege":8,"size":3016873,"songLink":"xwyer2c","mixsongid":173437404},{"first":1,"Hash":"CF51772F1675788DE65C1991ACDD728E","time":"03:25","timeLen":205061,"FileName":"HAIM - Summer Girl","Filename":"HAIM - Summer Girl","albumId":26156923,"privilege":8,"size":3281472,"songLink":"y7dr313","mixsongid":180192096},{"first":1,"Hash":"19497FF59859341C5D7CF52ADC685172","time":"02:54","timeLen":174811,"FileName":"NOTD、Shy Martin - Keep You Mine","Filename":"NOTD、Shy Martin - Keep You Mine","albumId":26217178,"privilege":8,"size":2797475,"songLink":"y83ec4a","mixsongid":180728450},{"first":0,"Hash":"6D8CEE0B6781AF6CD3A493CC8F60F82B","time":"04:42","timeLen":282070,"FileName":"Angel Olsen - All Mirrors","Filename":"Angel Olsen - All Mirrors","albumId":25237365,"privilege":8,"size":4513585,"songLink":"xylzg94","mixsongid":174399745},{"first":1,"Hash":"33CD8712FD66FC1DC98C4C253F9E986F","time":"04:01","timeLen":241737,"FileName":"YUNGBLUD - Hope For The Underrated Youth","Filename":"YUNGBLUD - Hope For The Underrated Youth","albumId":26067004,"privilege":8,"size":3868287,"songLink":"y5zez6e","mixsongid":179297756},{"first":1,"Hash":"51CAF59F35EFC378D97B3FA7205ADD67","time":"03:21","timeLen":201613,"FileName":"Rynx、Kiesza - All For You","Filename":"Rynx、Kiesza - All For You","albumId":26127786,"privilege":8,"size":3226302,"songLink":"y6vxf18","mixsongid":179909649},{"first":1,"Hash":"61CCA723C7F0F060B47EB347194AFCD1","time":"03:01","timeLen":181054,"FileName":"Tori Kelly - 2 Places","Filename":"Tori Kelly - 2 Places","albumId":26203762,"privilege":8,"size":2897368,"songLink":"y7y9319","mixsongid":180643722},{"first":1,"Hash":"8446A2E07076BABAAE7EA81512AA8848","time":"04:56","timeLen":296960,"FileName":"Sheryl Crow、Chris Stapleton - Tell Me When It s Over","Filename":"Sheryl Crow、Chris Stapleton - Tell Me When It s Over","albumId":26219911,"privilege":8,"size":4751853,"songLink":"y84wzaf","mixsongid":180745267}]',
+            DataEurope = JSON.parse(jsonEurope),
+            // 韩国新歌 
+            jsonKorea = '[{"first":1,"Hash":"29FA369D52E5BE3BF82CFDDE1E06448D","time":"03:11","timeLen":191190,"FileName":"ITZY - ICY","Filename":"ITZY - ICY","albumId":26047721,"privilege":8,"size":3059637,"songLink":"y5svgdb","mixsongid":179107865},{"first":1,"Hash":"59DCA3EFD7A0C40BDAF4CD7FB879B91C","time":"03:45","timeLen":225828,"FileName":"Heize - 내 맘을 볼수 있나요 (Can You See My Heart)【德鲁纳酒店 OST】","Filename":"Heize - 내 맘을 볼수 있나요 (Can You See My Heart)【德鲁纳酒店 OST】","albumId":25814110,"privilege":10,"size":3613772,"songLink":"y3w14e9","mixsongid":177071956},{"first":1,"Hash":"9F93E3B6F3E29DD7F2F0E44C7A7E7277","time":"03:15","timeLen":195108,"FileName":"NCT DREAM - BOOM","Filename":"NCT DREAM - BOOM","albumId":25910907,"privilege":10,"size":3122331,"songLink":"y4ud834","mixsongid":177805570},{"first":1,"Hash":"93013BFF81C2D705B92E8D661D0116C5","time":"03:04","timeLen":184398,"FileName":"MAMAMOO - 다 빛이나 (Gleam)","Filename":"MAMAMOO - 다 빛이나 (Gleam)","albumId":25810287,"privilege":8,"size":2951038,"songLink":"y3u9500","mixsongid":177042296},{"first":1,"Hash":"2A8136BBFF78BB72BD384E2CBB687079","time":"03:06","timeLen":186958,"FileName":"Raiden、Irene - The Only","Filename":"Raiden、Irene - The Only","albumId":26224463,"privilege":10,"size":2992050,"songLink":"y8bjx2a","mixsongid":180781921},{"first":1,"Hash":"86585273BD3F907DA84FAA3275064F30","time":"03:02","timeLen":182804,"FileName":"姜丹尼尔 - 뭐해 (What are you up to)","Filename":"姜丹尼尔 - 뭐해 (What are you up to)","albumId":25765118,"privilege":8,"size":2925503,"songLink":"y35b6d8","mixsongid":176775448},{"first":1,"Hash":"77989ABEC59CD7C278B62B7950CA3185","time":"03:30","timeLen":210938,"FileName":"HA:TFELT、玟星 - Happy Now","Filename":"HA:TFELT、玟星 - Happy Now","albumId":26182810,"privilege":8,"size":3375540,"songLink":"y7qrv7f","mixsongid":180445398},{"first":1,"Hash":"8BF63B13575D52636D57A663050A765F","time":"03:12","timeLen":192052,"FileName":"方容国 - Orange Drive","Filename":"方容国 - Orange Drive","albumId":26135797,"privilege":8,"size":3073297,"songLink":"y6zsb6c","mixsongid":180013009},{"first":1,"Hash":"5B89F1D2A73CE945E0CB3D283CF9DECC","time":"03:05","timeLen":185077,"FileName":"VERIVERY - Tag Tag Tag","Filename":"VERIVERY - Tag Tag Tag","albumId":26135700,"privilege":8,"size":2961760,"songLink":"y6zl7f3","mixsongid":180012260},{"first":1,"Hash":"B30D17E5A87D61D25FEC6BFEB95EBF41","time":"03:29","timeLen":209528,"FileName":"太妍 - 그대라는 시 (All about you)【德鲁纳酒店 OST】","Filename":"太妍 - 그대라는 시 (All about you)【德鲁纳酒店 OST】","albumId":25344697,"privilege":10,"size":3353081,"songLink":"xzasx85","mixsongid":174961888},{"first":1,"Hash":"BCBD6B63715D35E500959398F47E0B80","time":"03:30","timeLen":210546,"FileName":"CIX - Movie Star","Filename":"CIX - Movie Star","albumId":25495453,"privilege":8,"size":3369213,"songLink":"y1jjj9d","mixsongid":175620333},{"first":1,"Hash":"E06BE680774A7193F47D703FA362DBD1","time":"04:14","timeLen":254197,"FileName":"杨多一 - 너만 너만 너만 (Only You)【德鲁纳酒店 OST】","Filename":"杨多一 - 너만 너만 너만 (Only You)【德鲁纳酒店 OST】","albumId":25814194,"privilege":10,"size":4067675,"songLink":"y3w5d8e","mixsongid":177072638},{"first":1,"Hash":"2E501235DDAC51EE80C79C8D15429E04","time":"03:35","timeLen":215248,"FileName":"金娜英 - 조금 더 외로워지겠지 (会更加孤独的)【请输入搜索词：WWW OST】","Filename":"金娜英 - 조금 더 외로워지겠지 (会更加孤独的)【请输入搜索词：WWW OST】","albumId":25318630,"privilege":10,"size":3444445,"songLink":"xz5rlb2","mixsongid":174840672},{"first":1,"Hash":"BE8B8D18C2648DAF9510504F06B734C5","time":"03:23","timeLen":203911,"FileName":"EXO-SC - What a life","Filename":"EXO-SC - What a life","albumId":25648892,"privilege":10,"size":3263109,"songLink":"y1ziqef","mixsongid":176288175},{"first":1,"Hash":"2BDF6CA017DC5A45590239DE92239ACD","time":"03:47","timeLen":227000,"FileName":"PRODUCE X 101 - 꿈을 꾼다 (Dream For You)","Filename":"PRODUCE X 101 - 꿈을 꾼다 (Dream For You)","albumId":25642943,"privilege":8,"size":3645124,"songLink":"y1ypma8","mixsongid":176262988},{"first":1,"Hash":"DD31D44451426D5EAE6831C9EEC52C43","time":"03:33","timeLen":213733,"FileName":"Monsta X - Breathe For You","Filename":"Monsta X - Breathe For You","albumId":25760390,"privilege":8,"size":3420405,"songLink":"y2udsed","mixsongid":176759993},{"first":1,"Hash":"2C43E0A4195721831B31D7E4A5BA08BF","time":"03:13","timeLen":193488,"FileName":"HYO - Badster","Filename":"HYO - Badster","albumId":25423523,"privilege":10,"size":3096449,"songLink":"xzzejf9","mixsongid":175294638},{"first":1,"Hash":"B202901B607A00C34B7FC85030F7F891","time":"03:28","timeLen":208796,"FileName":"pH-1、Beenzino - BOOL (Prod. Mokyo)","Filename":"pH-1、Beenzino - BOOL (Prod. Mokyo)","albumId":25746615,"privilege":8,"size":3341267,"songLink":"y2kcx4d","mixsongid":176700856},{"first":1,"Hash":"FA494EC6D1010DF085EDD724F976DC82","time":"03:38","timeLen":218070,"FileName":"Monday Kiz、Punch - Another Day【德鲁纳酒店 OST】","Filename":"Monday Kiz、Punch - Another Day【德鲁纳酒店 OST】","albumId":24917441,"privilege":10,"size":3489585,"songLink":"xwmt99f","mixsongid":172910949},{"first":1,"Hash":"CCDB89FA4E07EBA1AE7FE325F6B21589","time":"03:18","timeLen":198321,"FileName":"泰容 - Long Flight","Filename":"泰容 - Long Flight","albumId":25317365,"privilege":10,"size":3173666,"songLink":"xz5jw27","mixsongid":174833797},{"first":1,"Hash":"56E790DEAB56CDAC0CBC0CD75DFA93A6","time":"04:05","timeLen":245054,"FileName":"李多喜 - TV에서 보는 그대 모습은 (在电视里看到的你的样子)【请输入搜索词：WWW OST】","Filename":"李多喜 - TV에서 보는 그대 모습은 (在电视里看到的你的样子)【请输入搜索词：WWW OST】","albumId":24755270,"privilege":10,"size":3921337,"songLink":"xvgo0b7","mixsongid":172185478},{"first":1,"Hash":"805C66F4F44EDF10427EB9B08273298E","time":"03:37","timeLen":217704,"FileName":"刘宪华Henry - Fall in Luv【新入史官具海玲 OST】","Filename":"刘宪华Henry - Fall in Luv【新入史官具海玲 OST】","albumId":25085230,"privilege":8,"size":3483748,"songLink":"xxbqn44","mixsongid":173703262},{"first":1,"Hash":"A82DF94244BB8E6A7C56982B7A3EB0C9","time":"03:02","timeLen":182700,"FileName":"MINO(宋旻浩)、P.O、圭贤 - 쓰담쓰담 (Pat Pat)【姜食堂3主题曲】","Filename":"MINO(宋旻浩)、P.O、圭贤 - 쓰담쓰담 (Pat Pat)【姜食堂3主题曲】","albumId":24840691,"privilege":8,"size":2923801,"songLink":"xw3n49b","mixsongid":172561780},{"first":1,"Hash":"C1ACC3CED16CB4D7EDAA6139AADF434D","time":"03:25","timeLen":205609,"FileName":"DAY6 - 한 페이지가 될 수 있게 (Time of Our Life)","Filename":"DAY6 - 한 페이지가 될 수 있게 (Time of Our Life)","albumId":25071764,"privilege":8,"size":3290350,"songLink":"xx4nee0","mixsongid":173615825}]',
+            DataKorea = JSON.parse(jsonKorea),
+            // 日本新歌 
+            jsonJapan= '[{"first":1,"Hash":"996D37FF95DDA2CB22CCED70FEA8933E","time":"03:08","timeLen":188421,"FileName":"GOT7 - 備忘録","Filename":"GOT7 - 備忘録","albumId":26157651,"privilege":8,"size":3015356,"songLink":"y7e3e61","mixsongid":180201537},{"first":1,"Hash":"56AA6FF68A893FD7881E1E4FDA045C0C","time":"03:54","timeLen":234213,"FileName":"米津玄師 - Ghosts of the Sea【海兽之子主题曲】","Filename":"米津玄師 - Ghosts of the Sea【海兽之子主题曲】","albumId":22173894,"privilege":8,"size":3748064,"songLink":"x2bc694","mixsongid":160062249},{"first":1,"Hash":"3AF7A224C24E1D9D31CD013CB5D72587","time":"04:52","timeLen":292806,"FileName":"BTS（防弹少年团） - Lights","Filename":"BTS（防弹少年团） - Lights","albumId":24037835,"privilege":8,"size":4685397,"songLink":"xofledb","mixsongid":168832884},{"first":1,"Hash":"EAE72AB045A53E0EED43E2CE966707ED","time":"03:29","timeLen":209684,"FileName":"須田景凪 - Veil【炎炎消防队片尾曲】","Filename":"須田景凪 - Veil【炎炎消防队片尾曲】","albumId":24103030,"privilege":8,"size":3355420,"songLink":"xp6xr48","mixsongid":169159604},{"first":1,"Hash":"64D7C79287E597DFDD300F411D511363","time":"03:27","timeLen":207020,"FileName":"TWICE - Happy Happy","Filename":"TWICE - Happy Happy","albumId":22382667,"privilege":8,"size":3312788,"songLink":"x4ryi67","mixsongid":160926181},{"first":1,"Hash":"AF7CE6322C6A306929D1F89511889593","time":"03:47","timeLen":227526,"FileName":"菅田将暉、あいみょん - キスだけで","Filename":"菅田将暉、あいみょん - キスだけで","albumId":23592613,"privilege":8,"size":3641065,"songLink":"xklkh7b","mixsongid":166683968},{"first":0,"Hash":"A6137BCD7834D25975FA27BDE3B16C64","time":"03:52","timeLen":232594,"FileName":"大塚愛 - Chime【水果篮子片头曲2】","Filename":"大塚愛 - Chime【水果篮子片头曲2】","albumId":24197239,"privilege":8,"size":3721970,"songLink":"xrgdv9f","mixsongid":169590892},{"first":1,"Hash":"8D6B79C2CFA98207FFD72BD8C20B5B34","time":"03:56","timeLen":236982,"FileName":"SKE48 - FRUSTRATION","Filename":"SKE48 - FRUSTRATION","albumId":25871544,"privilege":8,"size":3792394,"songLink":"y4dlmf9","mixsongid":177491005},{"first":0,"Hash":"296CFB65271A57307B41DA391EC740BF","time":"03:43","timeLen":223033,"FileName":"lol - bring back【按一按发明 PIKACHIN-KIT片头曲】","Filename":"lol - bring back【按一按发明 PIKACHIN-KIT片头曲】","albumId":26101124,"privilege":8,"size":3568997,"songLink":"y6ggm6d","mixsongid":179679146},{"first":1,"Hash":"27AB63764B4DF387E45BFD13EADAEB2C","time":"04:12","timeLen":252107,"FileName":"ポルノグラフィティ - VS【MIX:明青故事片头曲】","Filename":"ポルノグラフィティ - VS【MIX:明青故事片头曲】","albumId":26066255,"privilege":8,"size":4034338,"songLink":"y5ybgd0","mixsongid":179292867},{"first":1,"Hash":"9A71308F92D79E9BC3A601CF12497211","time":"03:32","timeLen":212584,"FileName":"Mrs.GREEN APPLE - インフェルノ【炎炎消防队片头曲】","Filename":"Mrs.GREEN APPLE - インフェルノ【炎炎消防队片头曲】","albumId":25296332,"privilege":8,"size":3401844,"songLink":"xz1h2d0","mixsongid":174740009},{"first":1,"Hash":"FDE4DDDED021C6BB2026C88CCD9EB844","time":"03:32","timeLen":212688,"FileName":"TWICE - The Best Thing I Ever Did (Japanese Version)","Filename":"TWICE - The Best Thing I Ever Did (Japanese Version)","albumId":25031049,"privilege":8,"size":3403485,"songLink":"xwycf82","mixsongid":173428476},{"first":1,"Hash":"1DB64475C360E808E742A634BE259F2F","time":"03:53","timeLen":233351,"FileName":"あいみょん - 真夏の夜の匂いがする【天国餐馆主题曲】","Filename":"あいみょん - 真夏の夜の匂いがする【天国餐馆主题曲】","albumId":25313112,"privilege":8,"size":3734091,"songLink":"xz50y36","mixsongid":174813224},{"first":1,"Hash":"C391876F0116A39594599A74D65ED95E","time":"04:54","timeLen":294791,"FileName":"まじ娘 - WISH","Filename":"まじ娘 - WISH","albumId":22117276,"privilege":8,"size":4717162,"songLink":"x1ths52","mixsongid":159838497},{"first":0,"Hash":"AEB4B38C8966BB6959BF01509C7F427B","time":"03:58","timeLen":238654,"FileName":"i☆Ris - アルティメット☆MAGIC【贤者之孙片头曲】","Filename":"i☆Ris - アルティメット☆MAGIC【贤者之孙片头曲】","albumId":21143496,"privilege":8,"size":3818937,"songLink":"wt0a94f","mixsongid":155677929},{"first":1,"Hash":"F36DE0752BA89D3969A8D9B1236D04F6","time":"04:55","timeLen":295366,"FileName":"STU48 - 大好きな人","Filename":"STU48 - 大好きな人","albumId":26090762,"privilege":8,"size":4726442,"songLink":"y6bowbd","mixsongid":179558171},{"first":0,"Hash":"4A1E3C8D30A102AC34076AB8A2FA8EA1","time":"04:09","timeLen":249182,"FileName":"E-Girls - シンデレラフィット","Filename":"E-Girls - シンデレラフィット","albumId":25754367,"privilege":8,"size":3987374,"songLink":"y2n6b4f","mixsongid":176734593},{"first":1,"Hash":"0003D13E729CBAE6AF6709AC0D30072F","time":"05:42","timeLen":342021,"FileName":"そらる - ワンダー","Filename":"そらる - ワンダー","albumId":25217186,"privilege":8,"size":5472832,"songLink":"xyhx595","mixsongid":174309361},{"first":0,"Hash":"39CC264AB082B98D22D6CE66B825F7AB","time":"03:00","timeLen":180140,"FileName":"島谷ひとみ - Brilliant Ways","Filename":"島谷ひとみ - Brilliant Ways","albumId":25754912,"privilege":8,"size":2882708,"songLink":"y2n1g42","mixsongid":176736882},{"first":1,"Hash":"27FA1070A0B90EAAF1D3B69F511775A0","time":"03:22","timeLen":202396,"FileName":"EGOIST - 咲かせや咲かせ【甲铁城的卡巴内利 海门决战主题曲】","Filename":"EGOIST - 咲かせや咲かせ【甲铁城的卡巴内利 海门决战主题曲】","albumId":20144400,"privilege":8,"size":3238965,"songLink":"wgrya49","mixsongid":150892921},{"first":1,"Hash":"A5D3275EFF71E3DB90C7A060560187B3","time":"03:39","timeLen":219376,"FileName":"灿烈 - 봄 여름 가을 겨울 (SSFW) (春夏秋冬) (Japanese Ver.)","Filename":"灿烈 - 봄 여름 가을 겨울 (SSFW) (春夏秋冬) (Japanese Ver.)","albumId":19543912,"privilege":10,"size":3510483,"songLink":"w9kop9a","mixsongid":147934738},{"first":0,"Hash":"66013396D69F3A104633096B0EA71FF2","time":"03:15","timeLen":195970,"FileName":"lol - like that!!【别扭合租房片头曲】","Filename":"lol - like that!!【别扭合租房片头曲】","albumId":19497467,"privilege":8,"size":3135991,"songLink":"w8qfzf3","mixsongid":147691157},{"first":1,"Hash":"6D731808CCCDE22BE938C7B6E60EE55C","time":"04:47","timeLen":287425,"FileName":"Perfume - ナナナナナイロ","Filename":"Perfume - ナナナナナイロ","albumId":24322384,"privilege":8,"size":4599297,"songLink":"xs8do26","mixsongid":170210193},{"first":0,"Hash":"21BC177073156E4E98A7B5B422AA6549","time":"01:32","timeLen":92760,"FileName":"花澤香菜 - 「Hello, Again ~昔からある場所~」from消滅都市 -TV size-【消灭都市片尾曲】","Filename":"花澤香菜 - 「Hello, Again ~昔からある場所~」from消滅都市 -TV size-【消灭都市片尾曲】","albumId":21706790,"privilege":8,"size":1484635,"songLink":"wyp2h44","mixsongid":158088144}]',
+            DataJapan = JSON.parse(jsonJapan),
+
+            // 中国
+           /* jsonSingerChina1= '[{"play_times":127928,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190720/20190720220214641.jpg","author_id":4490,"is_settled_author":1,"sort_offset":-23,"author_name":"G.E.M.邓紫棋","heat_offset":0,"avatar":"20190720220214641.jpg","cindex":"G","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190720/20190720220214641.jpg"},{"play_times":117861,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20180515/20180515002522714.jpg","author_id":3520,"is_settled_author":0,"sort_offset":8,"author_name":"周杰伦","heat_offset":0,"avatar":"20180515002522714.jpg","cindex":"Z","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20180515/20180515002522714.jpg"},{"play_times":78151,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190103/20190103191232626.jpg","author_id":3060,"is_settled_author":1,"sort_offset":0,"author_name":"薛之谦","heat_offset":0,"avatar":"20190103191232626.jpg","cindex":"X","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190103/20190103191232626.jpg"},{"play_times":64167,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20161209/20161209164303152140.jpg","author_id":1574,"is_settled_author":1,"sort_offset":-30,"author_name":"林俊杰","heat_offset":0,"avatar":"20161209164303152140.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20161209/20161209164303152140.jpg"},{"play_times":57411,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20180507/20180507120242140.jpg","author_id":1573,"is_settled_author":0,"sort_offset":17,"author_name":"刘德华","heat_offset":0,"avatar":"20180507120242140.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20180507/20180507120242140.jpg"}]',
+            DataSingerChina1 = JSON.parse(jsonSingerChina1),
+
+            jsonSingerChina2= '[{"play_times":49141,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20140527/20140527095042283066.jpg","author_id":3521,"is_settled_author":0,"sort_offset":19,"author_name":"张学友","heat_offset":1,"avatar":"20140527095042283066.jpg","cindex":"Z","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20140527/20140527095042283066.jpg"},{"play_times":47800,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190703/20190703165811160.jpg","author_id":90875,"is_settled_author":1,"sort_offset":-6,"author_name":"华晨宇","heat_offset":-1,"avatar":"20190703165811160.jpg","cindex":"H","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190703/20190703165811160.jpg"},{"play_times":41963,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20180906/20180906181115284.jpg","author_id":3047,"is_settled_author":1,"sort_offset":-48,"author_name":"许嵩","heat_offset":0,"avatar":"20180906181115284.jpg","cindex":"X","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20180906/20180906181115284.jpg"},{"play_times":40954,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20181010/20181010161310788.jpg","author_id":3539,"is_settled_author":1,"sort_offset":-26,"author_name":"张杰","heat_offset":0,"avatar":"20181010161310788.jpg","cindex":"Z","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20181010/20181010161310788.jpg"},{"play_times":39865,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20180709/20180709171823942.jpg","author_id":93475,"is_settled_author":1,"sort_offset":2,"author_name":"李荣浩","heat_offset":3,"avatar":"20180709171823942.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20180709/20180709171823942.jpg"}]',
+            DataSingerChina2 = JSON.parse(jsonSingerChina2),
+
+            jsonSingerChina3= '[{"play_times":39853,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190718/20190718161939429.jpg","author_id":864124,"is_settled_author":0,"sort_offset":-18,"author_name":"李现","heat_offset":0,"avatar":"20190718161939429.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190718/20190718161939429.jpg"},{"play_times":39584,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20180622/20180622193316603.jpg","author_id":420,"is_settled_author":1,"sort_offset":-41,"author_name":"陈奕迅","heat_offset":2,"avatar":"20180622193316603.jpg","cindex":"C","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20180622/20180622193316603.jpg"},{"play_times":39446,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20170602/20170602104911895.jpg","author_id":2724,"is_settled_author":1,"sort_offset":1,"author_name":"王力宏","heat_offset":-1,"avatar":"20170602104911895.jpg","cindex":"W","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20170602/20170602104911895.jpg"},{"play_times":37739,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190802/20190802141737402.jpg","author_id":803022,"is_settled_author":1,"sort_offset":-96,"author_name":"隔壁老樊","heat_offset":2,"avatar":"20190802141737402.jpg","cindex":"G","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190802/20190802141737402.jpg"},{"play_times":36787,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190605/20190605174732661.jpg","author_id":91839,"is_settled_author":1,"sort_offset":2,"author_name":"张艺兴","heat_offset":-5,"avatar":"20190605174732661.jpg","cindex":"Z","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190605/20190605174732661.jpg"}]',
+            DataSingerChina3 = JSON.parse(jsonSingerChina3),
+            // 欧美
+            jsonSingerEurope1= '[{"play_times":19274,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190320/20190320150807942.jpg","author_id":178240,"is_settled_author":1,"sort_offset":-184,"author_name":"Alan Walker","heat_offset":-1,"avatar":"20190320150807942.jpg","cindex":"A","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190320/20190320150807942.jpg"},{"play_times":10777,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190531/20190531100034704.jpg","author_id":34450,"is_settled_author":1,"sort_offset":-12,"author_name":"Taylor Swift","heat_offset":-2,"avatar":"20190531100034704.jpg","cindex":"T","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190531/20190531100034704.jpg"},{"play_times":6572,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20140409/20140409145904650908.jpg","author_id":29985,"is_settled_author":0,"sort_offset":24,"author_name":"Michael Jackson","heat_offset":5,"avatar":"20140409145904650908.jpg","cindex":"M","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20140409/20140409145904650908.jpg"},{"play_times":5690,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20180112/20180112180129652.jpg","author_id":27108,"is_settled_author":0,"sort_offset":-19,"author_name":"Justin Bieber","heat_offset":5,"avatar":"20180112180129652.jpg","cindex":"J","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20180112/20180112180129652.jpg"},{"play_times":5674,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190719/20190719142253446.jpg","author_id":295991,"is_settled_author":0,"sort_offset":-11,"author_name":"Billie Eilish","heat_offset":3,"avatar":"20190719142253446.jpg","cindex":"B","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190719/20190719142253446.jpg"}]',
+            DataSingerEurope1 = JSON.parse(jsonSingerEurope1),
+
+            jsonSingerEurope2= '[{"play_times":5257,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20170223/20170223163852686.jpg","author_id":190450,"is_settled_author":0,"sort_offset":-39,"author_name":"Marshmello","heat_offset":9,"avatar":"20170223163852686.jpg","cindex":"M","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20170223/20170223163852686.jpg"},{"play_times":4499,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20140829/20140829170016192331.jpg","author_id":75427,"is_settled_author":0,"sort_offset":-14,"author_name":"LINKIN PARK","heat_offset":2,"avatar":"20140829170016192331.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20140829/20140829170016192331.jpg"},{"play_times":4201,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20140317/20140317114852247895.jpg","author_id":85458,"is_settled_author":0,"sort_offset":8,"author_name":"The Pussycat Dolls","heat_offset":3,"avatar":"20140317114852247895.jpg","cindex":"T","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20140317/20140317114852247895.jpg"},{"play_times":4171,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190612/20190612173742823.jpg","author_id":170921,"is_settled_author":0,"sort_offset":-16,"author_name":"Troye Sivan","heat_offset":5,"avatar":"20190612173742823.jpg","cindex":"T","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190612/20190612173742823.jpg"},{"play_times":2997,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190715/20190715161747136.jpg","author_id":83709,"is_settled_author":0,"sort_offset":48,"author_name":"Lady Gaga","heat_offset":26,"avatar":"20190715161747136.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190715/20190715161747136.jpg"}]',
+            DataSingerEurope2 = JSON.parse(jsonSingerEurope2),
+
+            jsonSingerEurope3= '[{"play_times":2755,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190110/20190110173511430.jpg","author_id":35808,"is_settled_author":0,"sort_offset":33,"author_name":"Westlife","heat_offset":4,"avatar":"20190110173511430.jpg","cindex":"W","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190110/20190110173511430.jpg"},{"play_times":2675,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190207/20190207161829691.jpg","author_id":155341,"is_settled_author":0,"sort_offset":-135,"author_name":"The Chainsmokers","heat_offset":-24,"avatar":"20190207161829691.jpg","cindex":"T","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190207/20190207161829691.jpg"},{"play_times":2547,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190711/20190711154949755.jpg","author_id":36363,"is_settled_author":0,"sort_offset":-1,"author_name":"Avril Lavigne","heat_offset":4,"avatar":"20190711154949755.jpg","cindex":"A","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190711/20190711154949755.jpg"},{"play_times":2498,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20180112/20180112174651833.jpg","author_id":24625,"is_settled_author":0,"sort_offset":-79,"author_name":"Eminem","heat_offset":-13,"avatar":"20180112174651833.jpg","cindex":"E","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20180112/20180112174651833.jpg"},{"play_times":2438,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20140331/20140331182805428418.jpg","author_id":69862,"is_settled_author":0,"sort_offset":32,"author_name":"Bandari","heat_offset":14,"avatar":"20140331182805428418.jpg","cindex":"B","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20140331/20140331182805428418.jpg"}]',
+            DataSingerEurope3 = JSON.parse(jsonSingerEurope3),
+
+            // 日韩
+            jsonSingerKorea1= '[{"play_times":31942,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190715/20190715165716381.jpg","author_id":90474,"is_settled_author":0,"sort_offset":2,"author_name":"刘宪华Henry","heat_offset":-6,"avatar":"20190715165716381.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190715/20190715165716381.jpg"},{"play_times":14195,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20161229/20161229183012269.jpg","author_id":16542,"is_settled_author":0,"sort_offset":-24,"author_name":"G-DRAGON","heat_offset":4,"avatar":"20161229183012269.jpg","cindex":"G","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20161229/20161229183012269.jpg"},{"play_times":13158,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20170704/20170704172442730.jpg","author_id":84161,"is_settled_author":0,"sort_offset":-91,"author_name":"BIGBANG","heat_offset":2,"avatar":"20170704172442730.jpg","cindex":"B","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20170704/20170704172442730.jpg"},{"play_times":12703,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190126/20190126110708708.jpg","author_id":84195,"is_settled_author":0,"sort_offset":15,"author_name":"EXO","heat_offset":4,"avatar":"20190126110708708.jpg","cindex":"E","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190126/20190126110708708.jpg"},{"play_times":12407,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20170922/20170922192831665.jpg","author_id":83773,"is_settled_author":0,"sort_offset":-2,"author_name":"IU","heat_offset":-10,"avatar":"20170922192831665.jpg","cindex":"I","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20170922/20170922192831665.jpg"}]',
+            DataSingerKorea1 = JSON.parse(jsonSingerKorea1),
+
+            jsonSingerKorea2= '[{"play_times":8631,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190626/20190626102829897.jpg","author_id":555709,"is_settled_author":0,"sort_offset":-26,"author_name":"BLACKPINK","heat_offset":4,"avatar":"20190626102829897.jpg","cindex":"B","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190626/20190626102829897.jpg"},{"play_times":7967,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190429/20190429150700603.jpg","author_id":796203,"is_settled_author":0,"sort_offset":1,"author_name":"宋雨琦","heat_offset":1,"avatar":"20190429150700603.jpg","cindex":"S","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190429/20190429150700603.jpg"},{"play_times":5370,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190415/20190415160149248.jpg","author_id":90573,"is_settled_author":0,"sort_offset":-44,"author_name":"BTS（防弹少年团）","heat_offset":10,"avatar":"20190415160149248.jpg","cindex":"B","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190415/20190415160149248.jpg"},{"play_times":4819,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190509/20190509185049546.jpg","author_id":797439,"is_settled_author":0,"sort_offset":0,"author_name":"LUCAS","heat_offset":-10,"avatar":"20190509185049546.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190509/20190509185049546.jpg"},{"play_times":4602,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190127/20190127183604992.jpg","author_id":18815,"is_settled_author":0,"sort_offset":-8,"author_name":"少女时代","heat_offset":1,"avatar":"20190127183604992.jpg","cindex":"S","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190127/20190127183604992.jpg"}]',
+            DataSingerKorea2 = JSON.parse(jsonSingerKorea2),
+
+            jsonSingerKorea3= '[{"play_times":4161,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20160429/20160429120225741.jpg","author_id":17169,"is_settled_author":0,"sort_offset":-43,"author_name":"PSY","heat_offset":-6,"avatar":"20160429120225741.jpg","cindex":"P","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20160429/20160429120225741.jpg"},{"play_times":4109,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20171204/20171204122223222.jpg","author_id":17866,"is_settled_author":0,"sort_offset":-19,"author_name":"泫雅","heat_offset":-3,"avatar":"20171204122223222.jpg","cindex":"X","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20171204/20171204122223222.jpg"},{"play_times":3272,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190409/20190409173716549.jpg","author_id":177459,"is_settled_author":0,"sort_offset":64,"author_name":"脸红的思春期(BOL4)","heat_offset":9,"avatar":"20190409173716549.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190409/20190409173716549.jpg"},{"play_times":3169,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190325/20190325110436816.jpg","author_id":84104,"is_settled_author":0,"sort_offset":23,"author_name":"太妍","heat_offset":-45,"avatar":"20190325110436816.jpg","cindex":"T","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190325/20190325110436816.jpg"},{"play_times":2654,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20190729/20190729164941889.jpg","author_id":832392,"is_settled_author":0,"sort_offset":2,"author_name":"ITZY","heat_offset":-64,"avatar":"20190729164941889.jpg","cindex":"I","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20190729/20190729164941889.jpg"}]',
+            DataSingerKorea3 = JSON.parse(jsonSingerKorea3),
+
+            // 其他
+            jsonSingerOther1= '[{"play_times":3655,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20181023/20181023145133578.jpg","author_id":637006,"is_settled_author":1,"sort_offset":2,"author_name":"迪玛希","heat_offset":17,"avatar":"20181023145133578.jpg","cindex":"D","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20181023/20181023145133578.jpg"},{"play_times":2545,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20140218/20140218093900627425.jpg","author_id":29962,"is_settled_author":0,"sort_offset":23,"author_name":"Ludwig van Beethoven","heat_offset":21,"avatar":"20140218093900627425.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20140218/20140218093900627425.jpg"},{"play_times":1463,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20150831/20150831081106281130.jpg","author_id":546303,"is_settled_author":0,"sort_offset":4,"author_name":"Henry","heat_offset":0,"avatar":"20150831081106281130.jpg","cindex":"H","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20150831/20150831081106281130.jpg"},{"play_times":391,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20170706/20170706181832230.jpg","author_id":296164,"is_settled_author":0,"sort_offset":5,"author_name":"Hoaprox","heat_offset":27,"avatar":"20170706181832230.jpg","cindex":"H","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20170706/20170706181832230.jpg"},{"play_times":331,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20180912/20180912165217747.jpg","author_id":628604,"is_settled_author":0,"sort_offset":53,"author_name":"Candy","heat_offset":100,"avatar":"20180912165217747.jpg","cindex":"C","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20180912/20180912165217747.jpg"}]',
+            DataSingerOther1 = JSON.parse(jsonSingerOther1),
+
+            jsonSingerOther2= '[{"play_times":250,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20180502/20180502170209268.jpg","author_id":531191,"is_settled_author":0,"sort_offset":-88,"author_name":"Rich Brian","heat_offset":-24,"avatar":"20180502170209268.jpg","cindex":"R","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20180502/20180502170209268.jpg"},{"play_times":159,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20171207/20171207215832612.jpg","author_id":86431,"is_settled_author":0,"sort_offset":133,"author_name":"HKT","heat_offset":103,"avatar":"20171207215832612.jpg","cindex":"H","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20171207/20171207215832612.jpg"},{"play_times":144,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20130723/20130723153236137384.jpg","author_id":92165,"is_settled_author":0,"sort_offset":-22,"author_name":"Bie","heat_offset":14,"avatar":"20130723153236137384.jpg","cindex":"B","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20130723/20130723153236137384.jpg"},{"play_times":141,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20130809/20130809193411315158.jpg","author_id":93255,"is_settled_author":0,"sort_offset":31,"author_name":"琼英·卓玛","heat_offset":-194,"avatar":"20130809193411315158.jpg","cindex":"Q","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20130809/20130809193411315158.jpg"},{"play_times":136,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20151227/20151227115506312157.jpg","author_id":292024,"is_settled_author":0,"sort_offset":-57,"author_name":"CS","heat_offset":-134,"avatar":"20151227115506312157.jpg","cindex":"C","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20151227/20151227115506312157.jpg"}]',
+            DataSingerOther2 = JSON.parse(jsonSingerOther2),
+
+            jsonSingerOther3= '[{"play_times":119,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20140925/20140925203012355714.jpg","author_id":90063,"is_settled_author":0,"sort_offset":-116,"author_name":"Sainkho Namtchylak","heat_offset":21,"avatar":"20140925203012355714.jpg","cindex":"S","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20140925/20140925203012355714.jpg"},{"play_times":76,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20150716/20150716101612406088.jpg","author_id":175747,"is_settled_author":0,"sort_offset":330,"author_name":"般禅梵唱妙音组","heat_offset":361,"avatar":"20150716101612406088.jpg","cindex":"B","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20150716/20150716101612406088.jpg"},{"play_times":73,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20160121/20160121020506568629.jpg","author_id":584507,"is_settled_author":0,"sort_offset":-196,"author_name":"Siti Badriah","heat_offset":-242,"avatar":"20160121020506568629.jpg","cindex":"S","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20160121/20160121020506568629.jpg"},{"play_times":72,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20150714/20150714141909764174.jpg","author_id":194139,"is_settled_author":0,"sort_offset":-142,"author_name":"Ten","heat_offset":-135,"avatar":"20150714141909764174.jpg","cindex":"T","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20150714/20150714141909764174.jpg"},{"play_times":71,"sizable_avatar":"http://singerimg.kugou.com/uploadpic/softhead/{size}/20180718/20180718101744840.jpg","author_id":557007,"is_settled_author":0,"sort_offset":-572,"author_name":"Loso","heat_offset":62,"avatar":"20180718101744840.jpg","cindex":"L","imgurl":"http://singerimg.kugou.com/uploadpic/softhead/240/20180718/20180718101744840.jpg"}]',
+            DataSingerOther3 = JSON.parse(jsonSingerOther3); */
+
+    </script>
+    <script type="text/javascript"  src="js/index_9adfbac2cd.js"></script>
+    
+<!--     <script src="js/hijacked-min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/base-min.js"></script> -->
+    <!-- Sat Aug 03 2019 09:38:00 GMT+0800 (CST) -->
+</html>

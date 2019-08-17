@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.SystemlistMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Systemlist">
+    <id column="systemlist_id" jdbcType="INTEGER" property="systemlistId" />
+    <result column="systemlist_name" jdbcType="VARCHAR" property="systemlistName" />
+    <result column="systemlist_picture" jdbcType="VARCHAR" property="systemlistPicture" />
+    <result column="systemlist_message" jdbcType="VARCHAR" property="systemlistMessage" />
+    <result column="systemlist_playNum" jdbcType="INTEGER" property="systemlistPlaynum" />
+    <result column="systemlist_date" jdbcType="TIMESTAMP" property="systemlistDate" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.teach.entity.Systemlist">
+    <result column="systemlist_music_ids" jdbcType="LONGVARCHAR" property="systemlistMusicIds" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    systemlist_id, systemlist_name, systemlist_picture, systemlist_message, systemlist_playNum, 
+    systemlist_date
+  </sql>
+  <sql id="Blob_Column_List">
+    systemlist_music_ids
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from systemlist
+    where systemlist_id = #{systemlistId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from systemlist
+    where systemlist_id = #{systemlistId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Systemlist">
+    insert into systemlist (systemlist_id, systemlist_name, systemlist_picture, 
+      systemlist_message, systemlist_playNum, systemlist_date, 
+      systemlist_music_ids)
+    values (#{systemlistId,jdbcType=INTEGER}, #{systemlistName,jdbcType=VARCHAR}, #{systemlistPicture,jdbcType=VARCHAR}, 
+      #{systemlistMessage,jdbcType=VARCHAR}, #{systemlistPlaynum,jdbcType=INTEGER}, #{systemlistDate,jdbcType=TIMESTAMP}, 
+      #{systemlistMusicIds,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Systemlist">
+    insert into systemlist
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="systemlistId != null">
+        systemlist_id,
+      </if>
+      <if test="systemlistName != null">
+        systemlist_name,
+      </if>
+      <if test="systemlistPicture != null">
+        systemlist_picture,
+      </if>
+      <if test="systemlistMessage != null">
+        systemlist_message,
+      </if>
+      <if test="systemlistPlaynum != null">
+        systemlist_playNum,
+      </if>
+      <if test="systemlistDate != null">
+        systemlist_date,
+      </if>
+      <if test="systemlistMusicIds != null">
+        systemlist_music_ids,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="systemlistId != null">
+        #{systemlistId,jdbcType=INTEGER},
+      </if>
+      <if test="systemlistName != null">
+        #{systemlistName,jdbcType=VARCHAR},
+      </if>
+      <if test="systemlistPicture != null">
+        #{systemlistPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="systemlistMessage != null">
+        #{systemlistMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="systemlistPlaynum != null">
+        #{systemlistPlaynum,jdbcType=INTEGER},
+      </if>
+      <if test="systemlistDate != null">
+        #{systemlistDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="systemlistMusicIds != null">
+        #{systemlistMusicIds,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Systemlist">
+    update systemlist
+    <set>
+      <if test="systemlistName != null">
+        systemlist_name = #{systemlistName,jdbcType=VARCHAR},
+      </if>
+      <if test="systemlistPicture != null">
+        systemlist_picture = #{systemlistPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="systemlistMessage != null">
+        systemlist_message = #{systemlistMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="systemlistPlaynum != null">
+        systemlist_playNum = #{systemlistPlaynum,jdbcType=INTEGER},
+      </if>
+      <if test="systemlistDate != null">
+        systemlist_date = #{systemlistDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="systemlistMusicIds != null">
+        systemlist_music_ids = #{systemlistMusicIds,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where systemlist_id = #{systemlistId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.Systemlist">
+    update systemlist
+    set systemlist_name = #{systemlistName,jdbcType=VARCHAR},
+      systemlist_picture = #{systemlistPicture,jdbcType=VARCHAR},
+      systemlist_message = #{systemlistMessage,jdbcType=VARCHAR},
+      systemlist_playNum = #{systemlistPlaynum,jdbcType=INTEGER},
+      systemlist_date = #{systemlistDate,jdbcType=TIMESTAMP},
+      systemlist_music_ids = #{systemlistMusicIds,jdbcType=LONGVARCHAR}
+    where systemlist_id = #{systemlistId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Systemlist">
+    update systemlist
+    set systemlist_name = #{systemlistName,jdbcType=VARCHAR},
+      systemlist_picture = #{systemlistPicture,jdbcType=VARCHAR},
+      systemlist_message = #{systemlistMessage,jdbcType=VARCHAR},
+      systemlist_playNum = #{systemlistPlaynum,jdbcType=INTEGER},
+      systemlist_date = #{systemlistDate,jdbcType=TIMESTAMP}
+    where systemlist_id = #{systemlistId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta charset="UTF-8">
+		<script type="text/javascript" charset="UTF-8" src="js/jquery.js"></script>
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/jstorage_1.js"></script> -->
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/textchange.min_1.js"></script> -->
+
+		<script type="text/javascript" charset="UTF-8">
+			var apmCollectData = apmCollectData || [];
+		</script>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<!--<link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+		<link rel="stylesheet" href="css/person.css" />
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script type="text/javascript" src="js/person.js"></script>
+		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<style type="text/css">
+			.login-div-main .m-cvrlst-1 {
+				margin: 20px 0 0 0px;
+				height: auto;
+				list-style-type: disc;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-padding-start: 40px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+				<h1 class="logo">
+		    <a href="https://www.kugou.com/">
+		        <img src="picture/logo_3.png" alt="">
+		    </a>
+		</h1>
+				<div class="search_wrapper top_search">
+					<div class="search_input"><input type="text">
+						<div class="searh_btn"><i class="search_icon"></i><span>搜索</span></div>
+					</div>
+					<div class="search_recommend top_search_recommend">
+		
+					</div>
+					<div class="search_histroy top_search_histroy">
+		
+					</div>
+				</div>
+				<div class="topNav fr">
+					<ul>
+						<li>
+							<a target="_blank" href="https://www.kugou.com/shop/help/serviceCenter">客服中心</a>
+						</li>
+		
+						<li>
+							<a target="_blank" href="http://vip.kugou.com/">会员中心 </a>
+						</li>
+					</ul>
+					<div class="login_area">
+						<div id="login_in" class="clearfix" style="display: none;">
+							<a class="login_btn" id="login_btn">登录</a>
+							<a target="_blank" href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a>
+						</div>
+						<div id="login_out" class="clearfix" style="display: block;">
+							<img class="user_img" src="images/photo.jpg">
+							<span class="user_name">冯小仙女啊</span>
+						</div>
+						<div id="user_menu" class="user_menu">
+							<div class="topArrow1"></div>
+							<div class="topArrow2"></div>
+							<ul>
+								<li>
+									<a target="_blank" href=""><i class="fa fa-user" aria-hidden="true"></i>我的主页</a>
+								</li>
+								<li>
+									<a href=""><i class="fa fa-commenting fa-icon2" aria-hidden="true"></i>我的消息</a>
+								</li>
+								<li>
+									<a href=""><i class="fa fa-vimeo-square" aria-hidden="true"></i>VIP会员</a>
+								</li>
+								<li>
+									<a href=""><span class="user_icon1"></span>个人设置</a>
+								</li>
+								<li>
+									<a href=""><span class="user_icon2"></span>退出</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navWrap">
+				<div class="nav">
+					<ul class="homeNav">
+						<li>
+							<a class="normal" href="index.html">首 页</a>
+						</li>
+						<li>
+							<a class="normal" href="EveryDay.html">榜 单</a>
+						</li>
+						<li>
+							<a class="normal" id="productCenter" href="MyAlbum.html">专 辑</a>
+						</li>
+						<li class="more" id="more">
+							<a href="" class="iconMore" id="showMore">更 多</a>
+						</li>
+					</ul>
+					<ul class="secondMenu" id="secondMenu">
+						<li>
+							<a href="broadcast.html">电台</a>
+						</li>
+						<li>
+							<a href="mv.html">MV</a>
+						</li>
+						<li>
+							<a href="SongsList.html">歌单</a>
+						</li>
+						<li>
+							<a href="singer.html">歌手</a>
+						</li>
+					</ul>
+					<ul class="subNav">
+						<li>
+							<a target="_blank" href="index.html" class="icon icon-nav1">音乐直播</a>
+						</li>
+						<li>
+							<a target="_blank" href="friend.html" class="icon icon-nav2">iMusic动态</a>
+						</li>
+						<li>
+							<a target="_blank" href="index.html" class="icon icon-nav3">音乐人</a>
+						</li>
+						<!--<li>
+			        <a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a>
+			    </li>-->
+						<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
+						</li>
+			
+			
+					</ul>
+				</div>
+			</div>
+		<!-- ######################################################以上为头部##################################################################### -->
+
+		<!--个人展示页面-->
+		<div class="login-div">
+			<div class="login-div-main" style="width: 70%;height: auto; margin: auto;background-color: #fff;order: 1px solid #d3d3d3;border-width: 0 1px;">
+				<div class="login-div-main-top">
+					<dl class="main-top-dl">
+						<dt><img class="img-thumbnail" style="width: 180px;height: 180px;" src="../www.kugou.com/images/photo.jpg"/></dt>
+						<dd style="padding-left:220px;margin-top: -180px;height: 180px;">
+							<div class="user-name" style="padding-bottom: 30px;margin-bottom: 10px;border-bottom: 1px solid #ddd;">
+								<div class="">
+									<div class="edit">
+										<button class="btn btn-default">编辑个人资料</button>
+									</div>
+									<div class="rect" id="newmusician"></div>
+									<span style="font-size: 24px;">冯小仙女呀&nbsp;<img src="images/vip.jpg" style="width: 25px;height: 20px;"/></span>
+								</div>
+							</div>
+							<ul class="" id="tab-box" style="width: 670px;height: 50px;font-size: 20px;">
+								<h4>
+								<li style="float: left;padding: 0 40px 0 20px;">
+									<a>
+										<strong id="event_count" style="color: #666666;">1</strong>
+										<span style="color: #666666;">动态</span>
+									</a>
+								</li>
+								<li style="float: left;padding: 0 40px 0 20px;border-left: 1px solid #ddd;">
+									<a href="">
+										<strong id="follow_count" style="color: #666666;">2</strong>
+										<span style="color: #666666;">关注</span>
+									</a>
+								</li>
+								<li style="float: left;padding: 0 40px 0 20px;border-left: 1px solid #ddd;">
+									<a href="">
+										<strong id="fan_count" style="color: #666666;">1</strong>
+										<span style="color: #666666;">粉丝</span>
+									</a>
+								</li>
+								</h4>
+							</ul>
+							<div class="inf s-fc3">
+								<span>所在地区：湖南省 - 长沙市</span>
+								<span class="sep" id="age">&nbsp;年龄：<span>95后</span></span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<!--我创建的歌单-->
+				<div class="person-my-music" id="cHeader" style="margin-left: 50px;width: 90%;margin-top: 50px;font-size: 20px;">
+					<span class="f-ff2 f-pr">我创建的歌单<span class="f-pa f-r-black-icon" style="display:inline-block;width:8px;height:8px;top:1px;background-size:cover;"></span>（1）</span>
+					<hr style="border-bottom: 2px solid #c20c0c;" />
+				</div>
+
+				<!--歌单列表-->
+				<ul class="m-cvrlst-1" id="cBox">
+					<li id="">
+						<div class="u-cover">
+							<img title="冯小仙女呀喜欢的音乐" src="https://p2.music.126.net/pJYRW088_GRzHimrHb-frg==/3287539768549268.jpg?param=140y140" id="u-cover-img1" ;>
+							<a href="" class="msk" title="冯小仙女呀喜欢的音乐"></a>
+							<div class="bottom">
+								<a class="icon-play f-fr" href="" title="播放" data-res-action="play" data-res-type="13" data-res-id="409491397">
+									<i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+								<span class="icon-headset"><i class="fa fa-headphones" aria-hidden="true"></i></span>
+								<span class="nb">33</span>
+							</div>
+						</div>
+						<p class="dec">
+							<a href="" id="u-cover-title1" title="冯小仙女呀喜欢的音乐">冯小仙女呀喜欢的音乐</a>
+						</p>
+					</li>
+					<div style="clear:both;"></div>
+				</ul>
+
+				<!--我收藏的歌单-->
+				<div class="u-title-person" id="sHeader" style="margin-left: 50px;width: 90%;margin-top: 30px;font-size: 20px;">
+					<span class="f-ff2 f-pr">我收藏的歌单<span class="f-pa f-r-black-icon"></span>（7）</span>
+					<hr style="border-bottom: 2px solid #c20c0c;" />
+				</div>
+
+				<!--收藏的歌单列表-->
+				<ul class="m-cvrlst-2" id="sBox">
+					<li id="auto-id-URyMQQsGgG4ToPL1">
+						<div class="u-cover"><img src="https://p2.music.126.net/XoEnosQt7V0rQV49_AbbOg==/109951163809052537.jpg?param=140y140">
+							<a href="/playlist?id=2616416061" class="msk" title="【节奏控】超带感特别推荐BGM&nbsp;持更"></a>
+							<div class="bottom">
+								<a class="icon-play f-fr" href="" title="播放" data-res-action="play" data-res-type="13" data-res-id="409491397">
+									<i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+								<span class="icon-headset"><i class="fa fa-headphones" aria-hidden="true"></i></span><span class="nb">3004.1万</span></div>
+						</div>
+						<p class="dec">
+							<a class="tit f-thide s-fc0" href="/playlist?id=2616416061" title="【节奏控】超带感特别推荐BGM&nbsp;持更">【节奏控】超带感特别推荐BGM&nbsp;持更</a>
+						</p>
+					</li>
+					<li id="auto-id-kf4fs4lb7lZnwrG6">
+						<div class="u-cover"><img src="https://p2.music.126.net/SDOOMBIXRTphAnvczIMW3A==/19208468137311633.jpg?param=140y140">
+							<a href="/playlist?id=409491397" class="msk" title="经典•台湾偶像剧里好听的剧中歌"></a>
+							<div class="bottom">
+								<a class="icon-play f-fr" href="" title="播放" data-res-action="play" data-res-type="13" data-res-id="409491397">
+									<i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+								<span class="icon-headset"><i class="fa fa-headphones" aria-hidden="true"></i></span><span class="nb">108.4万</span></div>
+						</div>
+						<p class="dec">
+							<a class="tit f-thide s-fc0" href="/playlist?id=409491397" title="经典•台湾偶像剧里好听的剧中歌">经典•台湾偶像剧里好听的剧中歌</a>
+						</p>
+					</li>
+					<li id="auto-id-MhJ2DEs3c8NpbLG6">
+						<div class="u-cover"><img src="https://p2.music.126.net/zsRaHUdZO7LQ0hTX5ptqGg==/109951163102064502.jpg?param=140y140">
+							<a href="/playlist?id=2045750454" class="msk" title="分手后再次与前任相见你会怎么办？"></a>
+							<div class="bottom">
+								<a class="icon-play f-fr" href="" title="播放" data-res-action="play" data-res-type="13" data-res-id="409491397">
+									<i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+								<span class="icon-headset"><i class="fa fa-headphones" aria-hidden="true"></i></span>
+								<span class="nb">1939万</span></div>
+						</div>
+						<p class="dec">
+							<a class="tit f-thide s-fc0" href="/playlist?id=2045750454" title="分手后再次与前任相见你会怎么办？">分手后再次与前任相见你会怎么办？</a>
+						</p>
+					</li>
+					<li id="auto-id-yTp27HJGSWtXwrpk">
+						<div class="u-cover"><img src="https://p2.music.126.net/WxSHgEO7xMyXZZupFvMkeg==/1393081246085141.jpg?param=140y140">
+							<a href="/playlist?id=47190423" class="msk" title="首首好聽到爆的英文歌"></a>
+							<div class="bottom">
+								<a class="icon-play f-fr" href="" title="播放" data-res-action="play" data-res-type="13" data-res-id="409491397">
+									<i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+								<span class="icon-headset"><i class="fa fa-headphones" aria-hidden="true"></i></span>
+								<span class="nb">2258.6万</span></div>
+						</div>
+						<p class="dec">
+							<a class="tit f-thide s-fc0" href="/playlist?id=47190423" title="首首好聽到爆的英文歌">首首好聽到爆的英文歌</a>
+						</p>
+					</li>
+					<li id="auto-id-6H2tG8kthl7EsaLS">
+						<div class="u-cover"><img src="https://p2.music.126.net/g8HLVawXSg1ZRhJmIfp2tA==/19222761788597467.jpg?param=140y140">
+							<a href="/playlist?id=487457627" class="msk" title="说不出名字的那些经典英文歌"></a>
+							<div class="bottom">
+								<a class="icon-play f-fr" href="" title="播放" data-res-action="play" data-res-type="13" data-res-id="409491397">
+									<i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+								<span class="icon-headset"><i class="fa fa-headphones" aria-hidden="true"></i></span><span class="nb">2684.7万</span></div>
+						</div>
+						<p class="dec">
+							<a class="tit f-thide s-fc0" href="/playlist?id=487457627" title="说不出名字的那些经典英文歌">说不出名字的那些经典英文歌</a>
+						</p>
+					</li>
+				</ul>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		<!-- ######################################################以下为尾部 ##################################################################### -->
+	<div class="footerWrapper">
+		<div class="footer">
+			<div class="links">
+				<a hidefocus="true" href="javascript:void(0);" target="_blank">关于iMusic</a>|
+				<a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> |
+				<a hidefocus="true" href="javascript:void(0);" target="_blank">广告服务</a> |
+				<a hidefocus="true" target="_blank" href="javascript:void(0);">版权指引</a>|
+				<a hidefocus="true" target="_blank" href="javascript:void(0);">用户服务协议</a> |
+				<a hidefocus="true" target="_blank" href="javascript:void(0);">推广合作</a> |
+				<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐人</a> |
+				<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐推</a> |
+				<a hidefocus="true" href="javascript:void(0);" target="_blank">客服中心</a> |
+				<a hidefocus="true" href="javascript:void(0);" target="_blank">用户体验提升计划</a>
+			</div>
+			<div class="copyright">
+				<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@iMusic.com</p>
+				<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">粤ICP备09017694号-2</a><span class="footerIcon"><a
+						 target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+				<p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+				<p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018
+					<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img
+						 style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
+				</p>
+				<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">不良信息举报邮箱：jubao_music@kugou.net&nbsp;&nbsp;&nbsp;&nbsp;客服邮箱：kefu@iMusoic.net</p>
+				<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2019 KuGou-Inc.All Rights Reserved
+					<a hidefocus="true" class="office-verification" href="javascript:void(0);" target="_blank"></a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="scrollTop icon-scrollTop">
+		<a href="#"></a>
+	</div>
+	</div>
+	
+	
+	<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+	<script src="js/kguser_min_3.js"></script>
+	<title>iMusic音乐 - 就是歌多</title>
+	<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+	<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+	<link rel="stylesheet" href="css/search_1.css">
+		<div class="scrollTop icon-scrollTop">
+			<a href="#"></a>
+		</div>
+		</div>
+
+		<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+		<script src="js/kguser_min_3.js"></script>
+		<title>iMusic音乐 - 就是歌多</title>
+		<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+		<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="css/search_1.css">
+	</body>
+
+</html>

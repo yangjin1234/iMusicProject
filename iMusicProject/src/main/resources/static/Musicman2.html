@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta charset="UTF-8">
+		<script type="text/javascript" charset="UTF-8" src="js/jquery.min.js"></script>
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/jstorage_1.js"></script> -->
+		<!-- <script type="text/javascript"  charset="UTF-8" src="js/textchange.min_1.js"></script> -->
+		<script type="text/javascript" charset="UTF-8">
+			var apmCollectData = apmCollectData || [];
+		</script>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1 class="logo">
+				<a href="https://www.kugou.com/">
+					<img src="picture/logo_3.png" alt="">
+				</a>
+			</h1>
+			<div class="search_wrapper top_search">
+				<div class="search_input"><input type="text">
+					<div class="searh_btn"><i class="search_icon"></i><span>搜索</span></div>
+				</div>
+				<div class="search_recommend top_search_recommend">
+		
+				</div>
+				<div class="search_histroy top_search_histroy">
+		
+				</div>
+			</div>
+			<div class="topNav fr">
+				<ul>
+					<li>
+						<a target="_blank" href="index.html">客服中心</a>
+					</li>
+		
+					<li>
+						<a target="_blank" href="vip.html">会员中心 </a>
+					</li>
+				</ul>
+				<div class="login_area">
+					<div id="login_in" class="clearfix" style="display: none;">
+						<a class="login_btn" id="login_btn">登录</a>
+						<a target="_blank" href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a>
+					</div>
+					<div id="login_out" class="clearfix" style="display: block;">
+						<img class="user_img" src="images/photo.jpg">
+						<span class="user_name">冯小仙女啊</span>
+					</div>
+					<div id="user_menu" class="user_menu">
+						<div class="topArrow1"></div>
+						<div class="topArrow2"></div>
+						<ul>
+							<li>
+								<a target="_blank" href="person.html"><i class="fa fa-user" aria-hidden="true"></i>我的主页</a>
+							</li>
+							<li>
+								<a href=""><i class="fa fa-commenting fa-icon2" aria-hidden="true"></i>我的消息</a>
+							</li>
+							<li>
+								<a href="vip.html"><i class="fa fa-vimeo-square" aria-hidden="true"></i>VIP会员</a>
+							</li>
+							<li>
+								<a href="person_Account.html"><span class="user_icon1"></span>个人设置</a>
+							</li>
+							<li>
+								<a href="login.html"><span class="user_icon2"></span>退出</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navWrap">
+			<div class="nav">
+				<ul class="homeNav">
+					<li>
+						<a class="normal" href="index.html">首 页</a>
+					</li>
+					<li>
+						<a class="normal" href="EveryDay.html">榜 单</a>
+					</li>
+					<li>
+						<a class="normal" id="productCenter" href="MyAlbum.html">专 辑</a>
+					</li>
+					<li class="more" id="more">
+						<a href="" class="iconMore" id="showMore">更 多</a>
+					</li>
+				</ul>
+				<ul class="secondMenu" id="secondMenu">
+					<li>
+						<a href="broadcast.html">电台</a>
+					</li>
+					<li>
+						<a href="mv.html">MV</a>
+					</li>
+					<li>
+						<a href="SongsList.html">歌单</a>
+					</li>
+					<li>
+						<a href="singer.html">歌手</a>
+					</li>
+				</ul>
+				<ul class="subNav">
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav1">音乐直播</a>
+					</li>
+					<li>
+						<a target="_blank" href="friend.html" class="icon icon-nav2">iMusic动态</a>
+					</li>
+					<li>
+						<a target="_blank" href="index.html" class="icon icon-nav3">音乐人</a>
+					</li>
+					<!--<li>
+		    <a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a>
+		</li>-->
+					<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
+					</li>
+		
+		
+				</ul>
+			</div>
+		</div>
+
+		<!-- ######################################################以上为头部##################################################################### -->
+		<div class="body-">
+			<div class="head_">
+				<div class="head-text">
+					<div class="big-l">
+						<div class="small-l">
+							<h5>1</h5>
+						</div>
+					</div>
+					<span class="txt-l">阅读协议</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="glyphicon glyphicon-menu-right"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="big-r">
+						<div class="small-r">
+							<h5>2</h5>
+						</div>
+					</div>
+					<span class="txt-r">提交资料</span>
+				</div>
+			</div>
+			<div class="content-title">
+				<h3 style="font-size: 25px; text-align: center;">填写音乐人信息</h3>
+			</div>
+			
+			<div class="content-part1">
+				
+					<table align="center" width="850" height="400" >
+						<tr>
+							<td align="right" style="font-size: 18px;">歌手名：</td>
+							<td><input style="width: 500px; height: 35px; border: solid lightblue 1px; " placeholder="请输入歌手名，最多60个字！" type="text"></td>
+						</tr>
+						<tr>
+							<td align="right" style="font-size: 18px;">类　型：</td> 
+							<td style="font-size: 17px;"> 
+								<lable><input type="radio" name="aa">男</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="radio" name="aa">女 </lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="radio" name="aa">组合</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="radio" name="aa">虚拟</lable>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" style="font-size: 18px;">地　区：</td>
+							<td style="font-size: 17px;">
+								<lable><input type="checkbox" name="aa">内地</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="checkbox" name="aa">港澳</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="checkbox" name="aa">日本</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="checkbox" name="aa">欧美</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="checkbox" name="aa">台湾</lable> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="checkbox" name="aa">韩国</lable> 
+							</td>
+						</tr>
+						<tr>
+							<td align="right" style="font-size: 18px;">身&nbsp;&nbsp;&nbsp;&nbsp;份:&nbsp;&nbsp;</td>
+							<td style="font-size: 17px;">
+								<lable><input type="checkbox" name="aa">演唱</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="checkbox" name="aa">作词 </lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="checkbox" name="aa">作曲</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="checkbox" name="aa">编曲</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="checkbox" name="aa">制作</lable>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" style="font-size: 18px;" >流　派：</td>
+							<td><select style="width: 500px; height: 35px; border-color: lightblue; color: lightseagreen; font-size: 17px;" >
+								<option>流   行</option><option>嘻   哈</option><option>摇   滚</option>
+								<option>电   子</option><option>民   谣</option><option>R & B</option>
+								<option>民   歌</option><option>爵   士</option><option>古   典</option>
+								<option>新  世  纪</option><option>动   漫</option><option>古   风</option>
+							</select></td>
+						</tr>
+					</table>
+					<div class="pictures">
+						<ul> 
+							<li style="font-size: 18px;">授权平台：
+								<a href=""><img src="picture/QQ音乐图标.png"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href=""><img src="picture/酷我图标.png"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href=""><img src="picture/酷狗图标.png"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href=""><img src="picture/鬼图标.png"/></a>
+							</li>
+							<li style="font-size: 18px;" id="jianjie" >简　介：
+								<textarea  style=" width: 500px; height: 200px; 
+										max-width: 500px; max-height: 100px; 
+										min-height:100px; min-width: 300px; "
+										>
+								</textarea>
+								
+							</li>
+						
+						</ul>
+					</div>
+
+			</div>
+			
+			
+			
+			
+		</div>
+		<div class="content-part2">
+			<div class="content-title">
+				<h3 style="font-size: 25px; text-align: center;">填写实名信息</h3>
+			</div>
+			<ul>
+				<li>
+					<td align="right" style="font-size: 18px;" >证件类型：</td>
+						<td><select style="width: 230px; height: 40px; border-color: lightblue; font-size: 17px;" >
+							<option style="color: blue; ">公民身份证</option>
+							<option>护照</option>
+							<option>台湾居民来往内地通行证</option>
+							<option>电   子</option>
+							<option>港澳居民来往内地通行证</option>
+							</select></td>
+				</li>	
+				<li><span>真实姓名：</span><input type="text" style="width: 140px; height: 40px; font-size: 17px; border: lightblue solid 1px;"  placeholder="请输入真实姓名！"  /></li>
+				<li><span>证件号码：</span><input type="text" style="width: 300px; height: 40px; font-size: 17px; border: lightblue solid 1px;"  placeholder="上传证件照，自动生成。"  /></li>
+				<li><span>国&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;籍：</span>
+					<select style="width: 200px; height: 40px; border-color: lightblue; font-size: 17px;" >
+							<option style="color: blue; ">中国大陆</option>
+							<option>中国台湾</option>
+							<option>中国香港</option>
+							<option>中国澳门</option>
+							<option>其他国家</option>
+							
+					</select>
+				</li>
+				<li>
+					<td align="right" style="font-size: 18px;" >电&nbsp;&nbsp;话&nbsp;&nbsp;号：</td>
+						<td><select style="width: 100px; height: 40px; border-color: blue; border-radius: 6px; font-size: 17px;" >
+							<option style="color: blue;">+86</option>
+							<option>+355</option><option>+376</option>
+							<option>+43</option><option>+375</option>
+							<option>+32</option><option>+378</option>
+							</select>
+							<input type="text" style="width: 250px; height: 40px; font-size: 17px; border: lightblue solid 1px;"  placeholder="请输入电话号码"  />
+						</td>
+				</li>
+				<li><span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</span><input type="text" style="width: 350px; height: 40px; font-size: 17px; border: lightblue solid 1px;"  placeholder="请输入邮箱"  /></li>
+			</ul>
+			<div class="content-end">
+				<span id="my-button">
+					<div class="btn-group" role="group" aria-label="...">
+						<a href="Musicman.html" ><button type="button" class="up-one" style="width: 80px; height: 38px; border: solid gray 1px; border-radius: 6px; font-size: 17px; background: white;">上一步</button></a>
+					  	<a href="Musicman2.html"><button type="button" class="btn btn-default" style="color: white; " >提&nbsp;&nbsp;交</button></a>
+					</div>
+				</span>
+			</div>
+			
+		</div>
+			
+
+		<!-- ######################################################以下为尾部 ##################################################################### -->
+		<div class="footerWrapper">
+			<div class="footer">
+				<div class="links">
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">关于iMusic</a>|
+					<a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">广告服务</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">版权指引</a>|
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">用户服务协议</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">推广合作</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐人</a> |
+					<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐推</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">客服中心</a> |
+					<a hidefocus="true" href="javascript:void(0);" target="_blank">用户体验提升计划</a>
+				</div>
+				<div class="copyright">
+					<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@iMusic.com</p>
+					<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">粤ICP备09017694号-2</a><span class="footerIcon"><a
+							 target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+					<p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+					<p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018
+						<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img
+							 style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
+					</p>
+					<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">不良信息举报邮箱：jubao_music@kugou.net&nbsp;&nbsp;&nbsp;&nbsp;客服邮箱：kefu@iMusoic.net</p>
+					<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2019 KuGou-Inc.All Rights Reserved
+						<a hidefocus="true" class="office-verification" href="javascript:void(0);" target="_blank"></a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="scrollTop icon-scrollTop">
+			<a href="#"></a>
+		</div>
+		</div>
+		
+		
+		<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+		<script src="js/kguser_min_3.js"></script>
+		<title>iMusic音乐 - 就是歌多</title>
+		<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+		<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="css/search_1.css">
+	</body>
+
+</html>

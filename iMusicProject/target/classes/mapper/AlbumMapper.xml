@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.AlbumMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Album">
+    <id column="album_id" jdbcType="VARCHAR" property="albumId" />
+    <result column="singer_id" jdbcType="VARCHAR" property="singerId" />
+    <result column="album_name" jdbcType="VARCHAR" property="albumName" />
+    <result column="album_cover" jdbcType="VARCHAR" property="albumCover" />
+    <result column="album_info" jdbcType="VARCHAR" property="albumInfo" />
+    <result column="album_playNum" jdbcType="INTEGER" property="albumPlaynum" />
+    <result column="album_date" jdbcType="TIMESTAMP" property="albumDate" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.teach.entity.Album">
+    <result column="album_music_ids" jdbcType="LONGVARCHAR" property="albumMusicIds" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    album_id, singer_id, album_name, album_cover, album_info, album_playNum, album_date
+  </sql>
+  <sql id="Blob_Column_List">
+    album_music_ids
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from album
+    where album_id = #{albumId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from album
+    where album_id = #{albumId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Album">
+    insert into album (album_id, singer_id, album_name, 
+      album_cover, album_info, album_playNum, 
+      album_date, album_music_ids)
+    values (#{albumId,jdbcType=VARCHAR}, #{singerId,jdbcType=VARCHAR}, #{albumName,jdbcType=VARCHAR}, 
+      #{albumCover,jdbcType=VARCHAR}, #{albumInfo,jdbcType=VARCHAR}, #{albumPlaynum,jdbcType=INTEGER}, 
+      #{albumDate,jdbcType=TIMESTAMP}, #{albumMusicIds,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Album">
+    insert into album
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="albumId != null">
+        album_id,
+      </if>
+      <if test="singerId != null">
+        singer_id,
+      </if>
+      <if test="albumName != null">
+        album_name,
+      </if>
+      <if test="albumCover != null">
+        album_cover,
+      </if>
+      <if test="albumInfo != null">
+        album_info,
+      </if>
+      <if test="albumPlaynum != null">
+        album_playNum,
+      </if>
+      <if test="albumDate != null">
+        album_date,
+      </if>
+      <if test="albumMusicIds != null">
+        album_music_ids,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="albumId != null">
+        #{albumId,jdbcType=VARCHAR},
+      </if>
+      <if test="singerId != null">
+        #{singerId,jdbcType=VARCHAR},
+      </if>
+      <if test="albumName != null">
+        #{albumName,jdbcType=VARCHAR},
+      </if>
+      <if test="albumCover != null">
+        #{albumCover,jdbcType=VARCHAR},
+      </if>
+      <if test="albumInfo != null">
+        #{albumInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="albumPlaynum != null">
+        #{albumPlaynum,jdbcType=INTEGER},
+      </if>
+      <if test="albumDate != null">
+        #{albumDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="albumMusicIds != null">
+        #{albumMusicIds,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Album">
+    update album
+    <set>
+      <if test="singerId != null">
+        singer_id = #{singerId,jdbcType=VARCHAR},
+      </if>
+      <if test="albumName != null">
+        album_name = #{albumName,jdbcType=VARCHAR},
+      </if>
+      <if test="albumCover != null">
+        album_cover = #{albumCover,jdbcType=VARCHAR},
+      </if>
+      <if test="albumInfo != null">
+        album_info = #{albumInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="albumPlaynum != null">
+        album_playNum = #{albumPlaynum,jdbcType=INTEGER},
+      </if>
+      <if test="albumDate != null">
+        album_date = #{albumDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="albumMusicIds != null">
+        album_music_ids = #{albumMusicIds,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where album_id = #{albumId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.Album">
+    update album
+    set singer_id = #{singerId,jdbcType=VARCHAR},
+      album_name = #{albumName,jdbcType=VARCHAR},
+      album_cover = #{albumCover,jdbcType=VARCHAR},
+      album_info = #{albumInfo,jdbcType=VARCHAR},
+      album_playNum = #{albumPlaynum,jdbcType=INTEGER},
+      album_date = #{albumDate,jdbcType=TIMESTAMP},
+      album_music_ids = #{albumMusicIds,jdbcType=LONGVARCHAR}
+    where album_id = #{albumId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Album">
+    update album
+    set singer_id = #{singerId,jdbcType=VARCHAR},
+      album_name = #{albumName,jdbcType=VARCHAR},
+      album_cover = #{albumCover,jdbcType=VARCHAR},
+      album_info = #{albumInfo,jdbcType=VARCHAR},
+      album_playNum = #{albumPlaynum,jdbcType=INTEGER},
+      album_date = #{albumDate,jdbcType=TIMESTAMP}
+    where album_id = #{albumId,jdbcType=VARCHAR}
+  </update>
+</mapper>

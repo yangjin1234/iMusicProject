@@ -1,0 +1,173 @@
+@charset "utf-8";
+@import url("bootstrap.min.css");
+@import url("font-awesome.min.css");
+@import url("animate.css");
+@import url("search_1.css");
+.main_w {
+	width: 100%;
+	height: 500px;
+	position: relative;
+	z-index: 500;
+	background-image: url(../images/findPwd.jpg);
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix div {
+	font-size: 14px;
+}
+
+.new_loginpage {
+	width: 50%;
+	height: 357px;
+	margin: 50px auto 0px;
+	padding: 1px 0px 60px;
+	box-sizing: border-box;
+	background: hsla(0, 0%, 100%, .25) border-box;
+	overflow: hidden;
+	border-radius: .3em;
+	box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 .5em 1em rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+}
+
+.new_loginpage:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: -30px;
+	z-index: -1;
+	-webkit-filter: blur(20px);
+	filter: blur(20px);
+}
+
+.nl_more_zc {
+	width: 60%;
+	text-align: center;
+	border: 0px solid #eee;
+	margin: 0px auto;
+	border-radius: 4px;
+}
+
+.nl_tab {
+	height: 32px;
+	line-height: 32px;
+	margin: 32px auto 0px;
+	text-align: center;
+	color: #ddd;
+}
+
+.nl_loginbox_www {
+	width: 320px;
+	overflow: hidden;
+	margin: 0px auto 0px;
+}
+
+.nl_tab a.current {
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+
+.nl_tab a {
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.yzmbox {
+	height: 185px;
+	width: 400px;
+	display: none;
+}
+
+.nl_loginitem {
+	height: 44px;
+	width: 320px;
+	margin-bottom: 14px;
+}
+
+.nl_loginitem .text {
+	height: 46px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	line-height: 22px;
+	font-size: 14px;
+	color: #333;
+	padding: 11px;
+	width: 300px;
+	font-family: "Hiragino Sans GB", "冬青黑体", "Microsoft Yahei", "微软雅黑";
+}
+
+.nl_loginitem .password {
+	height: 46px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	line-height: 22px;
+	font-size: 14px;
+	color: #333;
+	padding: 11px;
+	width: 300px;
+	font-family: "Hiragino Sans GB", "冬青黑体", "Microsoft Yahei", "微软雅黑";
+}
+
+.nl_loginitem label {
+	color: #666;
+	font-size: 13px;
+	line-height: 22px;
+}
+
+.nl_loginitem .submit {
+	display: inline-block;
+	vertical-align: top;
+	height: 42px;
+	border: 1px solid #db432e;
+	border-radius: 4px;
+	line-height: 40px;
+	font-size: 15px;
+	color: #fff;
+	padding: 0px 24px;
+	font-family: "Hiragino Sans GB", "冬青黑体", "Microsoft Yahei", "微软雅黑";
+	background: #ec5541;
+	cursor: pointer;
+}
+
+.bbtitles {
+	height: 50px;
+	line-height: 120px;
+	font-size: 24px;
+	color: #222;
+	text-align: center;
+	font-family: Microsoft Yahei;
+	position: relative;
+	display: block;
+}
+
+.phone_yzmbtn.sended {
+	background: #ddd;
+	border: 1px solid #ccc;
+	color: #999;
+	text-decoration: none;
+}
+
+.phone_yzmbtn {
+	width: 134px;
+	float: right;
+	background: #8fc31f;
+	border: 1px solid #75ab49;
+	display: block;
+	color: #fff;
+	line-height: 43px;
+	height: 43px;
+	border-radius: 4px;
+	font-size: 15px;
+	text-align: center;
+	cursor: pointer;
+}
+

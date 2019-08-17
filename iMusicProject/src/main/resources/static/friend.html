@@ -1,0 +1,527 @@
+<!--
+    
+ @Name：不落阁整站模板源码
+ @Author：Absolutely
+ @Site：http://www.lyblogs.cn
+
+ -->
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<!-- 动态页面，完成 -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; Charset=gb2312">
+		<meta http-equiv="Content-Language" content="zh-CN">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="css/index_04cfa9d3c4.css">
+		<link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.kugou.com">
+		<!--[if IE 6]>
+    <script type="text/javascript" src="js/dd_belatedpng_0.0.8a-min.js"></script>
+    <script type="text/javascript">
+    DD_belatedPNG.fix('.icon,.logoImg,.icon-play_s,.cptT,.Cover,.sliderPages a,.logo,.office-verification,.footerIcon a,#chinaSingerContent .cptB,.download a');
+    </script>
+    <![endif]-->
+
+		<title>不落阁 - 一个.NET程序员的个人博客网站</title>
+		<link rel="shortcut icon" href="images/Logo_40.png" type="image/x-icon">
+		<!--Layui-->
+		<link href="plug/layui/css/layui.css" rel="stylesheet" />
+		<!--font-awesome-->
+		<link href="plug/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+		<!--全局样式表-->
+		<link href="css/global.css" rel="stylesheet" />
+		<!-- 本页样式表 -->
+		<link href="css/home.css" rel="stylesheet" />
+
+
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		 crossorigin="anonymous">
+
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+		 crossorigin="anonymous">
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		 crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="mainPage">
+			<div class="header">
+				<h1 class="logo">
+					<a href="https://www.kugou.com/">
+						<img src="picture/logo_3.png" alt="">
+					</a>
+				</h1>
+				<div class="search_wrapper top_search">
+					<div class="search_input"><input type="text">
+						<div class="searh_btn"><i class="search_icon"></i><span>搜索</span></div>
+					</div>
+					<div class="search_recommend top_search_recommend">
+
+					</div>
+					<div class="search_histroy top_search_histroy">
+
+					</div>
+				</div>
+				<div class="topNav fr">
+					<ul>
+						<li>
+							<a target="_blank" href="index.html">客服中心</a>
+						</li>
+
+						<li>
+							<a target="_blank" href="vip.html">会员中心 </a>
+						</li>
+					</ul>
+					<div class="login_area">
+						<div id="login_in" class="clearfix" style="display: none;">
+							<a class="login_btn" id="login_btn">登录</a>
+							<a target="_blank" href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a>
+						</div>
+						<div id="login_out" class="clearfix" style="display: block;">
+							<img class="user_img" src="images/photo.jpg">
+							<span class="user_name">冯小仙女啊</span>
+						</div>
+						<div id="user_menu" class="user_menu">
+							<div class="topArrow1"></div>
+							<div class="topArrow2"></div>
+							<ul>
+								<li>
+									<a target="_blank" href="person.html"><i class="fa fa-user" aria-hidden="true"></i>我的主页</a>
+								</li>
+								<li>
+									<a href=""><i class="fa fa-commenting fa-icon2" aria-hidden="true"></i>我的消息</a>
+								</li>
+								<li>
+									<a href="vip.html"><i class="fa fa-vimeo-square" aria-hidden="true"></i>VIP会员</a>
+								</li>
+								<li>
+									<a href="person_Account.html"><span class="user_icon1"></span>个人设置</a>
+								</li>
+								<li>
+									<a href="login.html"><span class="user_icon2"></span>退出</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navWrap">
+				<div class="nav">
+					<ul class="homeNav">
+						<li>
+							<a class="normal" href="index.html">首 页</a>
+						</li>
+						<li>
+							<a class="normal" href="EveryDay.html">榜 单</a>
+						</li>
+						<li>
+							<a class="normal" id="productCenter" href="MyAlbum.html">专 辑</a>
+						</li>
+						<li class="more" id="more">
+							<a href="" class="iconMore" id="showMore">更 多</a>
+						</li>
+					</ul>
+					<ul class="secondMenu" id="secondMenu">
+						<li>
+							<a href="broadcast.html">电台</a>
+						</li>
+						<li>
+							<a href="mv.html">MV</a>
+						</li>
+						<li>
+							<a href="SongsList.html">歌单</a>
+						</li>
+						<li>
+							<a href="singer.html">歌手</a>
+						</li>
+					</ul>
+					<ul class="subNav">
+						<li>
+							<a target="_blank" href="index.html" class="icon icon-nav1">音乐直播</a>
+						</li>
+						<li>
+							<a target="_blank" href="friend.html" class="icon icon-nav2">iMusic动态</a>
+						</li>
+						<li>
+							<a target="_blank" href="index.html" class="icon icon-nav3">音乐人</a>
+						</li>
+						<!--<li>
+       	        <a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a>
+       	    </li>-->
+						<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+
+
+
+			<!-- 主体（一般只改变这里的内容） -->
+			<div class="blog-body">
+
+				<!-- 这个一般才是真正的主体内容 -->
+				<div class="blog-container">
+					<div class="blog-main">
+						<button type="button" style="background: rgb(255,255,255); border-color:#222222;" class="btn   btn-default btn-danger  ">
+							<span style="color:#B92C28;" class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+							<b><a id="pullfriend" href="putfre.html" style=" color: #000000;">发动态</a></b>
+							<script type="text/javascript">
+								$("#pullfriend").on("click", function() {
+									$("#myModal").show();
+								});
+							</script>
+						</button>&nbsp;&nbsp;&nbsp;
+						<button type="button" style="background: rgb(255,255,255); border-color:#222222;" class="btn   btn-default btn-danger  ">
+							<span style="color:#B92C28;" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+							<b><a href="" style="color: #000000;">发布视频</a></b>
+						</button>
+						<div>
+							<hr style="width: 65%; height: 2px;  background-color: red;">
+							</hr>
+						</div>
+
+						<!--左边文章列表-->
+						<div class="blog-main-left">
+							<div class="article shadow">
+								<div class="article-bottom">
+									<div>
+										<ul>
+											<li style="float: left;"><img alt="图片未找到" src="picture/logo.png"></li>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li style="float:left; margin-left: 40px; margin-top: 10px;">名字</li>
+											<li style="float:right;">
+												<button type="button" style="background: rgb(255,255,255); border-color:#222222;" class="btn   btn-default btn-sm  ">
+													<span style="color:#761C19;" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+													<font style="color:#000000; font-size:small; "><b>关注</b></font>
+												</button>
+											</li>
+										</ul>
+									</div>
+									<br />
+									<div class="article-title">
+										<a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a>
+									</div>
+									<div class="article-abstract">
+										该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！该模块主要是针对当前版本lay该模块主要是针对当前版本lay该模块主要是针对当前版本lay该模块主要是针对当前版本lay
+										该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
+									</div>
+								</div>
+								<div class="article-top">
+									<img src="images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+								</div>
+
+
+								<div class="clear"></div>
+
+								<div class="article-footer" style="width: 760px;">
+									<!--
+                            	<div style="margin-left: -5px; background-color: red; float: left;"> </div>
+                        	<div style="margin-left: 560px; background-color: yellow; float: left; margin-top: -35px;"></div>
+                           -->
+									<span style="color:#761C19;"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017-03-18</span>
+									<span class="article-viewinfo" style="color:#761C19; font-size: large;"><i class="glyphicon glyphicon-share"></i>&nbsp;(4)</span>
+									<span class="article-viewinfo" style="color:#761C19; font-size: large;"><i class="glyphicon glyphicon-thumbs-up "></i>&nbsp;(1)</span>
+									<span class="article-viewinfo" style="color:#761C19; font-size: large;"><i class="fa fa-commenting"></i>&nbsp;(4)</span>
+								</div>
+							</div>
+							<div class="article shadow">
+								<div class="article-left">
+									<img src="images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+								</div>
+								<div class="article-right">
+									<div class="article-title">
+										<a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a>
+									</div>
+									<div class="article-abstract">
+										该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="article-footer">
+									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017-03-18</span>
+									<span class="article-author"><i class="fa fa-user"></i>&nbsp;&nbsp;Absolutely</span>
+									<span><i class="fa fa-tag"></i>&nbsp;&nbsp;<a href="#">Web前端</a></span>
+									<span class="article-viewinfo"><i class="fa fa-eye"></i>&nbsp;0</span>
+									<span class="article-viewinfo"><i class="fa fa-commenting"></i>&nbsp;4</span>
+								</div>
+							</div>
+							<div class="article shadow">
+								<div class="article-left">
+									<img src="images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+								</div>
+								<div class="article-right">
+									<div class="article-title">
+										<a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a>
+									</div>
+									<div class="article-abstract">
+										该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="article-footer">
+									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017-03-18</span>
+									<span class="article-author"><i class="fa fa-user"></i>&nbsp;&nbsp;Absolutely</span>
+									<span><i class="fa fa-tag"></i>&nbsp;&nbsp;<a href="#">Web前端</a></span>
+									<span class="article-viewinfo"><i class="fa fa-eye"></i>&nbsp;0</span>
+									<span class="article-viewinfo"><i class="fa fa-commenting"></i>&nbsp;4</span>
+								</div>
+							</div>
+							<div class="article shadow">
+								<div class="article-left">
+									<img src="images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+								</div>
+								<div class="article-right">
+									<div class="article-title">
+										<a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a>
+									</div>
+									<div class="article-abstract">
+										该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="article-footer">
+									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017-03-18</span>
+									<span class="article-author"><i class="fa fa-user"></i>&nbsp;&nbsp;Absolutely</span>
+									<span><i class="fa fa-tag"></i>&nbsp;&nbsp;<a href="#">Web前端</a></span>
+									<span class="article-viewinfo"><i class="fa fa-eye"></i>&nbsp;0</span>
+									<span class="article-viewinfo"><i class="fa fa-commenting"></i>&nbsp;4</span>
+								</div>
+							</div>
+							<div class="article shadow">
+								<div class="article-left">
+									<img src="images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+								</div>
+								<div class="article-right">
+									<div class="article-title">
+										<a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a>
+									</div>
+									<div class="article-abstract">
+										该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="article-footer">
+									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017-03-18</span>
+									<span class="article-author"><i class="fa fa-user"></i>&nbsp;&nbsp;Absolutely</span>
+									<span><i class="fa fa-tag"></i>&nbsp;&nbsp;<a href="#">Web前端</a></span>
+									<span class="article-viewinfo"><i class="fa fa-eye"></i>&nbsp;0</span>
+									<span class="article-viewinfo"><i class="fa fa-commenting"></i>&nbsp;4</span>
+								</div>
+							</div>
+							<div class="article shadow">
+								<div class="article-left">
+									<img src="images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+								</div>
+								<div class="article-right">
+									<div class="article-title">
+										<a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a>
+									</div>
+									<div class="article-abstract">
+										该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="article-footer">
+									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017-03-18</span>
+									<span class="article-author"><i class="fa fa-user"></i>&nbsp;&nbsp;Absolutely</span>
+									<span><i class="fa fa-tag"></i>&nbsp;&nbsp;<a href="#">Web前端</a></span>
+									<span class="article-viewinfo"><i class="fa fa-eye"></i>&nbsp;0</span>
+									<span class="article-viewinfo"><i class="fa fa-commenting"></i>&nbsp;4</span>
+								</div>
+							</div>
+							<div class="article shadow">
+								<div class="article-left">
+									<img src="images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+								</div>
+								<div class="article-right">
+									<div class="article-title">
+										<a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a>
+									</div>
+									<div class="article-abstract">
+										该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="article-footer">
+									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017-03-18</span>
+									<span class="article-author"><i class="fa fa-user"></i>&nbsp;&nbsp;Absolutely</span>
+									<span><i class="fa fa-tag"></i>&nbsp;&nbsp;<a href="#">Web前端</a></span>
+									<span class="article-viewinfo"><i class="fa fa-eye"></i>&nbsp;0</span>
+									<span class="article-viewinfo"><i class="fa fa-commenting"></i>&nbsp;4</span>
+								</div>
+							</div>
+						</div>
+						<!--右边小栏目-->
+						<div class="blog-main-right">
+							<div class="blogerinfo shadow">
+								<div class="blogerinfo-figure">
+									<img src="images/Absolutely.jpg" alt="Absolutely" />
+								</div>
+								<p class="blogerinfo-nickname">Absolutely</p>
+								<p class="blogerinfo-introduce">一枚90后程序员，.NET开发工程师</p>
+								<p class="blogerinfo-location"><i class="fa fa-location-arrow"></i>&nbsp;四川 - 成都</p>
+								<hr />
+								<div class="blogerinfo-contact">
+									<!-- 
+                            <a target="_blank" title="QQ交流" href="javascript:layer.msg('启动QQ会话窗口')"><i class="fa fa-qq fa-2x"></i></a>
+                            <a target="_blank" title="给我写信" href="javascript:layer.msg('启动邮我窗口')"><i class="fa fa-envelope fa-2x"></i></a>
+                            <a target="_blank" title="新浪微博" href="javascript:layer.msg('转到你的微博主页')"><i class="fa fa-weibo fa-2x"></i></a>
+                            <a target="_blank" title="码云" href="javascript:layer.msg('转到你的github主页')"><i class="fa fa-git fa-2x"></i></a>
+                        -->
+									<div><a>动态&nbsp;(1)</a>&nbsp;&nbsp;|<a>&nbsp;关注&nbsp;(1)</a>&nbsp;&nbsp;|<a>&nbsp;&nbsp;粉丝(1)</a></div>
+								</div>
+							</div>
+							<div></div>
+							<!--占位-->
+							<div class="blog-module shadow">
+								<div class="blog-module-title">
+									<font style="font-weight: bold;">明星用户</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="">换一批</a>
+								</div>
+								<ul class="">
+									<li style="float: left;"><img alt="图片未找到" src="icon_yuewangga1_1.png"></li>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li style="float:left;">名字</li>
+									<li style="float:right;">
+										<button type="button" style="background: rgb(255,255,255); border-color:#222222;" class="btn   btn-default btn-sm  ">
+											<span style="color:#761C19;" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+											<font style="color:#000000; font-size:small; "><b>关注</b></font>
+										</button>
+									</li>
+								</ul><br />
+								<ul class="">
+									<li style="float: left;"><img alt="图片未找到" src="icon_yuewangga1_1.png"></li>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li style="float:left;">名字</li>
+									<li style="float:right;">
+										<button type="button" style="background: rgb(255,255,255); border-color:#222222;" class="btn   btn-default btn-sm  ">
+											<span style="color:#761C19;" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+											<font style="color:#000000; font-size:small;"><b>关注</b></font>
+										</button>
+									</li>
+								</ul>
+							</div>
+							<div class="blog-module shadow">
+								<div class="blog-module-title">最近分享</div>
+								<ul class="fa-ul blog-module-ul">
+									<li><i class="fa-li fa fa-hand-o-right"></i><a href="http://pan.baidu.com/s/1c1BJ6Qc" target="_blank">Canvas</a></li>
+									<li><i class="fa-li fa fa-hand-o-right"></i><a href="http://pan.baidu.com/s/1kVK8UhT" target="_blank">pagesize.js</a></li>
+									<li><i class="fa-li fa fa-hand-o-right"></i><a href="https://pan.baidu.com/s/1mit2aiW" target="_blank">时光轴</a></li>
+									<li><i class="fa-li fa fa-hand-o-right"></i><a href="https://pan.baidu.com/s/1nuAKF81" target="_blank">图片轮播</a></li>
+								</ul>
+							</div>
+							<div class="blog-module shadow">
+								<div class="blog-module-title">一路走来</div>
+								<dl class="footprint">
+									<dt>2017年03月12日</dt>
+									<dd>新增留言回复功能！人人都可参与回复！</dd>
+									<dt>2017年03月10日</dt>
+									<dd>不落阁2.0基本功能完成，正式上线！</dd>
+									<dt>2017年03月09日</dt>
+									<dd>新增文章搜索功能！</dd>
+									<dt>2017年02月25日</dt>
+									<dd>QQ互联接入网站，可QQ登陆发表评论与留言！</dd>
+								</dl>
+							</div>
+							<div class="blog-module shadow">
+								<div class="blog-module-title">后台记录</div>
+								<dl class="footprint">
+									<dt>2017年03月16日</dt>
+									<dd>分页新增页容量控制</dd>
+									<dt>2017年03月12日</dt>
+									<dd>新增管家提醒功能</dd>
+									<dt>2017年03月10日</dt>
+									<dd>新增Win10快捷菜单</dd>
+								</dl>
+							</div>
+							<div class="blog-module shadow">
+								<div class="blog-module-title">友情链接</div>
+								<ul class="blogroll">
+									<li><a target="_blank" href="http://www.layui.com/" title="Layui">Layui</a></li>
+									<li><a target="_blank" href="http://www.pagemark.cn/" title="页签">页签</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			<div class="footerWrapper">
+				<div class="footer">
+					<div class="links">
+						<a hidefocus="true" href="javascript:void(0);" target="_blank">关于iMusic</a>|
+						<a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> |
+						<a hidefocus="true" href="javascript:void(0);" target="_blank">广告服务</a> |
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">版权指引</a>|
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">用户服务协议</a> |
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">推广合作</a> |
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐人</a> |
+						<a hidefocus="true" target="_blank" href="javascript:void(0);">iMusic音乐推</a> |
+						<a hidefocus="true" href="javascript:void(0);" target="_blank">客服中心</a> |
+						<a hidefocus="true" href="javascript:void(0);" target="_blank">用户体验提升计划</a>
+					</div>
+					<div class="copyright">
+						<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@iMusic.com</p>
+						<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;
+							<a hidefocus="true" target="_blank" href="javascript:void(0);">粤ICP备09017694号-2</a><span class="footerIcon"><a
+								 target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+						<p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+						<p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018
+							<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img
+								 style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
+						</p>
+						<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">不良信息举报邮箱：jubao_music@kugou.net&nbsp;&nbsp;&nbsp;&nbsp;客服邮箱：kefu@iMusoic.net</p>
+						<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2019 KuGou-Inc.All Rights Reserved
+							<a hidefocus="true" class="office-verification" href="javascript:void(0);" target="_blank"></a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="scrollTop icon-scrollTop">
+				<a href="#"></a>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+		<script src="js/kguser_min_3.js"></script>
+		<title>iMusic音乐 - 就是歌多</title>
+		<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
+		<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="css/search_1.css">
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+		<!--遮罩-->
+		<div class="blog-mask animated layui-hide"></div>
+		<!-- layui.js -->
+		<script src="plug/layui/layui.js"></script>
+		<!-- 全局脚本 -->
+		<script src="js/global.js"></script>
+		<!-- 本页脚本 -->
+		<script src="js/home.js"></script>
+		<script type="text/javascript" src="js/common_9da4617bd7.js"></script>
+		<script src="js/kguser_min.js"></script>
+		<script type="text/javascript" src="js/background-blur.js"></script>
+		<script src="js/repalcehttpsimg.js"></script>
+		<script type="text/javascript" src="js/registerdev.v1.min.js" charset="utf-8"></script>
+		<!--     <script src="js/hijacked-min.js"></script> -->
+		<script type="text/javascript" src="js/index_9adfbac2cd.js"></script>
+	</body>
+</html>

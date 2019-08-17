@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="background-color: #EEE;">
+		<div style="margin: 40px auto;letter-spacing: 5px;  background-color: #FFF; padding: 60px 40px; box-shadow: 0 0 20px #000; width: 600px; font: normal 24px/40px '微软雅黑';">
+			<div style="min-height:400px;background-image: repeating-linear-gradient(to bottom,#FFFFFF 0px,#FFFFFF 39px, #000000 40px);">
+				<span th:text="${name}">无双</span>吾妹!
+				<div style="text-indent: 4em;">见信如晤!</div>
+				<div style="text-indent: 2em;">夫何瑰逸之令姿，独旷世以秀群。表倾城之艳色，期有德于传闻。佩鸣玉以比洁，齐幽兰以争芬!</div>
+				<div style="text-align: right;"><span th:text="${my}">吕轻侯</span><br/>
+<span th:text="${#dates.format(#dates.createNow(),'yyyy年MM月dd日')}">xxxx年xx月xx日</span></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.HostsationMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Hostsation">
+    <id column="hoststation_id" jdbcType="VARCHAR" property="hoststationId" />
+    <result column="anchor_id" jdbcType="VARCHAR" property="anchorId" />
+    <result column="hoststation_name" jdbcType="VARCHAR" property="hoststationName" />
+    <result column="hoststation_playNum" jdbcType="INTEGER" property="hoststationPlaynum" />
+    <result column="hoststation_message" jdbcType="VARCHAR" property="hoststationMessage" />
+    <result column="hoststation_picture" jdbcType="VARCHAR" property="hoststationPicture" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.teach.entity.Hostsation">
+    <result column="hoststation_music_ids" jdbcType="LONGVARCHAR" property="hoststationMusicIds" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    hoststation_id, anchor_id, hoststation_name, hoststation_playNum, hoststation_message, 
+    hoststation_picture
+  </sql>
+  <sql id="Blob_Column_List">
+    hoststation_music_ids
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from hostsation
+    where hoststation_id = #{hoststationId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from hostsation
+    where hoststation_id = #{hoststationId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.Hostsation">
+    insert into hostsation (hoststation_id, anchor_id, hoststation_name, 
+      hoststation_playNum, hoststation_message, 
+      hoststation_picture, hoststation_music_ids
+      )
+    values (#{hoststationId,jdbcType=VARCHAR}, #{anchorId,jdbcType=VARCHAR}, #{hoststationName,jdbcType=VARCHAR}, 
+      #{hoststationPlaynum,jdbcType=INTEGER}, #{hoststationMessage,jdbcType=VARCHAR}, 
+      #{hoststationPicture,jdbcType=VARCHAR}, #{hoststationMusicIds,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.Hostsation">
+    insert into hostsation
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="hoststationId != null">
+        hoststation_id,
+      </if>
+      <if test="anchorId != null">
+        anchor_id,
+      </if>
+      <if test="hoststationName != null">
+        hoststation_name,
+      </if>
+      <if test="hoststationPlaynum != null">
+        hoststation_playNum,
+      </if>
+      <if test="hoststationMessage != null">
+        hoststation_message,
+      </if>
+      <if test="hoststationPicture != null">
+        hoststation_picture,
+      </if>
+      <if test="hoststationMusicIds != null">
+        hoststation_music_ids,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="hoststationId != null">
+        #{hoststationId,jdbcType=VARCHAR},
+      </if>
+      <if test="anchorId != null">
+        #{anchorId,jdbcType=VARCHAR},
+      </if>
+      <if test="hoststationName != null">
+        #{hoststationName,jdbcType=VARCHAR},
+      </if>
+      <if test="hoststationPlaynum != null">
+        #{hoststationPlaynum,jdbcType=INTEGER},
+      </if>
+      <if test="hoststationMessage != null">
+        #{hoststationMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="hoststationPicture != null">
+        #{hoststationPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="hoststationMusicIds != null">
+        #{hoststationMusicIds,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Hostsation">
+    update hostsation
+    <set>
+      <if test="anchorId != null">
+        anchor_id = #{anchorId,jdbcType=VARCHAR},
+      </if>
+      <if test="hoststationName != null">
+        hoststation_name = #{hoststationName,jdbcType=VARCHAR},
+      </if>
+      <if test="hoststationPlaynum != null">
+        hoststation_playNum = #{hoststationPlaynum,jdbcType=INTEGER},
+      </if>
+      <if test="hoststationMessage != null">
+        hoststation_message = #{hoststationMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="hoststationPicture != null">
+        hoststation_picture = #{hoststationPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="hoststationMusicIds != null">
+        hoststation_music_ids = #{hoststationMusicIds,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where hoststation_id = #{hoststationId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.Hostsation">
+    update hostsation
+    set anchor_id = #{anchorId,jdbcType=VARCHAR},
+      hoststation_name = #{hoststationName,jdbcType=VARCHAR},
+      hoststation_playNum = #{hoststationPlaynum,jdbcType=INTEGER},
+      hoststation_message = #{hoststationMessage,jdbcType=VARCHAR},
+      hoststation_picture = #{hoststationPicture,jdbcType=VARCHAR},
+      hoststation_music_ids = #{hoststationMusicIds,jdbcType=LONGVARCHAR}
+    where hoststation_id = #{hoststationId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Hostsation">
+    update hostsation
+    set anchor_id = #{anchorId,jdbcType=VARCHAR},
+      hoststation_name = #{hoststationName,jdbcType=VARCHAR},
+      hoststation_playNum = #{hoststationPlaynum,jdbcType=INTEGER},
+      hoststation_message = #{hoststationMessage,jdbcType=VARCHAR},
+      hoststation_picture = #{hoststationPicture,jdbcType=VARCHAR}
+    where hoststation_id = #{hoststationId,jdbcType=VARCHAR}
+  </update>
+</mapper>

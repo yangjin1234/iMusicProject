@@ -3,7 +3,7 @@ package com.teach.entity;
 public class Hostsation {
     private String hoststationId;
 
-    private String anchorId;
+    private String hoststationAnchorId;
 
     private String hoststationName;
 
@@ -23,12 +23,12 @@ public class Hostsation {
         this.hoststationId = hoststationId;
     }
 
-    public String getAnchorId() {
-        return anchorId;
+    public String getHoststationAnchorId() {
+        return hoststationAnchorId;
     }
 
-    public void setAnchorId(String anchorId) {
-        this.anchorId = anchorId;
+    public void setHoststationAnchorId(String hoststationAnchorId) {
+        this.hoststationAnchorId = hoststationAnchorId;
     }
 
     public String getHoststationName() {

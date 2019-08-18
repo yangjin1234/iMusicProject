@@ -3,13 +3,13 @@
 <mapper namespace="com.teach.mapper.CollectlistMapper">
   <resultMap id="BaseResultMap" type="com.teach.entity.Collectlist">
     <id column="collectlist_id" jdbcType="VARCHAR" property="collectlistId" />
-    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="collectlist_user_id" jdbcType="VARCHAR" property="collectlistUserId" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.teach.entity.Collectlist">
     <result column="collectlist_music_ids" jdbcType="LONGVARCHAR" property="collectlistMusicIds" />
   </resultMap>
   <sql id="Base_Column_List">
-    collectlist_id, user_id
+    collectlist_id, collectlist_user_id
   </sql>
   <sql id="Blob_Column_List">
     collectlist_music_ids
@@ -27,10 +27,10 @@
     where collectlist_id = #{collectlistId,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.teach.entity.Collectlist">
-    insert into collectlist (collectlist_id, user_id, collectlist_music_ids
-      )
-    values (#{collectlistId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{collectlistMusicIds,jdbcType=LONGVARCHAR}
-      )
+    insert into collectlist (collectlist_id, collectlist_user_id, 
+      collectlist_music_ids)
+    values (#{collectlistId,jdbcType=VARCHAR}, #{collectlistUserId,jdbcType=VARCHAR}, 
+      #{collectlistMusicIds,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.teach.entity.Collectlist">
     insert into collectlist
@@ -38,8 +38,8 @@
       <if test="collectlistId != null">
         collectlist_id,
       </if>
-      <if test="userId != null">
-        user_id,
+      <if test="collectlistUserId != null">
+        collectlist_user_id,
       </if>
       <if test="collectlistMusicIds != null">
         collectlist_music_ids,
@@ -49,8 +49,8 @@
       <if test="collectlistId != null">
         #{collectlistId,jdbcType=VARCHAR},
       </if>
-      <if test="userId != null">
-        #{userId,jdbcType=VARCHAR},
+      <if test="collectlistUserId != null">
+        #{collectlistUserId,jdbcType=VARCHAR},
       </if>
       <if test="collectlistMusicIds != null">
         #{collectlistMusicIds,jdbcType=LONGVARCHAR},
@@ -60,8 +60,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Collectlist">
     update collectlist
     <set>
-      <if test="userId != null">
-        user_id = #{userId,jdbcType=VARCHAR},
+      <if test="collectlistUserId != null">
+        collectlist_user_id = #{collectlistUserId,jdbcType=VARCHAR},
       </if>
       <if test="collectlistMusicIds != null">
         collectlist_music_ids = #{collectlistMusicIds,jdbcType=LONGVARCHAR},
@@ -71,13 +71,13 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.Collectlist">
     update collectlist
-    set user_id = #{userId,jdbcType=VARCHAR},
+    set collectlist_user_id = #{collectlistUserId,jdbcType=VARCHAR},
       collectlist_music_ids = #{collectlistMusicIds,jdbcType=LONGVARCHAR}
     where collectlist_id = #{collectlistId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.teach.entity.Collectlist">
     update collectlist
-    set user_id = #{userId,jdbcType=VARCHAR}
+    set collectlist_user_id = #{collectlistUserId,jdbcType=VARCHAR}
     where collectlist_id = #{collectlistId,jdbcType=VARCHAR}
   </update>
 </mapper>

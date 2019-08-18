@@ -3,7 +3,7 @@
 <mapper namespace="com.teach.mapper.AlbumMapper">
   <resultMap id="BaseResultMap" type="com.teach.entity.Album">
     <id column="album_id" jdbcType="VARCHAR" property="albumId" />
-    <result column="singer_id" jdbcType="VARCHAR" property="singerId" />
+    <result column="album_singer_id" jdbcType="VARCHAR" property="albumSingerId" />
     <result column="album_name" jdbcType="VARCHAR" property="albumName" />
     <result column="album_cover" jdbcType="VARCHAR" property="albumCover" />
     <result column="album_info" jdbcType="VARCHAR" property="albumInfo" />
@@ -14,7 +14,7 @@
     <result column="album_music_ids" jdbcType="LONGVARCHAR" property="albumMusicIds" />
   </resultMap>
   <sql id="Base_Column_List">
-    album_id, singer_id, album_name, album_cover, album_info, album_playNum, album_date
+    album_id, album_singer_id, album_name, album_cover, album_info, album_playNum, album_date
   </sql>
   <sql id="Blob_Column_List">
     album_music_ids
@@ -32,10 +32,10 @@
     where album_id = #{albumId,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.teach.entity.Album">
-    insert into album (album_id, singer_id, album_name, 
+    insert into album (album_id, album_singer_id, album_name, 
       album_cover, album_info, album_playNum, 
       album_date, album_music_ids)
-    values (#{albumId,jdbcType=VARCHAR}, #{singerId,jdbcType=VARCHAR}, #{albumName,jdbcType=VARCHAR}, 
+    values (#{albumId,jdbcType=VARCHAR}, #{albumSingerId,jdbcType=VARCHAR}, #{albumName,jdbcType=VARCHAR}, 
       #{albumCover,jdbcType=VARCHAR}, #{albumInfo,jdbcType=VARCHAR}, #{albumPlaynum,jdbcType=INTEGER}, 
       #{albumDate,jdbcType=TIMESTAMP}, #{albumMusicIds,jdbcType=LONGVARCHAR})
   </insert>
@@ -45,8 +45,8 @@
       <if test="albumId != null">
         album_id,
       </if>
-      <if test="singerId != null">
-        singer_id,
+      <if test="albumSingerId != null">
+        album_singer_id,
       </if>
       <if test="albumName != null">
         album_name,
@@ -71,8 +71,8 @@
       <if test="albumId != null">
         #{albumId,jdbcType=VARCHAR},
       </if>
-      <if test="singerId != null">
-        #{singerId,jdbcType=VARCHAR},
+      <if test="albumSingerId != null">
+        #{albumSingerId,jdbcType=VARCHAR},
       </if>
       <if test="albumName != null">
         #{albumName,jdbcType=VARCHAR},
@@ -97,8 +97,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Album">
     update album
     <set>
-      <if test="singerId != null">
-        singer_id = #{singerId,jdbcType=VARCHAR},
+      <if test="albumSingerId != null">
+        album_singer_id = #{albumSingerId,jdbcType=VARCHAR},
       </if>
       <if test="albumName != null">
         album_name = #{albumName,jdbcType=VARCHAR},
@@ -123,7 +123,7 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.Album">
     update album
-    set singer_id = #{singerId,jdbcType=VARCHAR},
+    set album_singer_id = #{albumSingerId,jdbcType=VARCHAR},
       album_name = #{albumName,jdbcType=VARCHAR},
       album_cover = #{albumCover,jdbcType=VARCHAR},
       album_info = #{albumInfo,jdbcType=VARCHAR},
@@ -134,7 +134,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.teach.entity.Album">
     update album
-    set singer_id = #{singerId,jdbcType=VARCHAR},
+    set album_singer_id = #{albumSingerId,jdbcType=VARCHAR},
       album_name = #{albumName,jdbcType=VARCHAR},
       album_cover = #{albumCover,jdbcType=VARCHAR},
       album_info = #{albumInfo,jdbcType=VARCHAR},

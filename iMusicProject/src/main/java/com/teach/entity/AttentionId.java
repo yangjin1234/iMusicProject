@@ -5,9 +5,9 @@ import java.util.Date;
 public class AttentionId {
     private Date attentionTime;
 
-    private String userId;
+    private String attentionUserIdIng;
 
-    private String useUserId;
+    private String attentionUserIdEd;
 
     public Date getAttentionTime() {
         return attentionTime;
@@ -17,19 +17,19 @@ public class AttentionId {
         this.attentionTime = attentionTime;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getAttentionUserIdIng() {
+        return attentionUserIdIng;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setAttentionUserIdIng(String attentionUserIdIng) {
+        this.attentionUserIdIng = attentionUserIdIng;
     }
 
-    public String getUseUserId() {
-        return useUserId;
+    public String getAttentionUserIdEd() {
+        return attentionUserIdEd;
     }
 
-    public void setUseUserId(String useUserId) {
-        this.useUserId = useUserId;
+    public void setAttentionUserIdEd(String attentionUserIdEd) {
+        this.attentionUserIdEd = attentionUserIdEd;
     }
 }

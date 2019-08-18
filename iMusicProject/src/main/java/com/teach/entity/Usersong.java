@@ -5,7 +5,7 @@ import java.util.Date;
 public class Usersong {
     private String usersongId;
 
-    private String userId;
+    private String usersongUserId;
 
     private String usersongName;
 
@@ -23,12 +23,12 @@ public class Usersong {
         this.usersongId = usersongId;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUsersongUserId() {
+        return usersongUserId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUsersongUserId(String usersongUserId) {
+        this.usersongUserId = usersongUserId;
     }
 
     public String getUsersongName() {

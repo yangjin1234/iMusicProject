@@ -5,7 +5,7 @@ import java.util.Date;
 public class Comment {
     private String commentId;
 
-    private String userId;
+    private String commentUserId;
 
     private String commentId2;
 
@@ -21,12 +21,12 @@ public class Comment {
         this.commentId = commentId;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getCommentUserId() {
+        return commentUserId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setCommentUserId(String commentUserId) {
+        this.commentUserId = commentUserId;
     }
 
     public String getCommentId2() {

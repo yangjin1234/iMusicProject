@@ -3,7 +3,7 @@ package com.teach.entity;
 public class Anchor {
     private String anchorId;
 
-    private String userId;
+    private String anchorUserId;
 
     private String anchorName;
 
@@ -17,12 +17,12 @@ public class Anchor {
         this.anchorId = anchorId;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getAnchorUserId() {
+        return anchorUserId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setAnchorUserId(String anchorUserId) {
+        this.anchorUserId = anchorUserId;
     }
 
     public String getAnchorName() {

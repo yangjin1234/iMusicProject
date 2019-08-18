@@ -3,11 +3,11 @@
 <mapper namespace="com.teach.mapper.AttentionIdMapper">
   <resultMap id="BaseResultMap" type="com.teach.entity.AttentionId">
     <id column="attention_time" jdbcType="TIMESTAMP" property="attentionTime" />
-    <result column="user_id" jdbcType="VARCHAR" property="userId" />
-    <result column="use_user_id" jdbcType="VARCHAR" property="useUserId" />
+    <result column="attention_user_id_ing" jdbcType="VARCHAR" property="attentionUserIdIng" />
+    <result column="attention_user_id_ed" jdbcType="VARCHAR" property="attentionUserIdEd" />
   </resultMap>
   <sql id="Base_Column_List">
-    attention_time, user_id, use_user_id
+    attention_time, attention_user_id_ing, attention_user_id_ed
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.util.Date" resultMap="BaseResultMap">
     select 
@@ -20,10 +20,10 @@
     where attention_time = #{attentionTime,jdbcType=TIMESTAMP}
   </delete>
   <insert id="insert" parameterType="com.teach.entity.AttentionId">
-    insert into attention_id (attention_time, user_id, use_user_id
-      )
-    values (#{attentionTime,jdbcType=TIMESTAMP}, #{userId,jdbcType=VARCHAR}, #{useUserId,jdbcType=VARCHAR}
-      )
+    insert into attention_id (attention_time, attention_user_id_ing, 
+      attention_user_id_ed)
+    values (#{attentionTime,jdbcType=TIMESTAMP}, #{attentionUserIdIng,jdbcType=VARCHAR}, 
+      #{attentionUserIdEd,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.teach.entity.AttentionId">
     insert into attention_id
@@ -31,41 +31,41 @@
       <if test="attentionTime != null">
         attention_time,
       </if>
-      <if test="userId != null">
-        user_id,
+      <if test="attentionUserIdIng != null">
+        attention_user_id_ing,
       </if>
-      <if test="useUserId != null">
-        use_user_id,
+      <if test="attentionUserIdEd != null">
+        attention_user_id_ed,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="attentionTime != null">
         #{attentionTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="userId != null">
-        #{userId,jdbcType=VARCHAR},
+      <if test="attentionUserIdIng != null">
+        #{attentionUserIdIng,jdbcType=VARCHAR},
       </if>
-      <if test="useUserId != null">
-        #{useUserId,jdbcType=VARCHAR},
+      <if test="attentionUserIdEd != null">
+        #{attentionUserIdEd,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.AttentionId">
     update attention_id
     <set>
-      <if test="userId != null">
-        user_id = #{userId,jdbcType=VARCHAR},
+      <if test="attentionUserIdIng != null">
+        attention_user_id_ing = #{attentionUserIdIng,jdbcType=VARCHAR},
       </if>
-      <if test="useUserId != null">
-        use_user_id = #{useUserId,jdbcType=VARCHAR},
+      <if test="attentionUserIdEd != null">
+        attention_user_id_ed = #{attentionUserIdEd,jdbcType=VARCHAR},
       </if>
     </set>
     where attention_time = #{attentionTime,jdbcType=TIMESTAMP}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.teach.entity.AttentionId">
     update attention_id
-    set user_id = #{userId,jdbcType=VARCHAR},
-      use_user_id = #{useUserId,jdbcType=VARCHAR}
+    set attention_user_id_ing = #{attentionUserIdIng,jdbcType=VARCHAR},
+      attention_user_id_ed = #{attentionUserIdEd,jdbcType=VARCHAR}
     where attention_time = #{attentionTime,jdbcType=TIMESTAMP}
   </update>
 </mapper>

@@ -3,17 +3,19 @@ package com.teach.entity;
 public class Music {
     private String musicId;
 
-    private String singerId;
+    private String musicSingerId;
 
-    private String videoId;
+    private String musicAlbumId;
 
-    private Integer emotionId;
+    private String musicVideoId;
 
-    private Integer styleId;
+    private Integer musicEmotionId;
 
-    private Integer themeId;
+    private Integer musicStyleId;
 
-    private Integer languageId;
+    private Integer musicThemeId;
+
+    private Integer musicLanguageId;
 
     private String musicName;
 
@@ -37,52 +39,60 @@ public class Music {
         this.musicId = musicId;
     }
 
-    public String getSingerId() {
-        return singerId;
+    public String getMusicSingerId() {
+        return musicSingerId;
     }
 
-    public void setSingerId(String singerId) {
-        this.singerId = singerId;
+    public void setMusicSingerId(String musicSingerId) {
+        this.musicSingerId = musicSingerId;
     }
 
-    public String getVideoId() {
-        return videoId;
+    public String getMusicAlbumId() {
+        return musicAlbumId;
     }
 
-    public void setVideoId(String videoId) {
-        this.videoId = videoId;
+    public void setMusicAlbumId(String musicAlbumId) {
+        this.musicAlbumId = musicAlbumId;
     }
 
-    public Integer getEmotionId() {
-        return emotionId;
+    public String getMusicVideoId() {
+        return musicVideoId;
     }
 
-    public void setEmotionId(Integer emotionId) {
-        this.emotionId = emotionId;
+    public void setMusicVideoId(String musicVideoId) {
+        this.musicVideoId = musicVideoId;
     }
 
-    public Integer getStyleId() {
-        return styleId;
+    public Integer getMusicEmotionId() {
+        return musicEmotionId;
     }
 
-    public void setStyleId(Integer styleId) {
-        this.styleId = styleId;
+    public void setMusicEmotionId(Integer musicEmotionId) {
+        this.musicEmotionId = musicEmotionId;
     }
 
-    public Integer getThemeId() {
-        return themeId;
+    public Integer getMusicStyleId() {
+        return musicStyleId;
     }
 
-    public void setThemeId(Integer themeId) {
-        this.themeId = themeId;
+    public void setMusicStyleId(Integer musicStyleId) {
+        this.musicStyleId = musicStyleId;
     }
 
-    public Integer getLanguageId() {
-        return languageId;
+    public Integer getMusicThemeId() {
+        return musicThemeId;
     }
 
-    public void setLanguageId(Integer languageId) {
-        this.languageId = languageId;
+    public void setMusicThemeId(Integer musicThemeId) {
+        this.musicThemeId = musicThemeId;
+    }
+
+    public Integer getMusicLanguageId() {
+        return musicLanguageId;
+    }
+
+    public void setMusicLanguageId(Integer musicLanguageId) {
+        this.musicLanguageId = musicLanguageId;
     }
 
     public String getMusicName() {

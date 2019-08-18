@@ -5,12 +5,6 @@ import java.util.Date;
 public class User {
     private String userId;
 
-    private String collectlistId;
-
-    private String collectId;
-
-    private String anchorId;
-
     private String userPhone;
 
     private String userName;
@@ -41,30 +35,6 @@ public class User {
 
     public void setUserId(String userId) {
         this.userId = userId;
-    }
-
-    public String getCollectlistId() {
-        return collectlistId;
-    }
-
-    public void setCollectlistId(String collectlistId) {
-        this.collectlistId = collectlistId;
-    }
-
-    public String getCollectId() {
-        return collectId;
-    }
-
-    public void setCollectId(String collectId) {
-        this.collectId = collectId;
-    }
-
-    public String getAnchorId() {
-        return anchorId;
-    }
-
-    public void setAnchorId(String anchorId) {
-        this.anchorId = anchorId;
     }
 
     public String getUserPhone() {

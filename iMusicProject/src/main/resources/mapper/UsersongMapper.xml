@@ -3,14 +3,15 @@
 <mapper namespace="com.teach.mapper.UsersongMapper">
   <resultMap id="BaseResultMap" type="com.teach.entity.Usersong">
     <id column="usersong_id" jdbcType="VARCHAR" property="usersongId" />
-    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="usersong_user_id" jdbcType="VARCHAR" property="usersongUserId" />
     <result column="usersong_name" jdbcType="VARCHAR" property="usersongName" />
     <result column="usersong_message" jdbcType="VARCHAR" property="usersongMessage" />
     <result column="usersong_picture" jdbcType="VARCHAR" property="usersongPicture" />
     <result column="usersong_date" jdbcType="TIMESTAMP" property="usersongDate" />
   </resultMap>
   <sql id="Base_Column_List">
-    usersong_id, user_id, usersong_name, usersong_message, usersong_picture, usersong_date
+    usersong_id, usersong_user_id, usersong_name, usersong_message, usersong_picture, 
+    usersong_date
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -23,10 +24,10 @@
     where usersong_id = #{usersongId,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.teach.entity.Usersong">
-    insert into usersong (usersong_id, user_id, usersong_name, 
+    insert into usersong (usersong_id, usersong_user_id, usersong_name, 
       usersong_message, usersong_picture, usersong_date
       )
-    values (#{usersongId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{usersongName,jdbcType=VARCHAR}, 
+    values (#{usersongId,jdbcType=VARCHAR}, #{usersongUserId,jdbcType=VARCHAR}, #{usersongName,jdbcType=VARCHAR}, 
       #{usersongMessage,jdbcType=VARCHAR}, #{usersongPicture,jdbcType=VARCHAR}, #{usersongDate,jdbcType=TIMESTAMP}
       )
   </insert>
@@ -36,8 +37,8 @@
       <if test="usersongId != null">
         usersong_id,
       </if>
-      <if test="userId != null">
-        user_id,
+      <if test="usersongUserId != null">
+        usersong_user_id,
       </if>
       <if test="usersongName != null">
         usersong_name,
@@ -56,8 +57,8 @@
       <if test="usersongId != null">
         #{usersongId,jdbcType=VARCHAR},
       </if>
-      <if test="userId != null">
-        #{userId,jdbcType=VARCHAR},
+      <if test="usersongUserId != null">
+        #{usersongUserId,jdbcType=VARCHAR},
       </if>
       <if test="usersongName != null">
         #{usersongName,jdbcType=VARCHAR},
@@ -76,8 +77,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Usersong">
     update usersong
     <set>
-      <if test="userId != null">
-        user_id = #{userId,jdbcType=VARCHAR},
+      <if test="usersongUserId != null">
+        usersong_user_id = #{usersongUserId,jdbcType=VARCHAR},
       </if>
       <if test="usersongName != null">
         usersong_name = #{usersongName,jdbcType=VARCHAR},
@@ -96,7 +97,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.teach.entity.Usersong">
     update usersong
-    set user_id = #{userId,jdbcType=VARCHAR},
+    set usersong_user_id = #{usersongUserId,jdbcType=VARCHAR},
       usersong_name = #{usersongName,jdbcType=VARCHAR},
       usersong_message = #{usersongMessage,jdbcType=VARCHAR},
       usersong_picture = #{usersongPicture,jdbcType=VARCHAR},

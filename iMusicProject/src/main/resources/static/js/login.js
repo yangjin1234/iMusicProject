@@ -18,11 +18,11 @@ window.onload = function() {
 			var mobile = $("#mobile").val();
 			var _this = $(this);
 			if(_this.hasClass("sended")) {
-
 			} else {
-				$.post("/ajax/send_mobile_code_register.php", {
-					"mobile": mobile
+				$.post("/sms/send.do", {
+					"tel": mobile
 				}, function(data) {
+					alert(date);
 					if(data.code == '1') {
 						$(this).addClass("sended");
 						_this.html("60秒后重新发送");
@@ -136,8 +136,8 @@ window.onload = function() {
 			$(this).parent().next().show();
 			var _this = $(this);
 			if(checkPhonenum(val)) {
-				$.post("/ajax/register.php", {
-					"mobile": val,
+				$.post("/sms/send.do", {
+					"tel": val,
 					"check": 'true'
 				}, function(data) {
 					if(data.code == '1') {
@@ -301,10 +301,10 @@ window.onload = function() {
 					if(y != "checked") {
 						return;
 					}
-					$.post("/ajax/register.php", {
-						"mobile": mobile,
+					$.post("/sms/check.do", {
+						"tel": mobile,
 						"password": password,
-						"mobile_code": mobile_code,
+						"code": mobile_code,
 						"reg_from": reg_from,
 						"obj_id": obj_id,
 						"i": invite_id,
@@ -485,7 +485,7 @@ window.onload = function() {
 		}
 		var verify_code_key = $('#verifycode_key_mobile').val();
 
-		$.post("/ajax/send_mobile_code_register.php", {
+		$.post("/sms/send.do", {
 			"mobile": mobile,
 			"verifycode": yzm_mobile,
 			"verifycode_key": verify_code_key

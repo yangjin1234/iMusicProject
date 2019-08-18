@@ -3,7 +3,7 @@
 <mapper namespace="com.teach.mapper.HostsationMapper">
   <resultMap id="BaseResultMap" type="com.teach.entity.Hostsation">
     <id column="hoststation_id" jdbcType="VARCHAR" property="hoststationId" />
-    <result column="anchor_id" jdbcType="VARCHAR" property="anchorId" />
+    <result column="hoststation_anchor_id" jdbcType="VARCHAR" property="hoststationAnchorId" />
     <result column="hoststation_name" jdbcType="VARCHAR" property="hoststationName" />
     <result column="hoststation_playNum" jdbcType="INTEGER" property="hoststationPlaynum" />
     <result column="hoststation_message" jdbcType="VARCHAR" property="hoststationMessage" />
@@ -13,7 +13,7 @@
     <result column="hoststation_music_ids" jdbcType="LONGVARCHAR" property="hoststationMusicIds" />
   </resultMap>
   <sql id="Base_Column_List">
-    hoststation_id, anchor_id, hoststation_name, hoststation_playNum, hoststation_message, 
+    hoststation_id, hoststation_anchor_id, hoststation_name, hoststation_playNum, hoststation_message, 
     hoststation_picture
   </sql>
   <sql id="Blob_Column_List">
@@ -32,12 +32,12 @@
     where hoststation_id = #{hoststationId,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.teach.entity.Hostsation">
-    insert into hostsation (hoststation_id, anchor_id, hoststation_name, 
-      hoststation_playNum, hoststation_message, 
+    insert into hostsation (hoststation_id, hoststation_anchor_id, 
+      hoststation_name, hoststation_playNum, hoststation_message, 
       hoststation_picture, hoststation_music_ids
       )
-    values (#{hoststationId,jdbcType=VARCHAR}, #{anchorId,jdbcType=VARCHAR}, #{hoststationName,jdbcType=VARCHAR}, 
-      #{hoststationPlaynum,jdbcType=INTEGER}, #{hoststationMessage,jdbcType=VARCHAR}, 
+    values (#{hoststationId,jdbcType=VARCHAR}, #{hoststationAnchorId,jdbcType=VARCHAR}, 
+      #{hoststationName,jdbcType=VARCHAR}, #{hoststationPlaynum,jdbcType=INTEGER}, #{hoststationMessage,jdbcType=VARCHAR}, 
       #{hoststationPicture,jdbcType=VARCHAR}, #{hoststationMusicIds,jdbcType=LONGVARCHAR}
       )
   </insert>
@@ -47,8 +47,8 @@
       <if test="hoststationId != null">
         hoststation_id,
       </if>
-      <if test="anchorId != null">
-        anchor_id,
+      <if test="hoststationAnchorId != null">
+        hoststation_anchor_id,
       </if>
       <if test="hoststationName != null">
         hoststation_name,
@@ -70,8 +70,8 @@
       <if test="hoststationId != null">
         #{hoststationId,jdbcType=VARCHAR},
       </if>
-      <if test="anchorId != null">
-        #{anchorId,jdbcType=VARCHAR},
+      <if test="hoststationAnchorId != null">
+        #{hoststationAnchorId,jdbcType=VARCHAR},
       </if>
       <if test="hoststationName != null">
         #{hoststationName,jdbcType=VARCHAR},
@@ -93,8 +93,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Hostsation">
     update hostsation
     <set>
-      <if test="anchorId != null">
-        anchor_id = #{anchorId,jdbcType=VARCHAR},
+      <if test="hoststationAnchorId != null">
+        hoststation_anchor_id = #{hoststationAnchorId,jdbcType=VARCHAR},
       </if>
       <if test="hoststationName != null">
         hoststation_name = #{hoststationName,jdbcType=VARCHAR},
@@ -116,7 +116,7 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.Hostsation">
     update hostsation
-    set anchor_id = #{anchorId,jdbcType=VARCHAR},
+    set hoststation_anchor_id = #{hoststationAnchorId,jdbcType=VARCHAR},
       hoststation_name = #{hoststationName,jdbcType=VARCHAR},
       hoststation_playNum = #{hoststationPlaynum,jdbcType=INTEGER},
       hoststation_message = #{hoststationMessage,jdbcType=VARCHAR},
@@ -126,7 +126,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.teach.entity.Hostsation">
     update hostsation
-    set anchor_id = #{anchorId,jdbcType=VARCHAR},
+    set hoststation_anchor_id = #{hoststationAnchorId,jdbcType=VARCHAR},
       hoststation_name = #{hoststationName,jdbcType=VARCHAR},
       hoststation_playNum = #{hoststationPlaynum,jdbcType=INTEGER},
       hoststation_message = #{hoststationMessage,jdbcType=VARCHAR},

@@ -3,12 +3,12 @@
 <mapper namespace="com.teach.mapper.AnchorMapper">
   <resultMap id="BaseResultMap" type="com.teach.entity.Anchor">
     <id column="anchor_id" jdbcType="VARCHAR" property="anchorId" />
-    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="anchor_user_id" jdbcType="VARCHAR" property="anchorUserId" />
     <result column="anchor_name" jdbcType="VARCHAR" property="anchorName" />
     <result column="anchor_state" jdbcType="CHAR" property="anchorState" />
   </resultMap>
   <sql id="Base_Column_List">
-    anchor_id, user_id, anchor_name, anchor_state
+    anchor_id, anchor_user_id, anchor_name, anchor_state
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -21,9 +21,9 @@
     where anchor_id = #{anchorId,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.teach.entity.Anchor">
-    insert into anchor (anchor_id, user_id, anchor_name, 
+    insert into anchor (anchor_id, anchor_user_id, anchor_name, 
       anchor_state)
-    values (#{anchorId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{anchorName,jdbcType=VARCHAR}, 
+    values (#{anchorId,jdbcType=VARCHAR}, #{anchorUserId,jdbcType=VARCHAR}, #{anchorName,jdbcType=VARCHAR}, 
       #{anchorState,jdbcType=CHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.teach.entity.Anchor">
@@ -32,8 +32,8 @@
       <if test="anchorId != null">
         anchor_id,
       </if>
-      <if test="userId != null">
-        user_id,
+      <if test="anchorUserId != null">
+        anchor_user_id,
       </if>
       <if test="anchorName != null">
         anchor_name,
@@ -46,8 +46,8 @@
       <if test="anchorId != null">
         #{anchorId,jdbcType=VARCHAR},
       </if>
-      <if test="userId != null">
-        #{userId,jdbcType=VARCHAR},
+      <if test="anchorUserId != null">
+        #{anchorUserId,jdbcType=VARCHAR},
       </if>
       <if test="anchorName != null">
         #{anchorName,jdbcType=VARCHAR},
@@ -60,8 +60,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Anchor">
     update anchor
     <set>
-      <if test="userId != null">
-        user_id = #{userId,jdbcType=VARCHAR},
+      <if test="anchorUserId != null">
+        anchor_user_id = #{anchorUserId,jdbcType=VARCHAR},
       </if>
       <if test="anchorName != null">
         anchor_name = #{anchorName,jdbcType=VARCHAR},
@@ -74,7 +74,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.teach.entity.Anchor">
     update anchor
-    set user_id = #{userId,jdbcType=VARCHAR},
+    set anchor_user_id = #{anchorUserId,jdbcType=VARCHAR},
       anchor_name = #{anchorName,jdbcType=VARCHAR},
       anchor_state = #{anchorState,jdbcType=CHAR}
     where anchor_id = #{anchorId,jdbcType=VARCHAR}

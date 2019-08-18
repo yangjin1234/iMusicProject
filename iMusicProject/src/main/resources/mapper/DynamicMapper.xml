@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teach.mapper.DynamicMapper">
+  <resultMap id="BaseResultMap" type="com.teach.entity.Dynamic">
+    <id column="dynamic_id" jdbcType="VARCHAR" property="dynamicId" />
+    <result column="dynamic_user_id" jdbcType="VARCHAR" property="dynamicUserId" />
+    <result column="dynamic_id2" jdbcType="VARCHAR" property="dynamicId2" />
+    <result column="dynamic_date" jdbcType="TIMESTAMP" property="dynamicDate" />
+    <result column="dynamic_like" jdbcType="INTEGER" property="dynamicLike" />
+    <result column="dynamic_transmit" jdbcType="INTEGER" property="dynamicTransmit" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.teach.entity.DynamicWithBLOBs">
+    <result column="dynamic_info" jdbcType="LONGVARCHAR" property="dynamicInfo" />
+    <result column="dynamic_like_ids" jdbcType="LONGVARCHAR" property="dynamicLikeIds" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    dynamic_id, dynamic_user_id, dynamic_id2, dynamic_date, dynamic_like, dynamic_transmit
+  </sql>
+  <sql id="Blob_Column_List">
+    dynamic_info, dynamic_like_ids
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from dynamic
+    where dynamic_id = #{dynamicId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from dynamic
+    where dynamic_id = #{dynamicId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.teach.entity.DynamicWithBLOBs">
+    insert into dynamic (dynamic_id, dynamic_user_id, dynamic_id2, 
+      dynamic_date, dynamic_like, dynamic_transmit, 
+      dynamic_info, dynamic_like_ids)
+    values (#{dynamicId,jdbcType=VARCHAR}, #{dynamicUserId,jdbcType=VARCHAR}, #{dynamicId2,jdbcType=VARCHAR}, 
+      #{dynamicDate,jdbcType=TIMESTAMP}, #{dynamicLike,jdbcType=INTEGER}, #{dynamicTransmit,jdbcType=INTEGER}, 
+      #{dynamicInfo,jdbcType=LONGVARCHAR}, #{dynamicLikeIds,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.teach.entity.DynamicWithBLOBs">
+    insert into dynamic
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="dynamicId != null">
+        dynamic_id,
+      </if>
+      <if test="dynamicUserId != null">
+        dynamic_user_id,
+      </if>
+      <if test="dynamicId2 != null">
+        dynamic_id2,
+      </if>
+      <if test="dynamicDate != null">
+        dynamic_date,
+      </if>
+      <if test="dynamicLike != null">
+        dynamic_like,
+      </if>
+      <if test="dynamicTransmit != null">
+        dynamic_transmit,
+      </if>
+      <if test="dynamicInfo != null">
+        dynamic_info,
+      </if>
+      <if test="dynamicLikeIds != null">
+        dynamic_like_ids,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="dynamicId != null">
+        #{dynamicId,jdbcType=VARCHAR},
+      </if>
+      <if test="dynamicUserId != null">
+        #{dynamicUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="dynamicId2 != null">
+        #{dynamicId2,jdbcType=VARCHAR},
+      </if>
+      <if test="dynamicDate != null">
+        #{dynamicDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dynamicLike != null">
+        #{dynamicLike,jdbcType=INTEGER},
+      </if>
+      <if test="dynamicTransmit != null">
+        #{dynamicTransmit,jdbcType=INTEGER},
+      </if>
+      <if test="dynamicInfo != null">
+        #{dynamicInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="dynamicLikeIds != null">
+        #{dynamicLikeIds,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.DynamicWithBLOBs">
+    update dynamic
+    <set>
+      <if test="dynamicUserId != null">
+        dynamic_user_id = #{dynamicUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="dynamicId2 != null">
+        dynamic_id2 = #{dynamicId2,jdbcType=VARCHAR},
+      </if>
+      <if test="dynamicDate != null">
+        dynamic_date = #{dynamicDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dynamicLike != null">
+        dynamic_like = #{dynamicLike,jdbcType=INTEGER},
+      </if>
+      <if test="dynamicTransmit != null">
+        dynamic_transmit = #{dynamicTransmit,jdbcType=INTEGER},
+      </if>
+      <if test="dynamicInfo != null">
+        dynamic_info = #{dynamicInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="dynamicLikeIds != null">
+        dynamic_like_ids = #{dynamicLikeIds,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where dynamic_id = #{dynamicId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.teach.entity.DynamicWithBLOBs">
+    update dynamic
+    set dynamic_user_id = #{dynamicUserId,jdbcType=VARCHAR},
+      dynamic_id2 = #{dynamicId2,jdbcType=VARCHAR},
+      dynamic_date = #{dynamicDate,jdbcType=TIMESTAMP},
+      dynamic_like = #{dynamicLike,jdbcType=INTEGER},
+      dynamic_transmit = #{dynamicTransmit,jdbcType=INTEGER},
+      dynamic_info = #{dynamicInfo,jdbcType=LONGVARCHAR},
+      dynamic_like_ids = #{dynamicLikeIds,jdbcType=LONGVARCHAR}
+    where dynamic_id = #{dynamicId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.teach.entity.Dynamic">
+    update dynamic
+    set dynamic_user_id = #{dynamicUserId,jdbcType=VARCHAR},
+      dynamic_id2 = #{dynamicId2,jdbcType=VARCHAR},
+      dynamic_date = #{dynamicDate,jdbcType=TIMESTAMP},
+      dynamic_like = #{dynamicLike,jdbcType=INTEGER},
+      dynamic_transmit = #{dynamicTransmit,jdbcType=INTEGER}
+    where dynamic_id = #{dynamicId,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -5,9 +5,9 @@ import java.util.Date;
 public class Chat {
     private String chatId;
 
-    private String userId;
+    private String chatUser1Id;
 
-    private String useUserId;
+    private String chatUser2Id;
 
     private Date chatDate;
 
@@ -21,20 +21,20 @@ public class Chat {
         this.chatId = chatId;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getChatUser1Id() {
+        return chatUser1Id;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setChatUser1Id(String chatUser1Id) {
+        this.chatUser1Id = chatUser1Id;
     }
 
-    public String getUseUserId() {
-        return useUserId;
+    public String getChatUser2Id() {
+        return chatUser2Id;
     }
 
-    public void setUseUserId(String useUserId) {
-        this.useUserId = useUserId;
+    public void setChatUser2Id(String chatUser2Id) {
+        this.chatUser2Id = chatUser2Id;
     }
 
     public Date getChatDate() {

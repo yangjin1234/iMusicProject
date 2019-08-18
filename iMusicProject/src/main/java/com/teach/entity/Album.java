@@ -5,7 +5,7 @@ import java.util.Date;
 public class Album {
     private String albumId;
 
-    private String singerId;
+    private String albumSingerId;
 
     private String albumName;
 
@@ -27,12 +27,12 @@ public class Album {
         this.albumId = albumId;
     }
 
-    public String getSingerId() {
-        return singerId;
+    public String getAlbumSingerId() {
+        return albumSingerId;
     }
 
-    public void setSingerId(String singerId) {
-        this.singerId = singerId;
+    public void setAlbumSingerId(String albumSingerId) {
+        this.albumSingerId = albumSingerId;
     }
 
     public String getAlbumName() {

@@ -3,7 +3,7 @@ package com.teach.entity;
 public class Collect {
     private String collectId;
 
-    private String userId;
+    private String collectUserId;
 
     private String collectMusicIds;
 
@@ -15,12 +15,12 @@ public class Collect {
         this.collectId = collectId;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getCollectUserId() {
+        return collectUserId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setCollectUserId(String collectUserId) {
+        this.collectUserId = collectUserId;
     }
 
     public String getCollectMusicIds() {

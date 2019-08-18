@@ -3,12 +3,13 @@
 <mapper namespace="com.teach.mapper.MusicMapper">
   <resultMap id="BaseResultMap" type="com.teach.entity.Music">
     <id column="music_id" jdbcType="VARCHAR" property="musicId" />
-    <result column="singer_id" jdbcType="VARCHAR" property="singerId" />
-    <result column="video_id" jdbcType="VARCHAR" property="videoId" />
-    <result column="emotion_id" jdbcType="INTEGER" property="emotionId" />
-    <result column="style_id" jdbcType="INTEGER" property="styleId" />
-    <result column="theme_id" jdbcType="INTEGER" property="themeId" />
-    <result column="language_id" jdbcType="INTEGER" property="languageId" />
+    <result column="music_singer_id" jdbcType="VARCHAR" property="musicSingerId" />
+    <result column="music_album_id" jdbcType="VARCHAR" property="musicAlbumId" />
+    <result column="music_video_id" jdbcType="VARCHAR" property="musicVideoId" />
+    <result column="music_emotion_id" jdbcType="INTEGER" property="musicEmotionId" />
+    <result column="music_style_id" jdbcType="INTEGER" property="musicStyleId" />
+    <result column="music_theme_id" jdbcType="INTEGER" property="musicThemeId" />
+    <result column="music_language_id" jdbcType="INTEGER" property="musicLanguageId" />
     <result column="music_name" jdbcType="VARCHAR" property="musicName" />
     <result column="music_file" jdbcType="VARCHAR" property="musicFile" />
     <result column="music_word" jdbcType="VARCHAR" property="musicWord" />
@@ -18,8 +19,9 @@
     <result column="music_grade" jdbcType="INTEGER" property="musicGrade" />
   </resultMap>
   <sql id="Base_Column_List">
-    music_id, singer_id, video_id, emotion_id, style_id, theme_id, language_id, music_name, 
-    music_file, music_word, music_picture, music_info, music_playNum, music_grade
+    music_id, music_singer_id, music_album_id, music_video_id, music_emotion_id, music_style_id, 
+    music_theme_id, music_language_id, music_name, music_file, music_word, music_picture, 
+    music_info, music_playNum, music_grade
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -32,16 +34,18 @@
     where music_id = #{musicId,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.teach.entity.Music">
-    insert into music (music_id, singer_id, video_id, 
-      emotion_id, style_id, theme_id, 
-      language_id, music_name, music_file, 
-      music_word, music_picture, music_info, 
-      music_playNum, music_grade)
-    values (#{musicId,jdbcType=VARCHAR}, #{singerId,jdbcType=VARCHAR}, #{videoId,jdbcType=VARCHAR}, 
-      #{emotionId,jdbcType=INTEGER}, #{styleId,jdbcType=INTEGER}, #{themeId,jdbcType=INTEGER}, 
-      #{languageId,jdbcType=INTEGER}, #{musicName,jdbcType=VARCHAR}, #{musicFile,jdbcType=VARCHAR}, 
-      #{musicWord,jdbcType=VARCHAR}, #{musicPicture,jdbcType=VARCHAR}, #{musicInfo,jdbcType=VARCHAR}, 
-      #{musicPlaynum,jdbcType=INTEGER}, #{musicGrade,jdbcType=INTEGER})
+    insert into music (music_id, music_singer_id, music_album_id, 
+      music_video_id, music_emotion_id, music_style_id, 
+      music_theme_id, music_language_id, music_name, 
+      music_file, music_word, music_picture, 
+      music_info, music_playNum, music_grade
+      )
+    values (#{musicId,jdbcType=VARCHAR}, #{musicSingerId,jdbcType=VARCHAR}, #{musicAlbumId,jdbcType=VARCHAR}, 
+      #{musicVideoId,jdbcType=VARCHAR}, #{musicEmotionId,jdbcType=INTEGER}, #{musicStyleId,jdbcType=INTEGER}, 
+      #{musicThemeId,jdbcType=INTEGER}, #{musicLanguageId,jdbcType=INTEGER}, #{musicName,jdbcType=VARCHAR}, 
+      #{musicFile,jdbcType=VARCHAR}, #{musicWord,jdbcType=VARCHAR}, #{musicPicture,jdbcType=VARCHAR}, 
+      #{musicInfo,jdbcType=VARCHAR}, #{musicPlaynum,jdbcType=INTEGER}, #{musicGrade,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.teach.entity.Music">
     insert into music
@@ -49,23 +53,26 @@
       <if test="musicId != null">
         music_id,
       </if>
-      <if test="singerId != null">
-        singer_id,
+      <if test="musicSingerId != null">
+        music_singer_id,
       </if>
-      <if test="videoId != null">
-        video_id,
+      <if test="musicAlbumId != null">
+        music_album_id,
       </if>
-      <if test="emotionId != null">
-        emotion_id,
+      <if test="musicVideoId != null">
+        music_video_id,
       </if>
-      <if test="styleId != null">
-        style_id,
+      <if test="musicEmotionId != null">
+        music_emotion_id,
       </if>
-      <if test="themeId != null">
-        theme_id,
+      <if test="musicStyleId != null">
+        music_style_id,
       </if>
-      <if test="languageId != null">
-        language_id,
+      <if test="musicThemeId != null">
+        music_theme_id,
+      </if>
+      <if test="musicLanguageId != null">
+        music_language_id,
       </if>
       <if test="musicName != null">
         music_name,
@@ -93,23 +100,26 @@
       <if test="musicId != null">
         #{musicId,jdbcType=VARCHAR},
       </if>
-      <if test="singerId != null">
-        #{singerId,jdbcType=VARCHAR},
+      <if test="musicSingerId != null">
+        #{musicSingerId,jdbcType=VARCHAR},
       </if>
-      <if test="videoId != null">
-        #{videoId,jdbcType=VARCHAR},
+      <if test="musicAlbumId != null">
+        #{musicAlbumId,jdbcType=VARCHAR},
       </if>
-      <if test="emotionId != null">
-        #{emotionId,jdbcType=INTEGER},
+      <if test="musicVideoId != null">
+        #{musicVideoId,jdbcType=VARCHAR},
       </if>
-      <if test="styleId != null">
-        #{styleId,jdbcType=INTEGER},
+      <if test="musicEmotionId != null">
+        #{musicEmotionId,jdbcType=INTEGER},
       </if>
-      <if test="themeId != null">
-        #{themeId,jdbcType=INTEGER},
+      <if test="musicStyleId != null">
+        #{musicStyleId,jdbcType=INTEGER},
       </if>
-      <if test="languageId != null">
-        #{languageId,jdbcType=INTEGER},
+      <if test="musicThemeId != null">
+        #{musicThemeId,jdbcType=INTEGER},
+      </if>
+      <if test="musicLanguageId != null">
+        #{musicLanguageId,jdbcType=INTEGER},
       </if>
       <if test="musicName != null">
         #{musicName,jdbcType=VARCHAR},
@@ -137,23 +147,26 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.Music">
     update music
     <set>
-      <if test="singerId != null">
-        singer_id = #{singerId,jdbcType=VARCHAR},
+      <if test="musicSingerId != null">
+        music_singer_id = #{musicSingerId,jdbcType=VARCHAR},
       </if>
-      <if test="videoId != null">
-        video_id = #{videoId,jdbcType=VARCHAR},
+      <if test="musicAlbumId != null">
+        music_album_id = #{musicAlbumId,jdbcType=VARCHAR},
       </if>
-      <if test="emotionId != null">
-        emotion_id = #{emotionId,jdbcType=INTEGER},
+      <if test="musicVideoId != null">
+        music_video_id = #{musicVideoId,jdbcType=VARCHAR},
       </if>
-      <if test="styleId != null">
-        style_id = #{styleId,jdbcType=INTEGER},
+      <if test="musicEmotionId != null">
+        music_emotion_id = #{musicEmotionId,jdbcType=INTEGER},
       </if>
-      <if test="themeId != null">
-        theme_id = #{themeId,jdbcType=INTEGER},
+      <if test="musicStyleId != null">
+        music_style_id = #{musicStyleId,jdbcType=INTEGER},
       </if>
-      <if test="languageId != null">
-        language_id = #{languageId,jdbcType=INTEGER},
+      <if test="musicThemeId != null">
+        music_theme_id = #{musicThemeId,jdbcType=INTEGER},
+      </if>
+      <if test="musicLanguageId != null">
+        music_language_id = #{musicLanguageId,jdbcType=INTEGER},
       </if>
       <if test="musicName != null">
         music_name = #{musicName,jdbcType=VARCHAR},
@@ -181,12 +194,13 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.teach.entity.Music">
     update music
-    set singer_id = #{singerId,jdbcType=VARCHAR},
-      video_id = #{videoId,jdbcType=VARCHAR},
-      emotion_id = #{emotionId,jdbcType=INTEGER},
-      style_id = #{styleId,jdbcType=INTEGER},
-      theme_id = #{themeId,jdbcType=INTEGER},
-      language_id = #{languageId,jdbcType=INTEGER},
+    set music_singer_id = #{musicSingerId,jdbcType=VARCHAR},
+      music_album_id = #{musicAlbumId,jdbcType=VARCHAR},
+      music_video_id = #{musicVideoId,jdbcType=VARCHAR},
+      music_emotion_id = #{musicEmotionId,jdbcType=INTEGER},
+      music_style_id = #{musicStyleId,jdbcType=INTEGER},
+      music_theme_id = #{musicThemeId,jdbcType=INTEGER},
+      music_language_id = #{musicLanguageId,jdbcType=INTEGER},
       music_name = #{musicName,jdbcType=VARCHAR},
       music_file = #{musicFile,jdbcType=VARCHAR},
       music_word = #{musicWord,jdbcType=VARCHAR},

@@ -3,8 +3,6 @@ package com.teach.entity;
 public class Video {
     private String videoId;
 
-    private String musicId;
-
     private String videoName;
 
     private Integer videoPlaynum;
@@ -19,14 +17,6 @@ public class Video {
 
     public void setVideoId(String videoId) {
         this.videoId = videoId;
-    }
-
-    public String getMusicId() {
-        return musicId;
-    }
-
-    public void setMusicId(String musicId) {
-        this.musicId = musicId;
     }
 
     public String getVideoName() {

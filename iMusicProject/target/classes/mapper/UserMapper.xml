@@ -3,9 +3,6 @@
 <mapper namespace="com.teach.mapper.UserMapper">
   <resultMap id="BaseResultMap" type="com.teach.entity.User">
     <id column="user_id" jdbcType="VARCHAR" property="userId" />
-    <result column="collectlist_id" jdbcType="VARCHAR" property="collectlistId" />
-    <result column="collect_id" jdbcType="VARCHAR" property="collectId" />
-    <result column="anchor_id" jdbcType="VARCHAR" property="anchorId" />
     <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
@@ -20,9 +17,8 @@
     <result column="user_viptime" jdbcType="DATE" property="userViptime" />
   </resultMap>
   <sql id="Base_Column_List">
-    user_id, collectlist_id, collect_id, anchor_id, user_phone, user_name, user_email, 
-    user_sex, user_birthday, user_photo, user_address, user_recommend, user_question, 
-    user_answer, user_grade, user_viptime
+    user_id, user_phone, user_name, user_email, user_sex, user_birthday, user_photo, 
+    user_address, user_recommend, user_question, user_answer, user_grade, user_viptime
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -35,14 +31,12 @@
     where user_id = #{userId,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.teach.entity.User">
-    insert into user (user_id, collectlist_id, collect_id, 
-      anchor_id, user_phone, user_name, 
+    insert into user (user_id, user_phone, user_name, 
       user_email, user_sex, user_birthday, 
       user_photo, user_address, user_recommend, 
       user_question, user_answer, user_grade, 
       user_viptime)
-    values (#{userId,jdbcType=VARCHAR}, #{collectlistId,jdbcType=VARCHAR}, #{collectId,jdbcType=VARCHAR}, 
-      #{anchorId,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
+    values (#{userId,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
       #{userEmail,jdbcType=VARCHAR}, #{userSex,jdbcType=VARCHAR}, #{userBirthday,jdbcType=TIMESTAMP}, 
       #{userPhoto,jdbcType=VARCHAR}, #{userAddress,jdbcType=VARCHAR}, #{userRecommend,jdbcType=VARCHAR}, 
       #{userQuestion,jdbcType=VARCHAR}, #{userAnswer,jdbcType=VARCHAR}, #{userGrade,jdbcType=VARCHAR}, 
@@ -53,15 +47,6 @@
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userId != null">
         user_id,
-      </if>
-      <if test="collectlistId != null">
-        collectlist_id,
-      </if>
-      <if test="collectId != null">
-        collect_id,
-      </if>
-      <if test="anchorId != null">
-        anchor_id,
       </if>
       <if test="userPhone != null">
         user_phone,
@@ -104,15 +89,6 @@
       <if test="userId != null">
         #{userId,jdbcType=VARCHAR},
       </if>
-      <if test="collectlistId != null">
-        #{collectlistId,jdbcType=VARCHAR},
-      </if>
-      <if test="collectId != null">
-        #{collectId,jdbcType=VARCHAR},
-      </if>
-      <if test="anchorId != null">
-        #{anchorId,jdbcType=VARCHAR},
-      </if>
       <if test="userPhone != null">
         #{userPhone,jdbcType=VARCHAR},
       </if>
@@ -154,15 +130,6 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.teach.entity.User">
     update user
     <set>
-      <if test="collectlistId != null">
-        collectlist_id = #{collectlistId,jdbcType=VARCHAR},
-      </if>
-      <if test="collectId != null">
-        collect_id = #{collectId,jdbcType=VARCHAR},
-      </if>
-      <if test="anchorId != null">
-        anchor_id = #{anchorId,jdbcType=VARCHAR},
-      </if>
       <if test="userPhone != null">
         user_phone = #{userPhone,jdbcType=VARCHAR},
       </if>
@@ -204,10 +171,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.teach.entity.User">
     update user
-    set collectlist_id = #{collectlistId,jdbcType=VARCHAR},
-      collect_id = #{collectId,jdbcType=VARCHAR},
-      anchor_id = #{anchorId,jdbcType=VARCHAR},
-      user_phone = #{userPhone,jdbcType=VARCHAR},
+    set user_phone = #{userPhone,jdbcType=VARCHAR},
       user_name = #{userName,jdbcType=VARCHAR},
       user_email = #{userEmail,jdbcType=VARCHAR},
       user_sex = #{userSex,jdbcType=VARCHAR},

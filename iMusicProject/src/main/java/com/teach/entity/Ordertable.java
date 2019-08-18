@@ -3,13 +3,15 @@ package com.teach.entity;
 public class Ordertable {
     private Integer ordertableId;
 
-    private String userId;
+    private String ordertableUserId;
 
     private String ordertableNumber;
 
     private String ordertableInfo;
 
     private Float ordertableState;
+
+    private Double ordertableMoney;
 
     public Integer getOrdertableId() {
         return ordertableId;
@@ -19,12 +21,12 @@ public class Ordertable {
         this.ordertableId = ordertableId;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getOrdertableUserId() {
+        return ordertableUserId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setOrdertableUserId(String ordertableUserId) {
+        this.ordertableUserId = ordertableUserId;
     }
 
     public String getOrdertableNumber() {
@@ -49,5 +51,13 @@ public class Ordertable {
 
     public void setOrdertableState(Float ordertableState) {
         this.ordertableState = ordertableState;
+    }
+
+    public Double getOrdertableMoney() {
+        return ordertableMoney;
+    }
+
+    public void setOrdertableMoney(Double ordertableMoney) {
+        this.ordertableMoney = ordertableMoney;
     }
 }

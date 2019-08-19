@@ -1,5 +1,19 @@
 window.onload = function() {
 	var yzmsti;
+	
+	$("#login_pwd").on("click", function() {
+		$("#login_pwd").attr("style", "color: black;");
+		$("#login_vercode").attr("style", "color: dimgray;");
+		$("#login-verCodebox").hide();
+		$("#login-pwdBox").show();
+	});
+	$("#login_vercode").on("click", function() {
+		$("#login_pwd").attr("style", "color: dimgray;");
+		$("#login_vercode").attr("style", "color: black;");
+		$("#login-pwdBox").hide();
+		$("#login-verCodebox").show();
+	});
+	
 	$(function(){
 		function init(){
 			$('#mobile').val('');
@@ -20,14 +34,16 @@ window.onload = function() {
 				$(this).html("已有账号？马上登陆 ∧");
 				$(this).attr("opened", "1");
 				$(this).attr("onclick", "_hmt.push(['_trackEvent', 'zhuce', 'click', '注册登录页_去登录'])");
-				$("#msj_loginbox").slideUp();
+				$("#login-pwdBox").slideUp();
+				$(".nl_tab").slideUp();
 				$(".nl_title").html('<span class="nl_t_left"></span>注册iMusic<span class="nl_t_right">');
 			} else {
 				$("#nl_more_zc").slideUp();
 				$(this).html("还没有账号？免费注册 ∨");
 				$(this).attr("opened", "0");
 				$(this).attr("onclick", "_hmt.push(['_trackEvent', 'zhuce', 'click', '注册登录页_去注册'])");
-				$("#msj_loginbox").slideDown();
+				$("#login-pwdBox").slideDown();
+				$(".nl_tab").slideDown();
 				$(".nl_title").html('<span class="nl_t_left"></span>登录iMusic<span class="nl_t_right">');
 			}
 

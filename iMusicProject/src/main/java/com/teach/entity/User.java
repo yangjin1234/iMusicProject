@@ -29,6 +29,8 @@ public class User {
 
     private Date userViptime;
 
+    private String userPass;
+
     public String getUserId() {
         return userId;
     }
@@ -131,5 +133,13 @@ public class User {
 
     public void setUserViptime(Date userViptime) {
         this.userViptime = userViptime;
+    }
+
+    public String getUserPass() {
+        return userPass;
+    }
+
+    public void setUserPass(String userPass) {
+        this.userPass = userPass;
     }
 }

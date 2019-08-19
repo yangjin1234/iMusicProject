@@ -15,10 +15,12 @@
     <result column="user_answer" jdbcType="VARCHAR" property="userAnswer" />
     <result column="user_grade" jdbcType="VARCHAR" property="userGrade" />
     <result column="user_viptime" jdbcType="DATE" property="userViptime" />
+    <result column="user_pass" jdbcType="VARCHAR" property="userPass" />
   </resultMap>
   <sql id="Base_Column_List">
     user_id, user_phone, user_name, user_email, user_sex, user_birthday, user_photo, 
-    user_address, user_recommend, user_question, user_answer, user_grade, user_viptime
+    user_address, user_recommend, user_question, user_answer, user_grade, user_viptime, 
+    user_pass
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -35,12 +37,12 @@
       user_email, user_sex, user_birthday, 
       user_photo, user_address, user_recommend, 
       user_question, user_answer, user_grade, 
-      user_viptime)
+      user_viptime, user_pass)
     values (#{userId,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
       #{userEmail,jdbcType=VARCHAR}, #{userSex,jdbcType=VARCHAR}, #{userBirthday,jdbcType=TIMESTAMP}, 
       #{userPhoto,jdbcType=VARCHAR}, #{userAddress,jdbcType=VARCHAR}, #{userRecommend,jdbcType=VARCHAR}, 
       #{userQuestion,jdbcType=VARCHAR}, #{userAnswer,jdbcType=VARCHAR}, #{userGrade,jdbcType=VARCHAR}, 
-      #{userViptime,jdbcType=DATE})
+      #{userViptime,jdbcType=DATE}, #{userPass,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.teach.entity.User">
     insert into user
@@ -84,6 +86,9 @@
       <if test="userViptime != null">
         user_viptime,
       </if>
+      <if test="userPass != null">
+        user_pass,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="userId != null">
@@ -124,6 +129,9 @@
       </if>
       <if test="userViptime != null">
         #{userViptime,jdbcType=DATE},
+      </if>
+      <if test="userPass != null">
+        #{userPass,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -166,6 +174,9 @@
       <if test="userViptime != null">
         user_viptime = #{userViptime,jdbcType=DATE},
       </if>
+      <if test="userPass != null">
+        user_pass = #{userPass,jdbcType=VARCHAR},
+      </if>
     </set>
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
@@ -182,7 +193,8 @@
       user_question = #{userQuestion,jdbcType=VARCHAR},
       user_answer = #{userAnswer,jdbcType=VARCHAR},
       user_grade = #{userGrade,jdbcType=VARCHAR},
-      user_viptime = #{userViptime,jdbcType=DATE}
+      user_viptime = #{userViptime,jdbcType=DATE},
+      user_pass = #{userPass,jdbcType=VARCHAR}
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
 </mapper>

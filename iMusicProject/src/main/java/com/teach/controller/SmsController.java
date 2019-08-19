@@ -26,7 +26,7 @@ public class SmsController {
 
 	@PostMapping("send.do")
 	public R doSend(String tel) {
-		service.send(tel);
+//		service.send(tel);
 		return R.ok();
 	}
 	

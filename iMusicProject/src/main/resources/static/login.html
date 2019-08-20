@@ -32,13 +32,15 @@
 			</h1>
 			<div class="search_wrapper top_search">
 				<div class="search_input"><input type="text">
-					<div class="searh_btn"><a href="find.html"><i class="search_icon" ></i><span>搜索</span></a></div>
+					<div class="searh_btn">
+						<a href="find.html"><i class="search_icon"></i><span>搜索</span></a>
+					</div>
 				</div>
 				<div class="search_recommend top_search_recommend">
-		
+
 				</div>
 				<div class="search_histroy top_search_histroy">
-		
+
 				</div>
 			</div>
 			<div class="topNav fr">
@@ -46,7 +48,7 @@
 					<li>
 						<a target="_blank" href="index.html">客服中心</a>
 					</li>
-		
+
 					<li>
 						<a target="_blank" href="index.html">会员中心 </a>
 					</li>
@@ -118,10 +120,10 @@
 					<!--<li>
 		        <a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a>
 		    </li>-->
-					<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
+					<li>
+						<a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
 					</li>
-		
-		
+
 				</ul>
 			</div>
 		</div>
@@ -132,15 +134,37 @@
 		<div class="main_w clearfix">
 			<div class="new_loginpage">
 				<h3 class="nl_title"><span class="nl_t_left"></span>登录iMusic<span class="nl_t_right"></span></h3>
-				<div class="nl_or"></div>
-				<div class="nl_loginbox_w" id="msj_loginbox">
-					<form method="POST">
+				<div class="nl_tab">
+					<a id="login_pwd" style="color: black;">密码</a>　|&nbsp;&nbsp;
+					<a id="login_vercode" style="color: dimgray;">验证码</a>
+				</div>
+				<div class="nl_loginbox_w" id="login-pwdBox">
+					<form method="POST" id="login-pwdForm">
 						<input type="hidden" value="https://www.meishij.net/" name="redirect">
 						<div class="nl_loginitem">
 							<input type="text" class="text" value="" name="username" placeholder="请输入手机号/邮箱/昵称">
 						</div>
 						<div class="nl_loginitem">
 							<input type="password" class="password" name="password" placeholder="请输入密码">
+						</div>
+						<div class="nl_loginitem" style="height:33px;">
+							<label><input type="checkbox" id="auto_login_next" value="auto" class="checkbox" style="display: inherit;margin: 0 3px 0 0;">自动登录</label>
+							<a onclick="_hmt.push(['_trackEvent', 'login', 'click', '注册登录页_忘记密码']);" href="findPwd.html" class="forgetpassword">忘记密码？</a>
+						</div>
+						<div class="nl_loginitem" style="text-align:center;">
+							<input type="submit" class="submit" value="登录">
+						</div>
+					</form>
+				</div>
+				<div class="nl_loginbox_w" id="login-verCodebox" style="display: none;">
+					<form method="POST" id="login-codeForm">
+						<input type="hidden" value="https://www.meishij.net/" name="redirect">
+						<div class="nl_loginitem">
+							<input type="text" class="text" value="" name="username" placeholder="请输入手机号/邮箱/昵称">
+						</div>
+						<div class="nl_loginitem">
+							<input type="text" class="text forcheck pyzm_forcheck" passcheck="0" id="login-mobile_code" placeholder="请输入验证码" style="width:150px;">
+							<a href="" class="phone_yzmbtn sended" id="login_yzmbtn">免费获取验证码</a>
 						</div>
 						<div class="nl_loginitem" style="height:33px;">
 							<label><input type="checkbox" id="auto_login_next" value="auto" class="checkbox" style="display: inherit;margin: 0 3px 0 0;">自动登录</label>
@@ -158,67 +182,40 @@
 						<a onclick="_hmt.push(['_trackEvent', 'zhuce', 'click', '注册登录页_手机注册']);" href="javascript:void(0);" id="zc_phone" class="current">手机注册</a>
 					</div>
 
-					<div class="nl_loginbox_www">
-						<div class="nl_loginbox_ww">
+					<div class="nl_loginbox_www" <div class="nl_loginbox_ww">
 
-							<div class="nl_loginbox_w" style="float:left;">
+						<div class="nl_loginbox_w" style="float:left;">
 
-								<form class="register_form_pn" id="nl_phone_submit_btn_form">
-									<div class="nl_loginitem">
-										<input type="text" class="text forcheck pn_forcheck" id="mobile" passcheck="0" placeholder="请输入手机号">
-									</div>
-									<div class="login_tips tip" style="display:none;"> </div>
-									<div class="nl_loginitem">
-										<input type="text" class="text forcheck pyzm_forcheck" passcheck="0" id="mobile_code" placeholder="请输入验证码" style="width:150px;">
-										<a href="javascript:void(0)" class="phone_yzmbtn sended" id="phone_yzmbtn">免费获取验证码</a>
-									</div>
-									<div class="login_tips false" style="display:none;"> </div>
-									<div class="nl_loginitem">
-										<input type="password" class="password forcheck pw_forcheck" id="password_mobile" name="password" passcheck="0" placeholder="请输入密码">
-									</div>
-									<div class="login_tips tip" style="display:none;"> </div>
-									<div class="login_pw_tips state1" style="display:none;"> </div>
+							<form class="register_form_pn" id="nl_phone_submit_btn_form">
+								<div class="nl_loginitem">
+									<input type="text" class="text forcheck pn_forcheck" id="mobile" passcheck="0" placeholder="请输入手机号">
+								</div>
+								<div class="login_tips tip" style="display:none;"> </div>
+								<div class="nl_loginitem">
+									<input type="text" class="text forcheck pyzm_forcheck" passcheck="0" id="mobile_code" placeholder="请输入验证码" style="width:150px;">
+									<a href="javascript:void(0)" class="phone_yzmbtn sended" id="phone_yzmbtn">免费获取验证码</a>
+								</div>
+								<div class="login_tips false" style="display:none;"> </div>
+								<div class="nl_loginitem">
+									<input type="password" class="password forcheck pw_forcheck" id="password_mobile" name="password" passcheck="0" placeholder="请输入密码">
+								</div>
+								<div class="login_tips tip" style="display:none;"> </div>
+								<div class="login_pw_tips state1" style="display:none;"> </div>
 
-									<div class="nl_loginitem-login" style="height:33px;">
-										<label><input type="checkbox" id="mobile_check" class="checkbox" checked="1" style="display: inherit;margin: 0 3px 0 0;">我已阅读并且同意<a href="http://www.meishij.net/siteinfo/index.php#mzsm">iMusic用户使用协议</a></label>
-									</div>
-									<div class="nl_loginitem" style="text-align:center;">
-										<input type="submit" class="submit register_submit" id="nl_phone_submit_btn" value="注册">
-									</div>
-								</form>
-
-							</div>
-
-							<div class="nl_loginbox_w" style="float:left;">
-
-								<form class="register_form_email" id="nl_email_submit_btn_form">
-									<div class="nl_loginitem">
-										<input type="text" class="text forcheck email_forcheck" name="email" id="email" passcheck="0" placeholder="请输入邮箱">
-									</div>
-									<div class="login_tips tip" style="display:none;"> </div>
-									<div class="nl_loginitem">
-										<input type="password" class="password forcheck pw_forcheck" name="password" id="email_password" placeholder="请输入密码">
-									</div>
-									<div class="login_tips tip" style="display:none;"> </div>
-									<div class="login_pw_tips state2" style="display:none;"> </div>
-
-									<div class="nl_loginitem" style="height:33px;">
-										<label><input type="checkbox" id="email_check" class="checkbox" checked="1">  我已阅读并且同意<a href="">美食杰用户使用协议</a></label>
-									</div>
-									<div class="nl_loginitem" style="text-align:center;">
-										<input type="submit" class="submit register_submit" id="nl_email_submit_btn" value="注册">
-									</div>
-								</form>
-
-							</div>
-
+								<div class="nl_loginitem-login" style="height:33px;">
+									<label><input type="checkbox" id="mobile_check" class="checkbox" checked="1" style="display: inherit;margin: 0 3px 0 0;">我已阅读并且同意<a href="http://www.meishij.net/siteinfo/index.php#mzsm">iMusic用户使用协议</a></label>
+								</div>
+								<div class="nl_loginitem" style="text-align:center;">
+									<input type="submit" class="submit register_submit" id="nl_phone_submit_btn" value="注册">
+								</div>
+							</form>
 						</div>
 					</div>
-
 				</div>
-
 				<a onclick="_hmt.push(['_trackEvent', 'zhuce', 'click', '注册登录页_去注册']);" href="javascript:void(0)" class="golink" id="nl_gozc" opened="0">还没有账号？免费注册 ∨</a>
 			</div>
+			
+		</div>
 		</div>
 
 		<!-- ######################################################以下为尾部 ##################################################################### -->
@@ -243,8 +240,7 @@
 							 target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
 					<p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
 					<p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018
-						<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img
-							 style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
+						<a style="" target="_blank" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;<span>粤公网安备 44010602000141号</span><img style="vertical-align: text-bottom;" }="" src="picture/icon_yuewangga1.png" width="16" height="16"></a>
 					</p>
 					<p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text">不良信息举报邮箱：jubao_music@kugou.net&nbsp;&nbsp;&nbsp;&nbsp;客服邮箱：kefu@iMusoic.net</p>
 					<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2019 KuGou-Inc.All Rights Reserved
@@ -257,8 +253,7 @@
 			<a href="#"></a>
 		</div>
 		</div>
-		
-		
+
 		<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
 		<script src="js/kguser_min_3.js"></script>
 		<title>iMusic音乐 - 就是歌多</title>

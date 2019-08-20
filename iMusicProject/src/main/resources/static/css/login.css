@@ -20,6 +20,7 @@
 
 .new_loginpage {
 	width: 1000px;
+	height: auto;
 	background: #fff;
 	margin: 40px auto 0px;
 	padding: 1px 0px 60px;
@@ -349,6 +350,7 @@
 
 .phone_yzmbtn:hover {
 	background: #75ab49;
+	text-decoration: none;
 }
 
 .phone_yzmbtn.sended {
@@ -372,7 +374,8 @@
 
 .nl_tab a:hover {
 	color: #ec5541;
-	text-decoration: underline;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .nl_tab a.current {

@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
@@ -21,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.mysql.cj.util.Base64Decoder;
 
 /**
  * Servlet implementation class MusicServlet
@@ -35,7 +37,6 @@ public class MusicServlet extends HttpServlet {
 	public static void main(String[] args) {
 		System.out.println(整数);
 	}
-	
 	//www.jlzhou.top/Music
 	//刘盼民	90	29
 	public static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
@@ -113,7 +114,7 @@ public class MusicServlet extends HttpServlet {
 					JSONObject kuwoSong = (JSONObject) object2;
 					Song song = new Song();
 					song.setSong_id(kuwoSong.getString("musicrid"));//获取音乐id
-					//song.setSong_url(SongInfos.getKuWoUrl(kuwoSong.getString("musicrid")));//获取下载链接
+					song.setSong_url(SongInfos.getKuWoUrl(kuwoSong.getString("musicrid")));//获取下载链接
 					song.setArtist(kuwoSong.getString("artist"));
 					song.setAlbum(kuwoSong.getString("album"));
 					song.setName(kuwoSong.getString("name"));
@@ -130,6 +131,7 @@ public class MusicServlet extends HttpServlet {
 			if (name == null || "".equals(name)) {
 				result.clear();
 			}
+//			out.write(result.toString());
 			out.write(result.toString());
 			out.flush();
 			out.close();

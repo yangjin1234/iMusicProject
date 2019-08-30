@@ -5,17 +5,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
 		<meta charset="UTF-8">
-		<title>酷狗音乐 - 就是歌多</title>
+		<title>iMusic音乐 - 就是歌多</title>
 		<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
 		<script type="text/javascript" charset="UTF-8" src="js/jquery.min.js"></script>
-		<link href="https://www.kugou.com/root/favicon.ico" rel="shortcut icon">
+		<link href="images/iMusic.jpg" rel="shortcut icon">
 		<link rel="stylesheet" href="css/search_1.css">
+		<link rel="stylesheet" href="plug/layui/css/layui.css">
 		<script type="text/javascript" charset="UTF-8">
 			var apmCollectData = apmCollectData || [];
 		</script>
-		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-		<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-		 crossorigin="anonymous">
 
 		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
@@ -24,24 +22,46 @@
 		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		 crossorigin="anonymous"></script>
+		 <style type="text/css">
+			 .progressBar { 
+			     border: solid 2px #86A5AD; 
+			     background: white url(progressBar_m.gif) no-repeat 10px 10px; 
+			 } 
+			 .progressBar { 
+			     display: block; 
+			     width: 220px; 
+			     height: 50px; 
+			     position: fixed; 
+			     top: 50%; 
+			     left: 50%; 
+			     margin-left: -74px; 
+			     margin-top: -14px; 
+			     padding: 10px 10px 10px 50px; 
+			     text-align: left; 
+			     line-height: 27px; 
+			     font-weight: bold; 
+			     position: absolute; 
+			     z-index: 2001; 
+			 } 
+		 </style>
 	</head>
 
 	<body>
-			<div class="header">
+		<div class="header">
 			<h1 class="logo">
 				<a href="index.html">
 					<img src="picture/logo_3.png" alt="" style="width=154px; height=27px;">
 				</a>
 			</h1>
 			<div class="search_wrapper top_search">
-				<div class="search_input"><input type="text">
-					<div class="searh_btn"><a href="find.html"><i class="search_icon" ></i><span>搜索</span></a></div>
+				<div class="search_input"><input class="search_name" type="text">
+					<div class="searh_btn"><a href="find.html"><i class="search_icon"></i><span>搜索</span></a></div>
 				</div>
 				<div class="search_recommend top_search_recommend">
-		
+
 				</div>
 				<div class="search_histroy top_search_histroy">
-		
+
 				</div>
 			</div>
 			<div class="topNav fr">
@@ -49,7 +69,7 @@
 					<li>
 						<a target="_blank" href="index.html">客服中心</a>
 					</li>
-		
+
 					<li>
 						<a target="_blank" href="index.html">会员中心 </a>
 					</li>
@@ -123,17 +143,17 @@
 		    </li>-->
 					<li><a target="_blank" href="Musicman.html" class="icon icon-nav8">成为主播</a>
 					</li>
-		
-		
+
+
 				</ul>
 			</div>
 		</div>
-		
-		
-		
+
+
+
 		<div class="search_header">
 			<div class="search_wrapper content_search">
-				<div class="search_input"><input type="text">
+				<div class="search_input"><input class="search_name" id="search_named" type="text">
 					<div class="searh_btn"><i class="search_icon"></i><span>搜索</span></div>
 				</div>
 				<div class="search_recommend content_search_recommend">
@@ -155,9 +175,7 @@
 				<li data-type="mv">
 					<a id="mv" href="javascript:;">MV</a>
 				</li>
-				<li data-type="admin">
-					<a id="admin" href="javascript:;">专辑</a>
-				</li>
+
 				<li data-type="user">
 					<a id="user" href="javascript:;">用户</a>
 				</li>
@@ -166,7 +184,7 @@
 				</li>
 			</ul>
 
-			<div class="search_song" id="search_song">
+			<div class="search_song" id="search_song" style="display: block;">
 				<div class="song_list_header">
 					<div class="similar_singer">
 						<a href="" class="singer_img" target="_blank"><img src="picture/singer_1.jpg" alt=""></a>
@@ -194,13 +212,23 @@
 							时长
 						</li>
 					</ul>
-					<ul class="list_content clearfix">
-
+					<div id="progressBar" class="progressBar" style="display: none; ">数据加载中，请稍等...</div>
+					<ul class="list_content clearfix" id="list_content_song">
+							<li class="clearfix">
+								<div class="width_f_li clearfix "><span class="search_icon checkbox"></span><a class="_name" title="周杰伦 - 霍元甲"
+									 href="javascript:;"><img class="_pic_info" /><em>周杰伦</em> - 霍元甲</a></div>
+								<div class="width_s_li _album"><a class="album_name" title="《霍元甲》" target="_blank" href="https://www.kugou.com/yy/album/single/983761.html">《霍元甲》</a>&nbsp;</div>
+								<div class="width_t_li _artist ">04:38</div>
+								<audio id="audio" src=""></audio>
+								<div class="play-item"><span class="common_icon icon_play"></span><span class="common_icon icon_download"
+									 onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);"></span><span class="common_icon icon_share"></span></div>
+							</li>
+							
 					</ul>
 				</div>
 			</div>
-			
-			<div class="search_special" id="search_special">
+
+			<div class="search_special" id="search_special" style="display: none;">
 				<div class="special_header">
 					<div class="action_area">
 						<p class="search_key_word">搜索到<i>周杰伦</i></p>
@@ -224,7 +252,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="search_mv" id="search_mv">
+			<div class="search_mv" id="search_mv" style="display: none;">
 				<div class="mv_header">
 					<div class="action_area">
 						<p class="search_key_word">搜索到<i>周杰伦</i></p>
@@ -236,34 +264,44 @@
 					</ul>
 				</div>
 			</div>
-			<nav aria-label="Page navigation" style="text-align-last: center;">
-				<ul class="pagination">
-					<li>
-						<a href="#" aria-label="Previous">
-							<span aria-hidden="true">&laquo;</span>
-						</a>
-					</li>
-					<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li>
-						<a href="#" aria-label="Next">
-							<span aria-hidden="true">&raquo;</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-
-
+			<div class="search_singer" id="search_singer" style="display: none;">
+				<div class="singer_header">
+					<div class="action_area">
+						<p class="search_key_word">搜索到<i>歌手</i></p>
+						<p class="search_tips">相关的歌手</p>
+					</div>
+				</div>
+				<div class="mv_list">
+					<ul>
+					</ul>
+				</div>
+			</div>
+			<div class="search_user" id="search_user" style="display: none;">
+				<div class="user_header">
+					<div class="action_area">
+						<p class="search_key_word">搜索到<i>用户</i></p>
+						<p class="search_tips">相关的歌手</p>
+					</div>
+				</div>
+				<div class="user_list">
+					<ul>
+					</ul>
+				</div>
+			</div>
+			<div id="demo1" style="text-align-last: center;">
+				<div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-2"><a href="javascript:;" class="layui-laypage-prev layui-disabled"
+					 data-page="0">上一页</a><span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>1</em></span><a href="javascript:;"
+					 data-page="2">2</a><a href="javascript:;" data-page="3">3</a><a href="javascript:;" data-page="4">4</a><a href="javascript:;"
+					 data-page="5">5</a><span class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last"
+					 title="尾页" data-page="7">7</a><a href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a></div>
+			</div>
 
 		</div>
-		</div>
-		
-		
-		
-		
+
+
+
+
+
 		<div class="footerWrapper">
 			<div class="footer">
 				<div class="links">
@@ -298,10 +336,10 @@
 		<div class="scrollTop icon-scrollTop">
 			<a href="#"></a>
 		</div>
-		</div>
-		
-		
-		<script type="text/javascript" charset="UTF-8" src="js/search_1.js"></script>
+
+
+
+		<script type="text/javascript" charset="UTF-8" src="js/find.js"></script>
 		<script src="js/kguser_min_3.js"></script>
 		<title>iMusic音乐 - 就是歌多</title>
 		<script data-embed="false" type="text/javascript" src="js/pctomoblie_1.js"></script>
@@ -310,7 +348,7 @@
 		<!-- <script type="text/javascript"  charset="UTF-8" src="js/jstorage_1.js"></script> -->
 		<!-- <script type="text/javascript"  charset="UTF-8" src="js/textchange.min_1.js"></script> -->
 		<script src="js/kguser_min_3.js"></script>
-	
+
 	</body>
 
 </html>

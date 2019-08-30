@@ -12,6 +12,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 @EnableCaching
 @MapperScan("com.teach.mapper")
+@ServletComponentScan
 public class DemoApplication {
 
 	public static void main(String[] args) {

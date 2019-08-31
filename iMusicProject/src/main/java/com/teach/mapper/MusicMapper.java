@@ -1,6 +1,12 @@
 package com.teach.mapper;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Select;
+
 import com.teach.entity.Music;
+
+import io.lettuce.core.dynamic.annotation.Param;
 
 public interface MusicMapper {
     int deleteByPrimaryKey(String musicId);
@@ -14,4 +20,6 @@ public interface MusicMapper {
     int updateByPrimaryKeySelective(Music record);
 
     int updateByPrimaryKey(Music record);
+    @Select("select * from music where musicId='${ids}'")
+    List<Music> selectByIds(@Param("ids") String mId); 
 }
